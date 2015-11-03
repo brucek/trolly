@@ -41,7 +41,7 @@ module.exports = function(config) {
                     loader: 'babel',
                     query: {
                         cacheDirectory: true,
-                        //presets: ['es2015'] // Babel 6.x
+                        presets: ['es2015'] // Babel 6.x
                     }
                 }]
             },
