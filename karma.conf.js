@@ -1,4 +1,11 @@
-var path = require('path');
+const webpackConfig = require('./webpack.config.js');
+const path = require('path');
+
+/**
+ * The entry point from the referenced Webpack configuration has to be removed or tests 
+ * will fail in weird and inscrutable ways.
+ */
+webpackConfig.entry = {}; // define an empty entry object (null won't work)
 
 // Karma configuration
 
@@ -12,51 +19,18 @@ module.exports = function(config) {
         files: [
             '__tests__/**/*.js'
         ],
-        // add webpack as preprocessor
+        // specify the entry point in Karma
         preprocessors: {
-            '__tests__/**/*.js': ['webpack']
+        './dist/trolly.js': ['webpack'],
+		 '__tests__/**/*.js': ['webpack', 'sourcemap']
         },
-        webpack: {
-            disableSha1: false, //defaults to false
-            disableLogging: false, //defaults to false
-            cache: true,
-            module: {
-                preLoaders: [{
-                    test: /\.jsx?$/,
-                    include: path.resolve('__tests__/'),
-                    loader: 'babel',
-                    query: {
-                        cacheDirectory: true,
-                       // presets: ['es2015'] // Babel 6.x
-                    }
-                }, {
-                    test: /\.jsx?$/,
-                    include: path.resolve('src/'),
-                    exclude: /(__tests__)/,
-                    loader: 'isparta?{babel: {stage: 0}}',
-                }],
-                loaders: [{
-                    test: /\.js$|.jsx$/,
-                    exclude: /node_modules/,
-                    loader: 'babel',
-                    query: {
-                        cacheDirectory: true,
-                        presets: ['es2015'] // Babel 6.x
-                    }
-                }]
-            },
-            resolve: {
-                root: [__dirname],
-                modulesDirectories: ['node_modules', 'src'],
-                extensions: ['', '.js', '.jsx']
-            },
-            plugins: []
-        },
-        webpackServer: {
-            // webpack-dev-server configuration
-            // webpack-dev-middleware configuration
+        webpack: webpackConfig, //
+        webpackMiddleware: {
             quiet: false,
             noInfo: true,
+            debug:true, // turn it off if you don't want it!
+			contentBase: path.resolve('__tests__/'),
+			devtool: 'source-map',
             stats: {
                 assets: false,
                 hot: true,
@@ -89,17 +63,6 @@ module.exports = function(config) {
         browsers: ['PhantomJS'],
         reporters: ['mocha', 'coverage'],
         browserNoActivityTimeout: 30000,
-        // List plugins explicitly, since autoloading karma-webpack
-        // won't work here        
-        plugins: [
-            'karma-coverage',
-            'karma-mocha',
-            'karma-mocha-reporter',
-            'karma-phantomjs-launcher',
-            'karma-phantomjs-shim',
-            'karma-sinon-chai',
-            'karma-webpack'
-        ],
         coverageReporter: {
             type: 'text'
         },

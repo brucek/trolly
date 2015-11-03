@@ -31,6 +31,8 @@ module.exports = {
   cache: true,
   debug: PROD ? false: true,
   devtool: 'source-map',
+  disableSha1: false, //defaults to false
+  disableLogging: false, //defaults to false
   entry: path.join(__dirname, '/src'),
   output: {
     path: path.join(__dirname, '/dist'),
@@ -40,13 +42,34 @@ module.exports = {
 	publicPath: 'http://localhost:8080/'
   },
   module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: ['node_modules'],
-	    loader: 'babel?presets[]=es2015'
-      }
-    ]
-  },
+                preLoaders: [{
+                    test: /\.jsx?$/,
+                    include: path.resolve('__tests__/'),
+                    loader: 'babel',
+                    query: {
+                        cacheDirectory: true,
+                       // presets: ['es2015'] // Babel 6.x
+                    }
+                }, {
+                    test: /\.jsx?$/,
+                    include: path.resolve('src/'),
+                    exclude: /(__tests__)/,
+                    loader: 'isparta?{babel: {stage: 0}}',
+                }],
+                loaders: [{
+                    test: /\.js$|.jsx$/,
+                    exclude: /node_modules/,
+                    loader: 'babel',
+                    query: {
+                        cacheDirectory: true,
+                        presets: ['es2015'] // Babel 6.x
+                    }
+                }]
+            },
+            resolve: {
+                root: [__dirname],
+                modulesDirectories: ['node_modules', 'src'],
+                extensions: ['', '.js', '.jsx']
+            },
 	plugins: plugins
 }
