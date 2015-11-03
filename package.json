@@ -1,11 +1,11 @@
 {
-  "name": "radium",
+  "name": "Trolly",
   "version": "0.0.1",
   "description": "Isomorphic boilerplate for a library written in ES2015 for Node and the browser.",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/formidablelabs/radium.git"
+    "url": "https://github.com/kflash/trolly.git"
   },
   "homepage": "https://github.com/kflash/trolly",
   "bugs": "https://github.com/kflash/trolly/issues",

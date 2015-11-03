@@ -11,4 +11,4 @@ if (ExecutionEnvironment.canUseDOM) {
 
 export default () => {
     console.log(message);
-}
+};
