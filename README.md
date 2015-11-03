@@ -21,6 +21,7 @@
 * Production mode
 * Development mode
 * Pre-publishing to NPM
+* Support NodeJS v. 4 and 5
 
 ## Installation
 

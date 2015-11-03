@@ -10,10 +10,8 @@
   "homepage": "https://github.com/kflash/trolly",
   "bugs": "https://github.com/kflash/trolly/issues",
   "scripts": {
-    "babel": "rimraf lib && babel src/ -d lib/",
     "dist": "webpack && webpack --config=webpack.config.minified.js",
     "flow": "node -e \"process.exit(process.platform === 'win32' ? 0 : 1)\" || flow check",
-    "lib": "npm run babel && rimraf lib/__tests__ lib/__mocks__",
     "lint": "eslint src && npm run flow",
     "postinstall": "node -e \"require('fs').stat('lib', function(e,s){process.exit(e || !s.isDirectory() ? 1 : 0)})\" || npm run lib",
     "prepublish": "npm test && npm run lint && npm run lib",
