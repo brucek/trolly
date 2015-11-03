@@ -1,12 +1,12 @@
-var path = require('path');
-var pkg = require('./package.json');
-var webpack = require('webpack');
-var PROD = JSON.parse(process.env.PROD_DEV || '0');
+const path = require('path');
+const pkg = require('./package.json');
+const webpack = require('webpack');
+const PROD = JSON.parse(process.env.PROD_DEV || '0');
 
  /**
    * For production deployments, we want minified and optimized JS.
    */
-var plugins = [
+const plugins = [
 	new webpack.optimize.DedupePlugin(),
 	new webpack.optimize.OccurenceOrderPlugin(),
 	new webpack.DefinePlugin({

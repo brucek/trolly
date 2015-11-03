@@ -1,7 +1,7 @@
 {
   "name": "trolly",
-  "version": "0.0.2",
-  "description": "Isomorphic boilerplate for a library written in ES2015 for Node and the browser.",
+  "version": "0.0.3",
+  "description": "Isomorphic boilerplate for creating libraries. Using Babel 6.x, Webpack, Karma and ESLint",
   "main": "./dist/trolly.js",
   "repository": {
     "type": "git",
