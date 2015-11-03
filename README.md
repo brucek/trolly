@@ -24,8 +24,10 @@
 
 ## Installation
 
+Download the package, and run this from the command line:
+
 ```
-npm install radium
+npm install 
 ```
 
 ## NPM tasks
