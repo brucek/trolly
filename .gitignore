@@ -1,4 +1,4 @@
-_site
+**/webpack-stats.json
 coverage
 lib
 node_modules

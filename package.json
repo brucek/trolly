@@ -20,6 +20,22 @@
     "test-dev": "karma start --no-single-run --auto-watch"
   },
   "license": "MIT",
+    "keywords": [
+    "workflow",
+    "boilerplate",
+    "ES2015",
+    "Babel",
+    "Babel 6",
+    "boilerplate",
+    "scaffold",
+    "template",
+    "skeleton",
+    "karma",
+    "mocha",
+    "chai",
+    "sinon",
+    "requirejs"
+  ],
   "dependencies": {
     "babel": "^6.0.15",
     "babel-plugin-flow-comments": "^1.0.9",
