@@ -2,7 +2,6 @@
 
 [![Travis Status][trav_img]][trav_site]
 [![Coverage Status](https://coveralls.io/repos/Kflash/trolly/badge.svg?branch=master&service=github)](https://coveralls.io/github/Kflash/trolly?branch=master)
-
 ## Features
 
 * ES2015 support
