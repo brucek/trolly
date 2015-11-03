@@ -27,6 +27,25 @@
 * NodeJS v. 4.x support
 * NPM v. 3.3.6 support
 
+## Basic guide
+
+Write your code in src. The entry file is what you named the project in kebab case (although the filename can be changed).
+
+Run `webpack` to build a non-minified version of the library.
+
+Put your unit tests in the `__tests__` folder. The npm test command runs the tests using Node. 
+
+## npm Scripts
+
+* `npm run lint` - Lint the source and unit tests
+* `npm run dist` - Build a distributable version of the library
+* `npm run flow` - Flow comments
+* `npm run prepublish` - prepublish to NPM
+* `npm run test` - Runs the unit tests
+* `npm run test-coverage` - Generate a coverage report
+* `npm run test-ie` - Runs the unit tests for older IE
+* `npm run test-dev` - Runs the unit tests and continuously run the unit tests as you make changes to the source and test files themselves
+
 ## Installation
 
 Download the package, and run this from the command line:
@@ -35,20 +54,13 @@ Download the package, and run this from the command line:
 npm install 
 ```
 
-## NPM tasks
+## Unit tests
 
-* `npm run lint` - Lints the code
-* `npm run dist` - Makes a distributable version
-* `npm run flow` - flow comments
-* `npm run prepublish` - prepublish to NPM
-* `npm run test` - Runs the unit tests
-* `npm run test-coverage` - Runs test coverage
-* `npm run test-ie` - Runs unit tests for older IE
-* `npm run test-dev` - Runs unit tests and auto-watch
+Units tests are done in the background and visible in the cli together with the generated coverage report.
 
-## Webpack tasks
+## Linting
 
-`webpack` - Build a non-mnified version of the code
+This boilerplate uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
 
 ## Customizing
 
