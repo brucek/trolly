@@ -5,13 +5,14 @@
 
 ## Features
 
-* Babel 6.x
-* Export as ES5 & UMD
+* Babel 6.x support
 * Mocha-Chai-Sinon testing stack
+* Support for ES2015 in the unit tests
 * Unit tests that work in Node and in the browser
 * Unit tests for older IE
 * Unit tests for production mode
 * Unit tests for development mode with auto-watch
+* Export as ES5 & UMD
 * Coverage report on the command line
 * Flow comments
 * Works both server and client side
