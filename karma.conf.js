@@ -19,30 +19,30 @@ module.exports = function (config) {
         }, {
           test: /\.jsx?$/,
           include: path.resolve('src/'),
-          exclude: /(__tests__|__mocks__)/,
-          loader: 'isparta?babel'
+          exclude: /(__tests__)/,
+          loader: 'isparta?{babel: {stage: 0}}',
         }],
         loaders: [{
-          test: /\.jsx?$/,
-          exclude: [/node_modules/],
+          test: /\.js$|.jsx$/,
+          exclude:  /node_modules/,
           loader: 'babel'
-        }, {
-          test: /\.css$/,
-          loader: 'style-loader!css-loader'
         }]
       },
       resolve: {
         root: [__dirname],
         modulesDirectories: ['node_modules', 'src'],
         extensions: ['', '.js', '.jsx']
-      }
+      },
+	  plugins: []
     },
+	
     webpackServer: {
       quiet: false,
       noInfo: true,
       stats: {
         assets: false,
-        colors: true,
+        hot:true,
+		colors: true,
         version: false,
         hash: false,
         timings: false,
@@ -57,7 +57,7 @@ module.exports = function (config) {
     autoWatch: false,
     browsers: ['PhantomJS'],
     reporters: ['mocha', 'coverage'],
-    browserNoActivityTimeout: 60000,
+    browserNoActivityTimeout: 30000,
     plugins: [
       'karma-coverage',
       'karma-mocha',

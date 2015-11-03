@@ -1,7 +1,7 @@
 import trolly from 'index.js';
 
-describe('camelCasePropsToDashCase', function() {
-  it('should be an object', function() {
+describe('Trolly()', () => {
+  it('should be an object', () => {
        expect(typeof trolly).to.be.a.object
   });
 });
