@@ -30,14 +30,14 @@ npm install radium
 
 ## NPM tasks
 
-`npm run lint` - Lints the code
-`npm run dist` - Makes a distributable version
-`npm run flow` - flow comments
-`npm run prepublish` - prepublish to NPM
-`npm run test` - Runs the unit tests
-`npm run test-coverage` - Runs test coverage
-`npm run test-ie` - Runs unit tests for older IE
-`npm run test-dev` - Runs unit tests and auto-watch
+* `npm run lint` - Lints the code
+* `npm run dist` - Makes a distributable version
+* `npm run flow` - flow comments
+* `npm run prepublish` - prepublish to NPM
+* `npm run test` - Runs the unit tests
+* `npm run test-coverage` - Runs test coverage
+* `npm run test-ie` - Runs unit tests for older IE
+* `npm run test-dev` - Runs unit tests and auto-watch
 
 ## Webpack tasks
 
