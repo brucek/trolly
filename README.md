@@ -2,9 +2,10 @@
 
 [![Travis Status][trav_img]][trav_site]
 [![Coverage Status](https://coveralls.io/repos/Kflash/trolly/badge.svg?branch=master&service=github)](https://coveralls.io/github/Kflash/trolly?branch=master)
+
 ## Features
 
-* ES2015 support
+* Babel 6.x
 * Export as ES5 & UMD
 * Mocha-Chai-Sinon testing stack
 * Unit tests that work in Node and in the browser
