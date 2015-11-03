@@ -44,10 +44,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: ['node_modules'],
-	    loader: 'babel-loader',
-		query: {
-		   presets: ['es2015']  // Babel 6.x
-      }
+	    loader: 'babel?presets[]=es2015'
       }
     ]
   },

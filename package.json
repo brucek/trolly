@@ -21,7 +21,7 @@
   },
   "author": "Kenny Flashlight",
   "license": "MIT",
-    "keywords": [
+  "keywords": [
     "workflow",
     "boilerplate",
     "test",
@@ -39,23 +39,22 @@
     "requirejs"
   ],
   "dependencies": {
-    "babel": "^6.0.15",
+    "babel": "^5.8.29",
     "babel-plugin-flow-comments": "^1.0.9",
     "exenv": "^1.2.0",
     "rimraf": "^2.4.3"
   },
   "devDependencies": {
+    "babel-core": "^6.0.20",
     "babel-eslint": "^4.1.3",
     "babel-loader": "^6.0.1",
-    "babel-core":   "^6.0.0",
-    "babel-preset-es2015": "~6.0.12",   
     "babel-plugin-transform-es2015-arrow-functions": "6.0.14",
+    "babel-preset-es2015": "^6.0.15",
     "chai": "^3.4.0",
     "coveralls": "^2.11.4",
     "eslint": "^1.8.0",
-    "eslint-plugin-react": "^3.3.1",    
+    "eslint-plugin-react": "^3.3.1",
     "flow-bin": "^0.17.0",
-    "uglify-loader": "^1.2.0",    
     "inject-loader": "^2.0.1",
     "isparta-loader": "^1.0.0",
     "karma": "^0.13.14",
@@ -73,9 +72,9 @@
     "phantomjs": "^1.9.18",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
+    "uglify-loader": "^1.2.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },
   "engine": "node >= 4.0.0"
 }
-
