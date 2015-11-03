@@ -1,8 +1,9 @@
 language: node_js
 
 node_js:
-  - "4"
-  
+  - '4'
+  - 'stable'
+   
 # Use container-based Travis infrastructure.
 sudo: false
 
@@ -15,6 +16,8 @@ before_install:
 
 script:
   - npm run lint
+  - npm run prepublish
+  - npm run test-ie
   - npm run test-coverage
   # Upload to coveralls, but don't _fail_ if coveralls is down.
   - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"

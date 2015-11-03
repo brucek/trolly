@@ -1,8 +1,8 @@
 {
-  "name": "Trolly",
-  "version": "0.0.1",
+  "name": "trolly",
+  "version": "0.0.2",
   "description": "Isomorphic boilerplate for a library written in ES2015 for Node and the browser.",
-  "main": "src/index.js",
+  "main": "./dist/trolly.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kflash/trolly.git"
@@ -19,10 +19,12 @@
     "test-ie": "karma start karma.conf.ie.js",
     "test-dev": "karma start --no-single-run --auto-watch"
   },
+  "author": "Kenny Flashlight",
   "license": "MIT",
     "keywords": [
     "workflow",
     "boilerplate",
+    "test",
     "ES2015",
     "Babel",
     "Babel 6",
@@ -56,24 +58,22 @@
     "inject-loader": "^2.0.1",
     "isparta-loader": "^1.0.0",
     "karma": "^0.13.14",
-    "karma-babel-preprocessor": "^5.2.1",
+    "karma-babel-preprocessor": "^6.0.1",
     "karma-coverage": "^0.5.3",
     "karma-ie-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
-    "karma-mocha-reporter": "^1.0.2",
-    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-phantomjs-launcher": "^0.2.1",
     "karma-phantomjs-shim": "^1.0.0",
-    "karma-sinon-chai": "^1.0.0",
+    "karma-sinon-chai": "^1.1.0",
     "karma-webpack": "^1.7.0",
-    "lodash": "^3.9.3",
+    "lodash": "^3.10.1",
     "mocha": "^2.3.3",
-    "node-libs-browser": "^0.5.2",
-    "nodemon": "^1.4.1",
-    "object-assign": "^3.0.0",
     "phantomjs": "^1.9.18",
-    "sinon": "^1.17.1",
+    "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
-  }
+  },
+  "engine": "node >= 4.0.0"
 }

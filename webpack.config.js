@@ -2,6 +2,10 @@ var path = require('path');
 var pkg = require('./package.json');
 var webpack = require('webpack');
 var PROD = JSON.parse(process.env.PROD_DEV || '0');
+
+ /**
+   * For production deployments, we want minified and optimized JS.
+   */
 var plugins = [
 	new webpack.optimize.DedupePlugin(),
 	new webpack.optimize.OccurenceOrderPlugin(),
