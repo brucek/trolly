@@ -1,4 +1,4 @@
-# A boilerplate written in ES2015 for Node and the browser.
+# A isomorphic boilerplate written in ES2015 for Node and the browser.
 
 [![Travis Status][trav_img]][trav_site]
 [![Coverage Status](https://coveralls.io/repos/Kflash/trolly/badge.svg?branch=master&service=github)](https://coveralls.io/github/Kflash/trolly?branch=master)

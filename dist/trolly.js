@@ -57,7 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 	
 	var _environment = __webpack_require__(3);
@@ -67,11 +67,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// test the environment
-	(0, _environment2.default)(); /* global __VERSION__ */
+	(0, _environment2.default)();
 	
-	exports.default = {
-		version: ("0.0.1")
-	};
+	exports.default = {};
 
 /***/ },
 /* 1 */

@@ -27,7 +27,7 @@ module.exports = {
   cache: true,
   debug: PROD ? false: true,
   devtool: 'source-map',
-  entry: path.join(__dirname, '/src/index.js'),
+  entry: path.join(__dirname, '/src'),
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'trolly.js',
