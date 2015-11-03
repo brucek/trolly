@@ -46,11 +46,13 @@ npm install
 
 ## Webpack tasks
 
-`webpack` - Build a non-mnified version if the code
+`webpack` - Build a non-mnified version of the code
 
 ## Customizing
 
-This boilerplate is easily customizable. Add your dependencies to the package.json file
+This boilerplate is easily customizable. Add your dependencies to the package.json file, and adjsut the `webpack` section inside the `karma.config.js` after your own needs. 
+
+Do not set anything inside the `webpack.config`. Everything are maintained by `karma`.
 
 [![Coverage Status](https://coveralls.io/repos/Kflash/trolly/badge.svg?branch=master&service=github)](https://coveralls.io/github/Kflash/trolly?branch=master)
 
