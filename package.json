@@ -2,7 +2,7 @@
   "name": "radium",
   "version": "0.0.1",
   "description": "Isomorphic boilerplate for a library written in ES2015 for Node and the browser.",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/formidablelabs/radium.git"
@@ -13,8 +13,7 @@
     "dist": "webpack && webpack --config=webpack.config.minified.js",
     "flow": "node -e \"process.exit(process.platform === 'win32' ? 0 : 1)\" || flow check",
     "lint": "eslint src && npm run flow",
-    "postinstall": "node -e \"require('fs').stat('lib', function(e,s){process.exit(e || !s.isDirectory() ? 1 : 0)})\" || npm run lib",
-    "prepublish": "npm test && npm run lint && npm run lib",
+    "prepublish": "npm test && npm run lint",
     "test": "karma start",
     "test-coverage": "karma start karma.conf.coverage.js",
     "test-ie": "karma start karma.conf.ie.js",
