@@ -2,7 +2,8 @@ language: node_js
 
 node_js:
   - "4"
-
+  - "5"
+  
 # Use container-based Travis infrastructure.
 sudo: false
 
@@ -10,6 +11,8 @@ before_install:
   # GUI for real browsers.
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  # Install webpack
+  - npm install -g webpack
 
 script:
   - npm run lint
