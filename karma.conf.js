@@ -1,15 +1,24 @@
 var path = require('path');
+
+// Karma configuration
+
 module.exports = function(config) {
     config.set({
+        // base path, that will be used to resolve files and exclude
         basePath: '',
+        // frameworks to use
         frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
+        // list of files / patterns to load in the browser
         files: [
             '__tests__/**/*.js'
         ],
+        // add webpack as preprocessor
         preprocessors: {
             '__tests__/**/*.js': ['webpack']
         },
         webpack: {
+            disableSha1: false, //defaults to false
+            disableLogging: false, //defaults to false
             cache: true,
             module: {
                 preLoaders: [{
@@ -18,7 +27,7 @@ module.exports = function(config) {
                     loader: 'babel',
                     query: {
                         cacheDirectory: true,
-                        presets: ['es2015']
+                        presets: ['es2015'] // Babel 6.x
                     }
                 }, {
                     test: /\.jsx?$/,
@@ -32,7 +41,7 @@ module.exports = function(config) {
                     loader: 'babel',
                     query: {
                         cacheDirectory: true,
-                        presets: ['es2015']
+                        presets: ['es2015'] // Babel 6.x
                     }
                 }]
             },
@@ -43,8 +52,9 @@ module.exports = function(config) {
             },
             plugins: []
         },
-
         webpackServer: {
+            // webpack-dev-server configuration
+            // webpack-dev-middleware configuration
             quiet: false,
             noInfo: true,
             stats: {
@@ -59,13 +69,28 @@ module.exports = function(config) {
             }
         },
         exclude: [],
+        // web server port
         port: 8080,
+        // level of logging
+        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
         logLevel: config.LOG_INFO,
+        // enable / disable colors in the output (reporters and logs)
         colors: true,
+        // enable / disable watching file and executing tests whenever any file changes
         autoWatch: false,
+        // Start these browsers, currently available:
+        // - Chrome
+        // - ChromeCanary
+        // - Firefox
+        // - Opera (has to be installed with `npm install karma-opera-launcher`)
+        // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
+        // - PhantomJS
+        // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
         browsers: ['PhantomJS'],
         reporters: ['mocha', 'coverage'],
         browserNoActivityTimeout: 30000,
+        // List plugins explicitly, since autoloading karma-webpack
+        // won't work here        
         plugins: [
             'karma-coverage',
             'karma-mocha',
@@ -78,7 +103,10 @@ module.exports = function(config) {
         coverageReporter: {
             type: 'text'
         },
+        // If browser does not capture in given timeout [ms], kill it
         captureTimeout: 100000,
+        // Continuous Integration mode
+        // if true, it capture browsers, run tests and exit
         singleRun: true
     });
 };
