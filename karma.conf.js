@@ -15,7 +15,10 @@ module.exports = function (config) {
         preLoaders: [{
           test: /\.jsx?$/,
           include: path.resolve('__tests__/'),
-          loader: 'babel'
+          loader: 'babel',
+		  query: {
+        presets: ['es2015']
+      }
         }, {
           test: /\.jsx?$/,
           include: path.resolve('src/'),
@@ -25,7 +28,10 @@ module.exports = function (config) {
         loaders: [{
           test: /\.js$|.jsx$/,
           exclude:  /node_modules/,
-          loader: 'babel'
+          loader: 'babel',
+		  query: {
+        presets: ['es2015']
+      }
         }]
       },
       resolve: {
