@@ -15,4 +15,4 @@ before_install:
 script:
   - npm run karma:server
   # Upload to coveralls, but don't _fail_ if coveralls is down.
-   - cat tmp/coverage/javascript/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"
+  - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"
