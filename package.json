@@ -1,6 +1,6 @@
 {
   "name": "trolly",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Isomorphic boilerplate for creating libraries. Using Babel 6.x, Webpack, Karma and ESLint",
   "devDependencies": {
     "babel": "^5.8.23",

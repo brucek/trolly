@@ -25,7 +25,7 @@
 * Production mode
 * Development mode
 * Pre-publishing to NPM
-* NodeJS v. 4.x support
+* Support NodeJS v. 4.x LTS and the 'stable' branch ( v.5x)
 * NPM v. 3.3.6 support
 
 ## Basic guide
@@ -57,6 +57,14 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 * `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
 
 
+## Unit tests
+
+Units tests are done in the background and visible in the cli together with the generated coverage report.
+
+## Linting
+
+This boilerplate uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
+
 ## Installation
 
 Download the package, and run this from the command line:
@@ -65,13 +73,15 @@ Download the package, and run this from the command line:
 npm install 
 ```
 
-## Unit tests
+## Development server
 
-Units tests are done in the background and visible in the cli together with the generated coverage report.
+Included with Trolly is a development server, but you need to customize it yourself to get it usefull.
 
-## Linting
+Start the server with `npm run dev-server` and open port 5000.
 
-This boilerplate uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
+All customizing has to be done in the `webpack-dev-server.js` file.
+
+The `index.html` are located in the root.
 
 ## Customizing
 
