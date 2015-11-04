@@ -39,13 +39,23 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 ## npm Scripts
 
 * `npm run lint` - Lint the source and unit tests
-* `npm run dist` - Build a distributable version of the library
-* `npm run flow` - Flow comments
-* `npm run prepublish` - prepublish to NPM
-* `npm run test` - Runs the unit tests
-* `npm run test-coverage` - Generate a coverage report
-* `npm run test-ie` - Runs the unit tests for older IE
-* `npm run test-dev` - Runs the unit tests and continuously run the unit tests as you make changes to the source and test files themselves
+* `npm run build` - Build a distributable version of the library
+* `npm run dev-server` - Run the development server ( port 5000)
+* `npm run prebuild` - clean up the dist folder
+* `npm run test` - Runs the unit tests with karma
+* `npm run test:browser` - Runs the unit tests with karma and Chrome
+* `npm run karma:server` - Runs the unit tests with karma and PhantomJS
+* `npm run karma:watch` - Runs the unit tests with karma tests and continuously run the unit tests as you make changes to the source and test files themselves
+* `npm run coverage` - Generate a coverage report
+* `npm run spec` - Runs the unit tests with Mocha
+* `npm run spec:watch` - Runs the unit tests with Mocha and continuously run the unit tests as you make changes to the source and test files themselves
+
+* `npm run packages` - Shows all installed dependencies
+* `npm run package:purge` - Remove all dependencies
+* `npm run package:reinstall` - Reinstall all dependencies
+* `npm run package:updates` - Generate a list overview for newer dependencies
+* `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
+
 
 ## Installation
 
