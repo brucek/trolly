@@ -1,5 +1,4 @@
-**/webpack-stats.json
-coverage
-lib
+.idea
 node_modules
-npm-debug.log
+dist
+tmp

@@ -1,13 +1,8 @@
 const path = require('path');
-const pkg = require('./package.json');
 const webpack = require('webpack');
-const PROD = JSON.parse(process.env.PROD_DEV || '0');
+const pkg = require('./package.json');
 
- /**
-   * For production deployments, we want minified and optimized JS.
-   */
 const plugins = [
-	new webpack.optimize.DedupePlugin(),
 	new webpack.optimize.OccurenceOrderPlugin(),
 	new webpack.DefinePlugin({
 		'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -15,61 +10,57 @@ const plugins = [
 	})
 ];
 
-if (PROD) {
-	plugins.push(
-		new webpack.optimize.UglifyJsPlugin({
-			minimize: true,
-			compressor: {
-				screw_ie8: true,
-				warnings: false
-			}
-		})
-	);
+if (process.env.NODE_ENV === 'production') {
+  plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        screw_ie8: true,
+        warnings: false
+      }
+    })
+  );
 }
 
 module.exports = {
-  cache: true,
-  debug: PROD ? false: true,
-  devtool: 'source-map',
-  disableSha1: false, //defaults to false
-  disableLogging: false, //defaults to false
-  entry: path.join(__dirname, '/src'),
+  entry: {
+      main: './src'
+    },
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'trolly.js',
-    library: 'trolly',
     libraryTarget: 'umd',
-	publicPath: 'http://localhost:8080/'
+	library: 'trolly'
+  },
+
+  cache: true,
+  debug: true,
+
+  plugins: [
+     new webpack.DefinePlugin({
+      'process.env': {
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
+      }
+    }),
+    new webpack.NoErrorsPlugin()
+  ],
+  resolve: {
+    extensions: ['', '.js']
   },
   module: {
-                preLoaders: [{
-                    test: /\.jsx?$/,
-                    include: path.resolve('__tests__/'),
-                    loader: 'babel',
-                    query: {
-                        cacheDirectory: true,
-                       // presets: ['es2015'] // Babel 6.x
-                    }
-                }, {
-                    test: /\.jsx?$/,
-                    include: path.resolve('src/'),
-                    exclude: /(__tests__)/,
-                    loader: 'isparta?{babel: {stage: 0}}',
-                }],
-                loaders: [{
-                    test: /\.js$|.jsx$/,
-                    exclude: /node_modules/,
-                    loader: 'babel',
-                    query: {
-                        cacheDirectory: true,
-                        presets: ['es2015'] // Babel 6.x
-                    }
-                }]
-            },
-            resolve: {
-                root: [__dirname],
-                modulesDirectories: ['node_modules', 'src'],
-                extensions: ['', '.js', '.jsx']
-            },
-	plugins: plugins
-}
+	   preLoaders: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader'
+        }
+      ],
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['babel-loader'],
+        include: path.join(__dirname, 'src'),
+        exclude: /(node_modules)/
+      }
+    ]
+  }
+};

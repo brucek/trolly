@@ -1,6 +1,5 @@
-import environment from './environment';
+import foo from './foo';
 
-// test the environment
-environment();
+foo();
 
 export default {};

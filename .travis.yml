@@ -2,6 +2,7 @@ language: node_js
 
 node_js:
   - '4'
+  - 'stable'
   
 # Use container-based Travis infrastructure.
 sudo: false
@@ -10,12 +11,8 @@ before_install:
   # GUI for real browsers.
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  # Install webpack
-  - npm install -g webpack
 
 script:
-  - npm run lint
-  - npm run prepublish
-  - npm run test-coverage
+  - npm run karma:server
   # Upload to coveralls, but don't _fail_ if coveralls is down.
   - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"

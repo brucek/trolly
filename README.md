@@ -25,7 +25,7 @@
 * Production mode
 * Development mode
 * Pre-publishing to NPM
-* NodeJS v. 4.x support
+* Support NodeJS v. 4.x LTS and the 'stable' branch ( v.5x)
 * NPM v. 3.3.6 support
 
 ## Basic guide
@@ -39,13 +39,31 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 ## npm Scripts
 
 * `npm run lint` - Lint the source and unit tests
-* `npm run dist` - Build a distributable version of the library
-* `npm run flow` - Flow comments
-* `npm run prepublish` - prepublish to NPM
-* `npm run test` - Runs the unit tests
-* `npm run test-coverage` - Generate a coverage report
-* `npm run test-ie` - Runs the unit tests for older IE
-* `npm run test-dev` - Runs the unit tests and continuously run the unit tests as you make changes to the source and test files themselves
+* `npm run build` - Build a distributable version of the library
+* `npm run dev-server` - Run the development server ( port 5000)
+* `npm run prebuild` - clean up the dist folder
+* `npm run test` - Runs the unit tests with karma
+* `npm run test:browser` - Runs the unit tests with karma and Chrome
+* `npm run karma:server` - Runs the unit tests with karma and PhantomJS
+* `npm run karma:watch` - Runs the unit tests with karma tests and continuously run the unit tests as you make changes to the source and test files themselves
+* `npm run coverage` - Generate a coverage report
+* `npm run spec` - Runs the unit tests with Mocha
+* `npm run spec:watch` - Runs the unit tests with Mocha and continuously run the unit tests as you make changes to the source and test files themselves
+
+* `npm run packages` - Shows all installed dependencies
+* `npm run package:purge` - Remove all dependencies
+* `npm run package:reinstall` - Reinstall all dependencies
+* `npm run package:updates` - Generate a list overview for newer dependencies
+* `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
+
+
+## Unit tests
+
+Units tests are done in the background and visible in the cli together with the generated coverage report.
+
+## Linting
+
+This boilerplate uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
 
 ## Installation
 
@@ -55,13 +73,15 @@ Download the package, and run this from the command line:
 npm install 
 ```
 
-## Unit tests
+## Development server
 
-Units tests are done in the background and visible in the cli together with the generated coverage report.
+Included with Trolly is a development server, but you need to customize it yourself to get it usefull.
 
-## Linting
+Start the server with `npm run dev-server` and open port 5000.
 
-This boilerplate uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
+All customizing has to be done in the `webpack-dev-server.js` file.
+
+The `index.html` are located in the root.
 
 ## Customizing
 
