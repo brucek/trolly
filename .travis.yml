@@ -10,8 +10,6 @@ before_install:
   # GUI for real browsers.
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  # Install webpack
-  - npm install -g webpack
 
 script:
   - npm run karma

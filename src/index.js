@@ -1,5 +1,5 @@
-import jiesa from './jiesa';
+import foo from './foo';
 
-jiesa();
+foo();
 
 export default {};
