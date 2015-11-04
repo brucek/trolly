@@ -1,6 +1,5 @@
-import environment from './environment';
+import jiesa from './jiesa';
 
-// test the environment
-environment();
+jiesa();
 
 export default {};
