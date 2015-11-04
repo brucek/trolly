@@ -14,9 +14,6 @@ before_install:
   - npm install -g webpack
 
 script:
-   - npm run karma
-  #- npm run lint
-#  - npm run prepublish
-#  - npm run test-coverage
+  - npm run karma
   # Upload to coveralls, but don't _fail_ if coveralls is down.
-  - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"
+  # - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"
