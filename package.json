@@ -1,7 +1,7 @@
 {
   "name": "trolly",
-  "version": "0.1.0",
-  "description": "A dummy project on how to integrate React and Webpack in a Web project",
+  "version": "0.0.4",
+  "description": "Isomorphic boilerplate for creating libraries. Using Babel 6.x, Webpack, Karma and ESLint",
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-core": "^5.8.23",
@@ -71,9 +71,9 @@
     "test:browser",
     "build"
   ],
-  "repository": {
+ "repository": {
     "type": "git",
-    "url": "git+https://github.com/whichdigital/webpack-react-workflow.git"
+    "url": "https://github.com/kflash/trolly.git"
   },
   "keywords": [
     "Webpack",
@@ -87,16 +87,8 @@
     "es2015",
     "es6"
   ],
-  "author": "Ahmet Katranci (https://github.com/katranci)",
-  "contributors": [
-    "Chris Kobrzak (https://github.com/chris-kobrzak)",
-    "Jacob Walton (https://github.com/jacobwalton)",
-    "Rob Parsons (https://github.com/rob-parsons)",
-    "Edmond Kojumdgian (https://github.com/edmondko)"
-  ],
+ "author": "Kenny Flashlight",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/whichdigital/webpack-react-workflow/issues"
-  },
-  "homepage": "https://github.com/whichdigital/webpack-react-workflow#readme"
+ "bugs": "https://github.com/kflash/trolly/issues",
+  "homepage": "https://github.com/kflash/trolly",
 }
