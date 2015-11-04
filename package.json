@@ -63,7 +63,7 @@
     "karma:server": "npm run karma -- --browsers=PhantomJS",
     "karma:watch": "npm run karma -- --auto-watch --no-single-run",
 	
-	"spec": "mocha ./__test__/**/*.spec.js --reporter spec --timeout 15000 --bail --require ./__test__/_lib/bootstrap.js",
+	"spec": "mocha ./__tests__/**/*.spec.js --reporter spec --timeout 15000 --bail --require ./__tests__/_lib/bootstrap.js",
 	"spec:watch": "npm run spec -- -w"
 	
   },

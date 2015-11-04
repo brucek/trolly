@@ -21,7 +21,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'spec/**/*_spec.js'
+      '__tests__/**/*.spec.js'
     ],
 
 
@@ -32,7 +32,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'spec/**/*_spec.js': ['webpack', 'sourcemap']
+      '__tests__/**/*.spec.js': ['webpack', 'sourcemap']
     },
 
     webpack: {
@@ -42,7 +42,7 @@ module.exports = function(config) {
       eslintrcPath: './_test.eslintrc',
       module: {
         preLoaders: [
-          { test: /\.jsx?$/, loader: 'isparta', exclude: /\/(spec|node_modules)\// },
+          { test: /\.jsx?$/, loader: 'isparta', exclude: /\/(__tests__|node_modules)\// },
           { test: /\.jsx?$/, loader: 'eslint', exclude: /(node_modules)/ }
         ],
         loaders: [
