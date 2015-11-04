@@ -66,10 +66,13 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['progress', 'coverage'],
 
-    coverageReporter: {
-      type: 'text',
-	  dir: 'tmp/coverage',
-      subdir: 'javascript'
+     coverageReporter: {
+      reporters: [{
+        type: 'text'
+      }, {
+        type: 'lcovonly',
+        subdir: '.'
+      }]
     },
     
 	customLaunchers: {
