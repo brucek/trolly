@@ -33,7 +33,7 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 * `npm run test:browser` - Runs the unit tests with karma and Chrome once
 * `npm run test:chrome` - Runs the unit tests with karma and Chrome once
 * `npm run test:firefox` - Runs the unit tests with karma and Firefox once
-* `npm run test:firefox` - Runs the unit tests with karma and Internet Explorer once
+* `npm run test:ie` - Runs the unit tests with karma and Internet Explorer once
 * `npm run test:legacy` - Runs the unit tests with karma and Internet Explorer 9.0 once
 * `npm run karma:server` - Runs the unit tests with karma and PhantomJS once
 * `npm run karma:watch` - Run Karma tests & watch files for changes
@@ -79,6 +79,8 @@ npm install
 ## Customizing
 
 This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
+
+For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the bootstrap.js in the __tests__/setup/bootstrap.js
 
 [trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
 [trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master
