@@ -53,7 +53,7 @@ To keep watching your test suites that you are working on, simply do `run npm ka
 
 ## Browser Tests
 
-The browser spec runner can be opened in a browser to run your tests. For it to work, you must first run `npm run mocha:server`, and
+The browser spec runner can be opened in a browser to run your tests. For it to work, you must first run `npm run mocha:browser`, and
 then open port 8080 in your browser. Example: `localhost::8080` 
 
 ## Coveralls
@@ -74,9 +74,7 @@ npm install
 
 ## Customizing
 
-This boilerplate is easily customizable. Add your dependencies to the package.json file, and adjsut the `webpack` section inside the `karma.config.js` after your own needs. 
-
-Do not set anything inside the `webpack.config`. Everything are maintained by `karma`.
+This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
 
 [trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
 [trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master

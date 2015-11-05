@@ -47,9 +47,8 @@
 	
   },
   "scripts": {
-	"prebuild": "rimraf ./dist", 
-    "build": "webpack --no-minimize",
-	"postbuild": "webpack -p -d",
+	"build": "rimraf dist && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --profile --colors",
+	"postbuild": "webpack",
     "clean": "rm -fr tmp/coverage/javascript/* && rm -fr dist/*",
 	"start": "nodemon --exec babel-node --stage 0 -- ./src/server.js --compilers js:babel/register",
 	"coverage": "karma start karma.conf.js",
@@ -59,14 +58,12 @@
     "package:reinstall": "npm run package:purge && npm install",
     "package:updates": "./node_modules/.bin/ncu",
     "package:upgrade": "npm run package:updates -u",
-	
-    "karma": "karma start",
+    "karma": "./node_modules/.bin/karma start",
     "karma:browser": "karma start --single-run",
 	"karma:server": "npm run karma -- --browsers=PhantomJS",
     "karma:watch": "npm run karma -- --auto-watch --no-single-run",
-
 	"mocha:browser": "webpack-dev-server --config webpack.mocha.config.js --progress --colors --hot --inline ",
-	"mocha:server": "mocha ./__tests__/bootstrap.js --compilers js:babel-core/register  --reporter spec --timeout 15000 --bail --require ./__tests__/setup/bootstrap.js",
+    "mocha:server": "mocha ./__tests__/**/*.spec.js --compilers js:babel-core/register  --reporter spec --timeout 15000 --bail --require ./__tests__/setup/bootstrap.js",
 	"mocha:watch": "npm run mocha:server -- -watch"
 	
   },
