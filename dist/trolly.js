@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["Inferno"] = factory();
+		exports["trolly"] = factory();
 	else
-		root["Inferno"] = factory();
+		root["trolly"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -44,7 +44,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://localhost:8080/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -56,39 +56,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(1)['default'];
-	
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
 	
-	var _foo = __webpack_require__(2);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _foo = __webpack_require__(1);
 	
 	var _foo2 = _interopRequireDefault(_foo);
 	
 	(0, _foo2['default'])();
-	
-	document.createElement('div');
 	
 	exports['default'] = {};
 	module.exports = exports['default'];
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	exports["default"] = function (obj) {
-	  return obj && obj.__esModule ? obj : {
-	    "default": obj
-	  };
-	};
-	
-	exports.__esModule = true;
-
-/***/ },
-/* 2 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -100,7 +84,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function a() {
 	  return abc;
-	};
+	}
+	
 	exports["default"] = a;
 	module.exports = exports["default"];
 
