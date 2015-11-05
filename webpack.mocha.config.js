@@ -1,17 +1,8 @@
-var path = require('path');
-var pkg = require('./package.json');
-var webpack = require('webpack');
-var plugins = [
-	new webpack.DefinePlugin({
-		__VERSION__: JSON.stringify(pkg.version)
-	})
-];
-
-var srcDir = path.join(__dirname, 'src');
-var testDir = path.join(__dirname, '__tests__');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-	entry: 'mocha!' + testDir + '/bootstrap.js',
+	entry: 'mocha!' + path.join(__dirname, '__tests__'); + '/bootstrap.js',
 	cache: true,
 	debug: true,
 	devtool: 'source-map',
@@ -21,7 +12,7 @@ module.exports = {
 		publicPath: 'http://localhost:8080/'
 	},
 	devServer: {
-		contentBase: testDir,
+		contentBase: path.join(__dirname, '__tests__');,
 		noInfo: true,
 		hot: true,
 		inline: true
@@ -30,11 +21,11 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				include: [srcDir, testDir],
+				include: [path.join(__dirname, 'src'), path.join(__dirname, '__tests__')],
 				exclude: ['node_modules'],
 				loader: 'babel-loader'
 			}
 		]
 	},
-	plugins: plugins
+	plugins: []
 };
