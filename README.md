@@ -6,27 +6,17 @@
 
 ## Features
 
-* Babel 6.x support
+* Babel for ES6 and ES7 magic
 * Mocha-Chai-Sinon testing stack
 * Support for ES2015 in the unit tests
 * Unit tests that work in Node and in the browser
-* Unit tests for older IE
-* Unit tests for production mode
-* Unit tests for development mode with auto-watch
-* Export as ES5 & UMD
 * Coverage report on the command line
-* Flow comments
-* Works both server and client side
-* Karma
-* Webpack
-* Webpack server for development
-* Eslint
-* Execution environment ala React
-* Production mode
-* Development mode
-* Pre-publishing to NPM
+* Karma and mocha to allow writing unit tests for the project.
+* Webpack for bundling
+* Webpack Dev Middleware
+* Webpack Hot Middleware
+* Eslint to maintain a consistent code style
 * Support NodeJS v. 4.x LTS and the 'stable' branch ( v.5x)
-* NPM v. 3.3.6 support
 
 ## Basic guide
 
@@ -39,27 +29,38 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 ## npm Scripts
 
 * `npm run lint` - Lint the source and unit tests
-* `npm run build` - Build a distributable version of the library
+* `npm run build` - Build a production version of the library
+* `npm run postbuild` - Build a development version of the library
 * `npm run dev-server` - Run the development server ( port 5000)
-* `npm run prebuild` - clean up the dist folder
-* `npm run test` - Runs the unit tests with karma
 * `npm run test:browser` - Runs the unit tests with karma and Chrome
 * `npm run karma:server` - Runs the unit tests with karma and PhantomJS
 * `npm run karma:watch` - Runs the unit tests with karma tests and continuously run the unit tests as you make changes to the source and test files themselves
+* `npm run mocha:browser` - Runs the unit tests together with the spec runner ( open port 8080 in the browser)
+* `npm run mocha:server` - Runs the unit tests on the server
+* `npm run mocha:watch` - Runs the unit tests on the server, and continuously run the unit tests as you make changes to the source and test files themselves
 * `npm run coverage` - Generate a coverage report
-* `npm run spec` - Runs the unit tests with Mocha
-* `npm run spec:watch` - Runs the unit tests with Mocha and continuously run the unit tests as you make changes to the source and test files themselves
-
 * `npm run packages` - Shows all installed dependencies
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
 * `npm run package:updates` - Generate a list overview for newer dependencies
 * `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
 
-
 ## Unit tests
 
-Units tests are done in the background and visible in the cli together with the generated coverage report.
+This project uses Mocha to run your unit tests, it uses Karma as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.).
+
+To run the tests in the project, just simply `run npm karma:browser`. If you have Chrome installed, it will be automatically launched as a test service for you. PhantomJs are used to run karma server side. Just simply `run npm karma:server`
+
+To keep watching your test suites that you are working on, simply do `run npm karma:watch` for client side. Or `run npm mocha:server` to keep watching the unit tests on the server.
+
+## Browser Tests
+
+The browser spec runner can be opened in a browser to run your tests. For it to work, you must first run `npm run mocha:server`, and
+then open port 8080 in your browser. Example: `localhost::8080` 
+
+## Coveralls
+
+This library is set up to integrate with Coveralls, and will automaticly publish your coverage report if you have created an account for your repo at **coveralls.io**
 
 ## Linting
 
@@ -73,16 +74,6 @@ Download the package, and run this from the command line:
 npm install 
 ```
 
-## Development server
-
-Included with Trolly is a development server, but you need to customize it yourself to get it usefull.
-
-Start the server with `npm run dev-server` and open port 5000.
-
-All customizing has to be done in the `webpack-dev-server.js` file.
-
-The `index.html` are located in the root.
-
 ## Customizing
 
 This boilerplate is easily customizable. Add your dependencies to the package.json file, and adjsut the `webpack` section inside the `karma.config.js` after your own needs. 
@@ -91,4 +82,14 @@ Do not set anything inside the `webpack.config`. Everything are maintained by `k
 
 [trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
 [trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master
+
+## FAQ
+
+###Help! It doesn't work on Windows! What do I do?
+Just take a cup of coffee and relax. It works!
+
+### What's the browser compatibility?
+As a rule of thumb, this transpiler works best in IE9+. You can support IE8 by limiting yourself to a subset of ES2015 features. The Babel caveats page does an excellent job at explaining the nitty gritty details of supporting legacy browsers.
+
+
 
