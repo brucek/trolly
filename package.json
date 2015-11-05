@@ -60,6 +60,7 @@
 	"karma:chrome": "npm run karma -- --browsers=Chrome",
 	"karma:ie": "npm run karma -- --browsers=IE",
     "karma:legacy": "karma start karma.conf.legacy.js",
+    "karma:all": "npm run karma -- --browsers=PhantomJS,Chrome,Firefox",
 	"karma:server": "npm run karma -- --browsers=PhantomJS",
     "karma:watch": "npm run karma -- --auto-watch --no-single-run",
 	"mocha:browser": "webpack-dev-server --config webpack.mocha.config.js --progress --colors --hot --inline ",

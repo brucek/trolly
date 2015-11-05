@@ -3,9 +3,12 @@ const path = require('path');
 
 module.exports = {
     entry: path.join(__dirname, 'src'),
-    cache: true,
-    devtool: 'source-map',
-    output: {
+    cache: false,
+	debug:false,
+    devtool: false,
+    hot:false,
+	build:true,
+	output: {
         path: path.join(__dirname, 'dist'),
         filename: 'trolly.min.js',
         libraryTarget: 'umd',
@@ -16,19 +19,22 @@ module.exports = {
             test: /\.js$/,
             exclude: ['node_modules'],
             include: path.join(__dirname, 'src'),
-            loaders: ['babel-loader', 'eslint-loader']
+            loader: 'babel-loader'
         }]
     },
     plugins: [
         // optimizations
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({
+			output: {
+			   comments:false
+			},
             compress: {
                 warnings: false,
 				screw_ie8: true
-            },
-            minimize: true
+            }
         }),
+    new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     })

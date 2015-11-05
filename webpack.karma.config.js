@@ -3,9 +3,10 @@ const path = require('path');
 
 module.exports = {
     cache: true,
-    output: {
-        path: path.join(__dirname, 'dist'),
-    },
+	hot:false,
+    output: {},
+    entry: {},
+	devtool: 'inline-source-map',
     module: {
         preLoaders: [{
             test: /\.jsx?$/,

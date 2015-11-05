@@ -28,14 +28,15 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 ## Workflow
 
 * `npm run build` - Build task that generates minified scripts
-* `npm run prepublish` - Lint the source, run unit tests, and generates minified scripts
+* `npm run prepublish` - Lint the source, run unit tests, and generate a minified script
 * `npm run lint` - Lint the source and unit tests
 * `npm run clean` - Remove the coverage report and the *dist* folder
-* `npm run test:browser` - Runs the unit tests with karma and Chrome once
-* `npm run test:chrome` - Runs the unit tests with karma and Chrome once
-* `npm run test:firefox` - Runs the unit tests with karma and Firefox once
-* `npm run test:ie` - Runs the unit tests with karma and Internet Explorer once
-* `npm run test:legacy` - Runs the unit tests with karma and Internet Explorer 9.0 once
+* `npm run karma:browser` - Runs the unit tests with karma and Chrome once
+* `npm run karma:chrome` - Runs the unit tests with karma and Chrome once
+* `npm run karma:firefox` - Runs the unit tests with karma and Firefox once
+* `npm run karma:ie` - Runs the unit tests with karma and Internet Explorer once
+* `npm run karma:legacy` - Runs the unit tests with karma and Internet Explorer 9.0 once
+* `npm run karma:all` - Runs the unit tests with karma and Chrome, Firefox and Internet Exploreronce
 * `npm run karma:server` - Runs the unit tests with karma and PhantomJS once
 * `npm run karma:watch` - Run Karma tests & watch files for changes
 * `npm run mocha:browser` - Runs the unit tests together with the spec runner ( open port 8080 in the browser)
