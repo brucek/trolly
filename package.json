@@ -1,6 +1,6 @@
 {
   "name": "trolly",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Isomorphic boilerplate for creating libraries. Using Babel 6.x, Webpack, Karma and ESLint",
   "dependencies": {},
   "devDependencies": {
@@ -45,7 +45,6 @@
     "sinon-chai": "^2.8.0",
 	"lodash": "^3.10.1",
 	"nodemon": "^1.3.7"
-	
   },
   "scripts": {
 	"build": "rimraf dist && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --profile --colors",
@@ -68,8 +67,9 @@
     "karma:watch": "npm run karma -- --auto-watch --no-single-run",
 	"mocha:browser": "webpack-dev-server --config webpack.mocha.config.js --progress --colors --hot --inline ",
     "mocha:server": "mocha ./__tests__/**/*.spec.js --compilers js:babel-core/register  --reporter spec --timeout 15000 --bail --require ./__tests__/setup/bootstrap.js",
-	"mocha:watch": "npm run mocha:server -- -watch"
-	
+	"mocha:watch": "npm run mocha:server -- -watch",
+	"test": "npm run mocha:server",
+    "prepublish": "npm run lint && npm test && npm run build"
   },
   "pre-commit": [
     "test",
@@ -83,7 +83,9 @@
   },
   "keywords": [
     "Webpack",
+    "workflow",
     "boilerplate",
+    "test",
     "node",
     "karma",
     "mocha",
@@ -91,7 +93,18 @@
     "eslint",
     "isparta",
     "es2015",
-    "es6"
+    "es6",
+	"ES2015",
+	"Babel",
+    "Babel 6",
+    "boilerplate",
+    "scaffold",
+    "template",
+    "skeleton",
+    "karma",
+    "mocha",
+    "chai",
+    "sinon"
   ],
    "author": {
     "name": "Kenny Flashlight",
