@@ -2,6 +2,6 @@ import foo from './foo';
 
 foo();
 
-//document.createElement('div');
+// document.createElement('div');
 
 export default {};
