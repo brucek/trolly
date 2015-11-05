@@ -28,6 +28,7 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 ## Workflow
 
 * `npm run build` - Build task that generates minified scripts
+* `npm run prepublish` - Lint the source, run unit tests, and generates minified scripts
 * `npm run lint` - Lint the source and unit tests
 * `npm run clean` - Remove the coverage report and the *dist* folder
 * `npm run test:browser` - Runs the unit tests with karma and Chrome once
@@ -80,10 +81,7 @@ npm install
 
 This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
 
-For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the bootstrap.js in the __tests__/setup/bootstrap.js
-
-[trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
-[trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master
+For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `bootstrap.js` file located inside the `__tests__/setup folder`
 
 ## FAQ
 
@@ -94,6 +92,8 @@ Just take a cup of coffee and relax. It works!
 As a rule of thumb, this transpiler works best in IE9+. You can support IE8 by limiting yourself to a subset of ES2015 features. The Babel caveats page does an excellent job at explaining the nitty gritty details of supporting legacy browsers.
 
 ## License
-MIT Â© [Kenny Flashlight](https://github.com/kflash)
+MIT © [Kenny Flashlight](https://github.com/kflash)
 
+[trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
+[trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master
 

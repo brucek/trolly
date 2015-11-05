@@ -4,17 +4,15 @@
   "description": "Isomorphic boilerplate for creating libraries. Using Babel 6.x, Webpack, Karma and ESLint",
   "dependencies": {},
   "devDependencies": {
-    "babel": "^5.8.23",
-    "babel-core": "^5.8.23",
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
     "babel-loader": "^5.3.2",
     "babel-eslint": "^4.1.4",
-    "chai": "^3.4.0",
     "eslint": "^1.8.0",
     "eslint-loader": "^1.0.0",
-    "eslint-plugin-react": "^3.3.1",
     "eslint-plugin-babel": "^2.1.1",
     "eslint-plugin-mocha": "^1.0.0",
-    "http-server": "^0.8.5",
+    "eslint-plugin-react": "^3.7.1",
     "isparta-loader": "^1.0.0",
 	"karma": "^0.13.14",
     "karma-sinon": "^1.0.4",
@@ -36,7 +34,6 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1",
     "coveralls": "^2.11.4",
-	"pre-commit": "^1.1.2",
 	"rimraf": "^2.4.3",
     "npm-check-updates": "^2.2.0",
     "npm-shrinkwrap": "^200.4.0",
@@ -48,7 +45,7 @@
   },
   "scripts": {
 	"build": "rimraf dist && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --profile --colors",
-    "clean": "rm -fr tmp/coverage/javascript/* && rm -fr dist/*",
+    "clean": "rm -fr dist/*",
 	"start": "nodemon --exec babel-node --stage 0 -- ./src/server.js --compilers js:babel/register",
 	"coverage": "./node_modules/.bin/karma start karma.conf.js",
 	"lint": "eslint -c .eslintrc src api",
@@ -58,7 +55,7 @@
     "package:updates": "./node_modules/.bin/ncu",
     "package:upgrade": "npm run package:updates -u",
     "karma": "./node_modules/.bin/karma start",
-    "karma:browser": "./node_modules/.bin/karma start --single-run",
+    "karma:browser": "./node_modules/.bin/karma start --single-run --no-auto-watch",
 	"karma:firefox": "npm run karma -- --browsers=Firefox",
 	"karma:chrome": "npm run karma -- --browsers=Chrome",
 	"karma:ie": "npm run karma -- --browsers=IE",
@@ -71,12 +68,6 @@
 	"test": "npm run mocha:server",
     "prepublish": "npm run lint && npm test && npm run build"
   },
-  "pre-commit": [
-    "test",
-    "karma:browser",
-    "mocha:browser",
-    "build"
-  ],
  "repository": {
     "type": "git",
     "url": "https://github.com/kflash/trolly.git"
@@ -95,6 +86,7 @@
     "es2015",
     "es6",
 	"ES2015",
+	"es6",
 	"Babel",
     "Babel 6",
     "boilerplate",
@@ -103,6 +95,7 @@
     "skeleton",
     "karma",
     "mocha",
+	"istanbul",
     "chai",
     "sinon"
   ],

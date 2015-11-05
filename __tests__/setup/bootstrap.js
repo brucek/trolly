@@ -1,5 +1,5 @@
 /* eslint-disable */
 
-global.babel = require('babel-core/register')({ stage: 0 });
-global.expect = require('chai').expect;
+global.chai = require('chai');
 global.sinon = require('sinon');
+global.expect = global.chai.expect;

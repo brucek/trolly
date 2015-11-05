@@ -1,8 +1,6 @@
-const webpackConfig = require('./webpack.config.js');
-
-webpackConfig.entry = {}; // define an empty entry object (null won't work)
-
 // Karma configuration
+
+const webpackConfig = require('./webpack.karma.config.js');
 
 module.exports = function(config) {
     config.set({
@@ -30,7 +28,8 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            '__tests__/**/*.spec.js': ['webpack', 'sourcemap']
+            'src/**/*.js': [ 'webpack', 'coverage' ],
+			'__tests__/**/*.spec.js': ['webpack', 'sourcemap']
         },
 
         webpack: webpackConfig,
