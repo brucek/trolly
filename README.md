@@ -30,7 +30,6 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 * `npm run lint` - Lint the source and unit tests
 * `npm run build` - Build a production version of the library
 * `npm run postbuild` - Build a development version of the library
-* `npm run dev-server` - Run the development server ( port 5000)
 * `npm run test:browser` - Runs the unit tests with karma and Chrome
 * `npm run karma:server` - Runs the unit tests with karma and PhantomJS
 * `npm run karma:watch` - Runs the unit tests with karma tests and continuously run the unit tests as you make changes to the source and test files themselves
