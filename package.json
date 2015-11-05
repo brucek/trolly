@@ -47,9 +47,8 @@
 	
   },
   "scripts": {
-	"prebuild": "rimraf ./dist", 
-    "build": "webpack --no-minimize",
-	"postbuild": "webpack -p -d",
+	"build": "rimraf dist && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --profile --colors",
+	"postbuild": "webpack",
     "clean": "rm -fr tmp/coverage/javascript/* && rm -fr dist/*",
 	"start": "nodemon --exec babel-node --stage 0 -- ./src/server.js --compilers js:babel/register",
 	"coverage": "karma start karma.conf.js",
