@@ -13,6 +13,11 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 script:
+  - npm run package:upgrade
+  - npm run lint
+  - npm run build
   - npm run karma:server
+  - npm run mocha:server
+  
   # Upload to coveralls, but don't _fail_ if coveralls is down.
   - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"
