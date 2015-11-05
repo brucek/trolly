@@ -6,17 +6,16 @@
 
 ## Features
 
-* Babel for ES6 and ES7 magic
-* Mocha-Chai-Sinon testing stack
+* Babel for ES6 and ES7
+* Universal unit tests that work in Node and in the browser
 * Support for ES2015 in the unit tests
-* Unit tests that work in Node and in the browser
-* Coverage report on the command line
-* Karma and mocha to allow writing unit tests for the project.
 * Webpack for bundling
 * Webpack Dev Middleware
 * Webpack Hot Middleware
 * Eslint to maintain a consistent code style
-* Support NodeJS v. 4.x LTS and the 'stable' branch ( v.5x)
+* UMD pattern, which provides compatibility with the most popular script loaders, to the output.
+* Coverage report
+* Support NodeJS v. 4.x LTS and the *stable* branch ( v.5x)
 
 ## Basic guide
 
@@ -26,7 +25,7 @@ Run `webpack` to build a non-minified version of the library.
 
 Put your unit tests in the `__tests__` folder. The npm test command runs the tests using Node. 
 
-## npm Scripts
+## Workflow
 
 * `npm run lint` - Lint the source and unit tests
 * `npm run build` - Build a production version of the library
