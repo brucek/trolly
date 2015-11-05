@@ -13,7 +13,9 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 script:
+  # Upgrade package.json to latest packages
   - npm run package:upgrade
+  - npm run clean
   - npm run lint
   - npm run build
   - npm run karma:server
