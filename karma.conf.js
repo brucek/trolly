@@ -21,7 +21,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '__tests__/**/*.spec.js'
+      '__tests__/bootstrap.js'
     ],
 
     // list of files to exclude
@@ -31,7 +31,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '__tests__/**/*.spec.js': ['webpack', 'sourcemap']
+      '__tests__/bootstrap.js': ['webpack', 'sourcemap']
     },
 
     webpack: {
@@ -47,7 +47,19 @@ module.exports = function(config) {
         loaders: [
           { test: /\.js$/, loader: 'babel-loader', exclude: /(node_modules)/ }
         ]
-      }
+      },
+      resolve: {
+        modulesDirectories: [
+          'src',
+          'node_modules'
+        ],
+        extensions: ['', '.json', '.js']
+      },
+	  plugins: [],
+    webpackServer: {
+      noInfo: true
+    }
+	  
     },
     // test results reporter to use
     // possible values: 'dots', 'progress'
