@@ -1,8 +1,10 @@
-# A isomorphic boilerplate written in ES2015 for Node and the browser.
+# Isomorphic boilerplate written in ES2015 for Node and the browser.
 
 [![Travis Status][trav_img]][trav_site]
 [![Coverage Status](https://coveralls.io/repos/Kflash/trolly/badge.svg?branch=master&service=github)](https://coveralls.io/github/Kflash/trolly?branch=master)
 [![Dependency Status](https://david-dm.org/kflash/trolly.svg)](https://david-dm.org/kflash/trolly)
+
+> A boilerplate for creating isomorphic libraries using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint
 
 ## Features
 
@@ -10,12 +12,10 @@
 * Universal unit tests that work in Node and in the browser
 * Support for ES2015 in the unit tests
 * Webpack for bundling
-* Webpack Dev Middleware
-* Webpack Hot Middleware
 * Eslint to maintain a consistent code style
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * Coverage report
-* Support NodeJS v. 4.x LTS and the *stable* branch ( v.5x)
+* Node >= 4.x support
 
 ## Basic guide
 
@@ -27,10 +27,14 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 
 ## Workflow
 
-* `npm run lint` - Lint the source and unit tests
 * `npm run build` - Build a production version of the library
-* `npm run postbuild` - Build a development version of the library
+* `npm run lint` - Lint the source and unit tests
+* `npm run clean` - Remove the coverage report and the *dist* folder
 * `npm run test:browser` - Runs the unit tests with karma and Chrome
+* `npm run test:chrome` - Runs the unit tests with karma and Chrome
+* `npm run test:firefox` - Runs the unit tests with karma and Firefox
+* `npm run test:firefox` - Runs the unit tests with karma and Internet Explorer
+* `npm run test:legacy` - Runs the unit tests with karma and Internet Explorer 9.0
 * `npm run karma:server` - Runs the unit tests with karma and PhantomJS
 * `npm run karma:watch` - Runs the unit tests with karma tests and continuously run the unit tests as you make changes to the source and test files themselves
 * `npm run mocha:browser` - Runs the unit tests together with the spec runner ( open port 8080 in the browser)
