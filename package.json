@@ -34,6 +34,7 @@
     "sinon-chai": "^2.8.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1",
+    "coveralls": "^2.11.4",
 	"pre-commit": "^1.1.2",
 	"rimraf": "^2.4.3",
     "npm-check-updates": "^2.2.0",
@@ -49,17 +50,10 @@
 	"prebuild": "rimraf ./dist", 
     "build": "webpack --no-minimize",
 	"postbuild": "webpack -p -d",
-	
     "clean": "rm -fr tmp/coverage/javascript/* && rm -fr dist/*",
-
 	"start": "nodemon --exec babel-node --stage 0 -- ./src/server.js --compilers js:babel/register",
-	
 	"coverage": "karma start karma.conf.js",
 	"lint": "eslint src",
-	"prebuild": "rimraf ./dist",
-    "test": "karma start",
-	"test:browser": "karma start --single-run",
-    
 	"packages": "npm list --depth=0",
     "package:purge": "rm -rf node_modules",
     "package:reinstall": "npm run package:purge && npm install",
