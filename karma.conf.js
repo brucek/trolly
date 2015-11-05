@@ -1,4 +1,6 @@
-var webpackConf = require('./webpack.config.js');
+const webpackConfig = require('./webpack.config.js');
+
+webpackConfig.entry = {}; // define an empty entry object (null won't work)
 
 // Karma configuration
 
@@ -7,7 +9,6 @@ module.exports = function(config) {
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
-
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -32,49 +33,7 @@ module.exports = function(config) {
             '__tests__/**/*.spec.js': ['webpack', 'sourcemap']
         },
 
-        webpack: {
-            hot: false,
-            test: true,
-            devtool: 'inline-source-map',
-            eslintrcPath: './_test.eslintrc',
-            module: {
-                preLoaders: [{
-                    test: /\.js$/,
-                    loader: 'isparta?{babel: {stage: 0}}',
-                    exclude: ['__tests__', 'node_modules']
-                }, {
-                    test: /\.js$/,
-                    loader: 'eslint',
-                    exclude: ['node_modules'],
-                }],
-                loaders: [{
-                    test: /\.js$/,
-                    loader: 'babel-loader',
-                    exclude: /(node_modules)/
-                }]
-            },
-            resolve: {
-                modulesDirectories: [
-                    'src',
-                    'node_modules'
-                ],
-                extensions: ['', '.json', '.js']
-            },
-            plugins: [],
-            webpackServer: {
-                noInfo: true,
-                stats: {
-                    assets: false,
-                    hot: true,
-                    colors: true,
-                    version: false,
-                    hash: false,
-                    timings: false,
-                    chunks: false,
-                    chunkModules: false
-                }
-            }
-        },
+        webpack: webpackConfig,
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
