@@ -53,7 +53,7 @@
     "clean": "rm -fr tmp/coverage/javascript/* && rm -fr dist/*",
 	"start": "nodemon --exec babel-node --stage 0 -- ./src/server.js --compilers js:babel/register",
 	"coverage": "karma start karma.conf.js",
-	"lint": "eslint src",
+	"lint": "eslint -c .eslintrc src api",
 	"packages": "npm list --depth=0",
     "package:purge": "rm -rf node_modules",
     "package:reinstall": "npm run package:purge && npm install",
@@ -66,7 +66,7 @@
     "karma:watch": "npm run karma -- --auto-watch --no-single-run",
 
 	"mocha:browser": "webpack-dev-server --config webpack.mocha.config.js --progress --colors --hot --inline ",
-	"mocha:server": "mocha ./__tests__/**/*.spec.js --compilers js:babel-core/register  --reporter spec --timeout 15000 --bail --require ./__tests__/setup/bootstrap.js",
+	"mocha:server": "mocha ./__tests__/bootstrap.js --compilers js:babel-core/register  --reporter spec --timeout 15000 --bail --require ./__tests__/setup/bootstrap.js",
 	"mocha:watch": "npm run mocha:server -- -watch"
 	
   },
