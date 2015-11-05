@@ -1,6 +1,7 @@
 
-// Karma configuration
+var webpackConf = require('./webpack.config.js');
 
+// Karma configuration
 
 module.exports = function(config) {
   config.set({
@@ -18,12 +19,10 @@ module.exports = function(config) {
       'mocha'
     ],
 
-
     // list of files / patterns to load in the browser
     files: [
-      '__tests__/**/*.spec.js'
+      '__tests__/bootstrap.js'
     ],
-
 
     // list of files to exclude
     exclude: [
@@ -32,7 +31,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '__tests__/**/*.spec.js': ['webpack', 'sourcemap']
+      '__tests__/bootstrap.js': ['webpack', 'sourcemap']
     },
 
     webpack: {
@@ -42,25 +41,26 @@ module.exports = function(config) {
       eslintrcPath: './_test.eslintrc',
       module: {
         preLoaders: [
-          { test: /\.jsx?$/, loader: 'isparta', exclude: /\/(__tests__|node_modules)\// },
-          { test: /\.jsx?$/, loader: 'eslint', exclude: /(node_modules)/ }
+          { test: /\.js$/, loader: 'isparta', exclude: ['__tests__', 'node_modules'] },
+          { test: /\.js$/, loader: 'eslint', exclude: ['node_modules'], }
         ],
         loaders: [
-          { test: /\.jsx?$/, loader: 'babel', exclude: /(node_modules)/ }
+          { test: /\.js$/, loader: 'babel-loader', exclude: /(node_modules)/ }
         ]
       },
-	  webpackMiddleware: {
-      stats: {
-        colors: true,
-        assets: false,
-        chunks: false,
-        modules: false,
-        hash: false
-      }
+      resolve: {
+        modulesDirectories: [
+          'src',
+          'node_modules'
+        ],
+        extensions: ['', '.json', '.js']
+      },
+	  plugins: [],
+    webpackServer: {
+      noInfo: true
     }
+	  
     },
-
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
@@ -74,18 +74,6 @@ module.exports = function(config) {
         subdir: '.'
       }]
     },
-    
-	customLaunchers: {
-      PhantomJS_debug: {
-        base: 'PhantomJS',
-        debug: true
-      }
-    },
-
-    phantomjsLauncher: {
-      exitOnResourceError: true
-    },
-	
     // web server port
     port: 9876,
     captureTimeout: 60000,
@@ -94,11 +82,9 @@ module.exports = function(config) {
     // enable / disable colors in the output (reporters and logs)
     colors: true,
 
-
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
-
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,

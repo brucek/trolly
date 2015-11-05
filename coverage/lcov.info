@@ -1,5 +1,5 @@
 TN:
-SF:C:\xampp3\htdocs\trolly\__tests__\trolly.spec.js
+SF:C:\xampp3\htdocs\playground\__tests__\trolly.spec.js
 FN:3,_interopRequireDefault
 FN:9,(anonymous_2)
 FN:10,(anonymous_3)
@@ -22,7 +22,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:C:\xampp3\htdocs\trolly\src\index.js
+SF:C:\xampp3\htdocs\playground\src\index.js
 FN:7,_interopRequireDefault
 FNF:1
 FNH:1
@@ -39,7 +39,7 @@ BRF:4
 BRH:4
 end_of_record
 TN:
-SF:C:\xampp3\htdocs\trolly\src\foo.js
+SF:C:\xampp3\htdocs\playground\src\foo.js
 FN:8,a
 FNF:1
 FNH:1
