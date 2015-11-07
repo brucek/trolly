@@ -1,1 +1,3 @@
-Thanks for contributing!
+# Contributers to Rivatha
+
+We would love contributers!

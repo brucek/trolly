@@ -1,0 +1,10 @@
+{
+
+"ignore": [
+    "foo.js",
+    "bar/**/*.js"
+  ],
+  "presets": [
+    "es2015"
+  ]
+}

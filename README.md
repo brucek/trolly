@@ -28,21 +28,16 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 ## Workflow
 
 * `npm run build` - Build task that generates minified scripts
-* `npm run prepublish` - Lint the source, run unit tests, and generate a minified script
-* `npm run lint` - Lint the source and unit tests
+* `npm run precommit` - Run the unit tests,, and generate a minified script
+* `npm run clean` - Remove the `dist` folder
+* `npm run lint` - Lint the source
+* `npm run lint:tests` - Lint the unit tests
 * `npm run clean` - Remove the coverage report and the *dist* folder
-* `npm run karma:browser` - Runs the unit tests with karma and Chrome once
-* `npm run karma:chrome` - Runs the unit tests with karma and Chrome once
-* `npm run karma:firefox` - Runs the unit tests with karma and Firefox once
-* `npm run karma:ie` - Runs the unit tests with karma and Internet Explorer once
-* `npm run karma:legacy` - Runs the unit tests with karma and Internet Explorer 9.0 once
-* `npm run karma:all` - Runs the unit tests with karma and Chrome, Firefox and Internet Exploreronce
-* `npm run karma:server` - Runs the unit tests with karma and PhantomJS once
-* `npm run karma:watch` - Run Karma tests & watch files for changes
-* `npm run mocha:browser` - Runs the unit tests together with the spec runner ( open port 8080 in the browser)
-* `npm run mocha:server` - Runs the unit tests on the server once
-* `npm run mocha:watch` - Run Mocha tests & watch files for changes
-* `npm run coverage` - Run Isparta, a code coverage tool;
+* `npm run test` - Runs the unit tests with karma and Chrome once
+* `npm run test:browser` - Runs the unit tests for browser once
+* `npm run test:server` - Runs the unit tests on the server once
+* `npm run watch` - Run unit tests & watch files for changes
+* `npm run coveralls` - Run Isparta, a code coverage tool;
 * `npm run packages` - Shows all installed dependencies
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
@@ -53,14 +48,9 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 
 This project uses Mocha to run your unit tests, it uses Karma as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.).
 
-To run the tests in the project, just simply `run npm karma:browser`. If you have Chrome installed, it will be automatically launched as a test service for you. PhantomJs are used to run karma server side. Just simply `run npm karma:server`
+To run the tests in the project, just simply `run npm test:browser`. 
 
-To keep watching your test suites that you are working on, simply do `run npm karma:watch` for client side. Or `run npm mocha:server` to keep watching the unit tests on the server.
-
-## Browser Tests
-
-The browser spec runner can be opened in a browser to run your tests. For it to work, you must first run `npm run mocha:browser`, and
-then open port 8080 in your browser. Example: `localhost::8080` 
+To keep watching your test suites that you are working on, simply do `run npm test:watch`.
 
 ## Coveralls
 
@@ -82,7 +72,7 @@ npm install
 
 This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
 
-For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `bootstrap.js` file located inside the `__tests__/setup folder`
+For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `bootstrap.js` file located inside the `__setup__ folder`
 
 ## FAQ
 

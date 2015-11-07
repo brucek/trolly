@@ -1,5 +1,1 @@
-import foo from './foo';
-
-foo();
-
-export default {};
+export default function() {}
