@@ -5,9 +5,12 @@ import pkg from '../../package.json';
 import banner from '../banner';
 
 module.exports = {
-    entry: path.join(__dirname, '../../src'),
+    devtool: 'eval',
     cache: true,
     debug: true,
+    entry: [
+	path.join(__dirname, '../../src/index')
+	],
     output: {
         path: path.join(__dirname, '../../dist'),
         filename: 'trolly.js',
@@ -19,6 +22,7 @@ module.exports = {
             test: /\.js?$/,
             exclude: ['node_modules'],
             loader: 'babel',
+            include: path.join(__dirname, '../../src')
             query: {
                 env: {
                     development: {}

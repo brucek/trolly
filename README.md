@@ -67,7 +67,7 @@ This library is set up to integrate with Coveralls, and will automaticly publish
 
 ## Linting
 
-This boilerplate uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
+This boilerplate project uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
 
 ```js
 npm run lint // lints the source
@@ -103,10 +103,10 @@ Older node.js versions gives issues with some newer dependencies, so only `Node 
 Just take a cup of coffee and relax. It works!
 
 ###Is this boilerplate production ready?
-Yes, for small applications. For larger applications you need to customize this after your own needs. Example setting up Babel to work with React, adding express etc.
+Yes, for small applications. For a larger project, you'll need to customize the boilerplate after your own needs, but that is out of scope of this boilerplate.
 
 ## License
-MIT Â© [KFlash](https://github.com/kflash)
+MIT © [KFlash](https://github.com/kflash)
 
 [trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
 [trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master
