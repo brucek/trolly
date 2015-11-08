@@ -16,14 +16,7 @@
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * Isparta for coverage report
 * Node >= 4.x
-
-## Note
-
-There are known issues with `Babel v.6.x`, and `Webpack 2.0-Beta`. Latest Webpack release runs stable only on node.js `stable` branch. 
-
-However. Trolly uses `Babel v. 6.x` without any issues, but not yet updated to `Webpack 2.0-Beta`. `PhantomJS 2.0` is still not supported.
-
-Older node.js versions gives issues with some newer dependencies, so only `Node >= 4.x` are supported.
+*`iojs >= 3.x`
 
 ## Basic guide
 
@@ -81,6 +74,14 @@ npm install
 This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
 
 For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `bootstrap.js` file located inside the `__setup__ folder`
+
+## Known package issues
+
+There are issues with `Babel v.6.x`, and `Webpack 2.0-Beta`. Latest Webpack release runs stable only on node.js `stable` branch. 
+
+However. Trolly uses `Babel v. 6.x` without any issues, but not yet updated to `Webpack 2.0-Beta`. `PhantomJS 2.0` is still not supported.
+
+Older node.js versions gives issues with some newer dependencies, so only `Node >= 4.x` and `iojs >= 3.x` are supported.
 
 ## FAQ
 

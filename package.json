@@ -1,6 +1,6 @@
 {
   "name": "trolly",
-  "version": "0.1.2",
+  "version": "0.1.2a",
   "distTag": "pre",
   "description": "A boilerplate for creating isomorphic libraries using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint",
   "scripts": {
@@ -75,11 +75,16 @@
     "karma-spec-reporter": "0.0.22",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.3.3",
-    "npm-check-updates": "^2.2.0",
+    "npm-check-updates": "^2.3.4",
     "phantomjs": "^1.9.18",
     "phantomjs-polyfill": "0.0.1",
     "sinon-chai": "^2.8.0",
     "webpack": "^1.12.3"
+  },
+  "babel": {
+    "ignore": [
+      "packages/babel-cli/src/babel-plugin/templates"
+    ]
   },
   "devEngines": {
     "node": "4.x || 5.x",
@@ -93,6 +98,7 @@
   "homepage": "https://github.com/kflash/trolly",
   "license": "MIT",
   "dependencies": {
-    "rimraf": "^2.4.3"
+    "rimraf": "^2.4.3",
+	"semver": "^5.0.3"
   }
 }
