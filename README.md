@@ -59,7 +59,7 @@ To add a unit test, simply create `.spec.js` file inside either the server or cl
 
 To run the tests in the project, just simply `npm run test` for both server and client unit tests, or `npm run test:server`. for server or `npm run test:browser`. for browser tests. 
 
-To keep watching your test suites that you are working on, simply do `run npm test:watch`.
+To keep watching your test suites that you are working on, simply do `npm run test:watch`.
 
 ## Coveralls
 
