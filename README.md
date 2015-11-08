@@ -4,7 +4,11 @@
 [![Coverage Status](https://coveralls.io/repos/Kflash/trolly/badge.svg?branch=master&service=github)](https://coveralls.io/github/Kflash/trolly?branch=master)
 [![Dependency Status](https://david-dm.org/kflash/trolly.svg)](https://david-dm.org/kflash/trolly)
 
-> A boilerplate for creating isomorphic libraries using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint without any framework dependencies.
+> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint without any framework dependencies.
+
+## Requirements
+
+Node `^4.0.0` or `^5.0.0` (npm3 recommended).
 
 ## Features
 
@@ -16,17 +20,19 @@
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * Isparta for coverage report
 * Node >= 4.x
-*`iojs >= 3.x`
+* iojs >= 3.x
 
-## Basic guide
+## Getting Started
 
-Write your code in src. The entry file is what you named the project in kebab case (although the filename can be changed).
+Just clone the repo and install the necessary node modules:
+```js
+$ git clone https://github.com/kflash/trolly.git trolly
+$ cd trolly
+$ npm install                   # Install Node modules listed in ./package.json (may take a while the first time)
+$ npm webpack                   # Build a non-minified version of the library
+```
 
-Run `webpack` to build a non-minified version of the library.
-
-Put your unit tests in the `__tests__` folder. The npm test command runs the tests using Node. 
-
-## Workflow
+## Usage
 
 * `npm run build` - Build task that generates minified scripts
 * `npm run precommit` - Run the unit tests,, and generate a minified script
@@ -48,6 +54,8 @@ Put your unit tests in the `__tests__` folder. The npm test command runs the tes
 ## Unit tests
 
 This project uses Mocha to run your unit tests, it uses Karma as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.).
+
+To add a unit test, simply create .spec.js file anywhere in ~/__tests__. Karma will pick up on these files automatically, and Mocha and Chai will be available within your test without the need to import them.
 
 To run the tests in the project, just simply `run npm test:browser`. 
 
