@@ -55,7 +55,7 @@ $ npm webpack                   # Build a non-minified version of the library
 
 This project uses Mocha to run your unit tests, it uses Karma as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.).
 
-To add a unit test, simply create .spec.js file anywhere in ~/__tests__. Karma will pick up on these files automatically, and Mocha and Chai will be available within your test without the need to import them.
+To add a unit test, simply create `.spec.js` file inside either the server or client folder in the `~/__tests__` main folder. Karma will pick up on these files automatically, and Mocha and Chai will be available within your unit tests without the need to import them.
 
 To run the tests in the project, just simply `run npm test:browser`. 
 
