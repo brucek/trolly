@@ -96,9 +96,6 @@ Older node.js versions gives issues with some newer dependencies, so only `Node 
 ###Help! It doesn't work on Windows! What do I do?
 Just take a cup of coffee and relax. It works!
 
-### What's the browser compatibility?
-As a rule of thumb, this transpiler works best in IE9+. You can support IE8 by limiting yourself to a subset of ES2015 features. The Babel caveats page does an excellent job at explaining the nitty gritty details of supporting legacy browsers.
-
 ## License
 MIT © [Kenny Flashlight](https://github.com/kflash)
 
