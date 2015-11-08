@@ -106,7 +106,7 @@ Just take a cup of coffee and relax. It works!
 Yes, for small applications. For larger applications you need to customize this after your own needs. Example setting up Babel to work with React, adding express etc.
 
 ## License
-MIT © [Kenny Flashlight](https://github.com/kflash)
+MIT © [KFlash](https://github.com/kflash)
 
 [trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
 [trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master

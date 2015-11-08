@@ -1,6 +1,6 @@
 {
   "name": "trolly",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "distTag": "pre",
   "description": "A boilerplate for creating isomorphic libraries using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint",
   "scripts": {
