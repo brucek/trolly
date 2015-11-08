@@ -1,6 +1,6 @@
 {
     "name": "trolly",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "distTag": "pre",
     "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint without any framework dependencies.",
     "scripts": {
