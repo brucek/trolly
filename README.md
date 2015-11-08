@@ -57,7 +57,7 @@ This project uses Mocha to run your unit tests, it uses Karma as the test runner
 
 To add a unit test, simply create `.spec.js` file inside either the server or client folder in the `~/__tests__` main folder. Karma will pick up on these files automatically, and Mocha and Chai will be available within your unit tests without the need to import them.
 
-To run the tests in the project, just simply `run npm test:browser`. 
+To run the tests in the project, just simply `run npm test` for both server and client unit tests, or `run npm test:server`. for server or `run npm test:browser`. for browser tests. 
 
 To keep watching your test suites that you are working on, simply do `run npm test:watch`.
 
