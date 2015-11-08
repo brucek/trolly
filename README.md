@@ -28,7 +28,7 @@ Just clone the repo and install the necessary node modules:
 ```js
 $ git clone https://github.com/kflash/trolly.git trolly
 $ cd trolly
-$ npm install                   # Install Node modules listed in ./package.json (may take a while the first time)
+$ npm install                   # Install Node modules listed in ./package.json
 $ npm webpack                   # Build a non-minified version of the library
 ```
 
