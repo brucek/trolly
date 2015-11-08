@@ -1,3 +1,4 @@
+// Webpack config for development
 import webpack from 'webpack';
 import path from 'path';
 
@@ -23,5 +24,17 @@ module.exports = {
             }
         }]
     },
-    plugins: []
+    resolve: {
+        modulesDirectories: [
+            'src',
+            'node_modules'
+        ],
+        extensions: ['', '.json', '.js']
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            '__DEV__': true,
+            'process.env.NODE_ENV': JSON.stringify('development')
+        })
+    ]
 };

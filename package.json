@@ -1,12 +1,12 @@
 {
   "name": "trolly",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "distTag": "pre",
   "description": "A boilerplate for creating isomorphic libraries using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint",
   "scripts": {
     "precommit": "npm test && npm run build",
-    "build": "rimraf dist && set NODE_ENV=production && webpack --config ./__config__/webpack/webpack.production.config.js --progress --profile --colors",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
+    "build": "npm run clean && set NODE_ENV=production && webpack --config ./__config__/webpack/webpack.production.config.js --progress --profile --colors",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover --report text node_modules/mocha/bin/_mocha",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
     "compile": "webpack",
@@ -57,11 +57,7 @@
   ],
   "devDependencies": {
     "babel-cli": "^6.1.2",
-    "babel-eslint": "^4.1.4",
     "babel-loader": "^6.0.1",
-    "babel-plugin-transform-es2015-arrow-functions": "^6.0.14",
-    "babel-plugin-transform-es2015-block-scoping": "^6.0.18",
-    "babel-plugin-transform-es2015-constants": "^6.0.15",
     "babel-preset-stage-2": "^6.1.2",
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-stage-2": "^6.1.2",
