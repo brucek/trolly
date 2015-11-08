@@ -12,7 +12,7 @@ Node `^4.0.0` or `^5.0.0`.
 
 ## Features
 
-* [Babel](http://babeljs.io/) for ES6 and ES7
+* [ES6 with Babel](http://babeljs.io/) for ES6 and ES7
 * Universal unit tests that work in Node and in the browser
 * Support for ES2015 in the unit tests
 * [Webpack](https://webpack.github.io/) for bundling
@@ -68,6 +68,12 @@ This library is set up to integrate with Coveralls, and will automaticly publish
 ## Linting
 
 This boilerplate uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
+
+```js
+npm run lint // lints the source
+
+npm run lint:tests // lints the unit tests
+```
 
 ## Installation
 

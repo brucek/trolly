@@ -1,2 +1,5 @@
-node_modules/**
-*.spec.js
+dist/*
+node_modules/*
+**/node_modules/*
+__config__/**
+__setup__/**

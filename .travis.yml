@@ -4,7 +4,6 @@ node_js:
   - 'stable'
   - 'v4'
   - 'iojs'
-
 # Use container-based Travis infrastructure.
 sudo: false
 
@@ -17,5 +16,9 @@ notifications:
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
+
+before_install:
+  - npm install -g babel-cli@6.1.2
+
 after_script:
   - npm run coveralls
