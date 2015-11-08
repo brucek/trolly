@@ -5,6 +5,11 @@
     "bar/**/*.js"
   ],
   "presets": [
-    "es2015"
-  ]
+    "es2015", "stage-2"
+  ],
+"plugins": [
+  "transform-es2015-arrow-functions",
+  "transform-es2015-constants",
+  "transform-es2015-block-scoping"
+]
 }
