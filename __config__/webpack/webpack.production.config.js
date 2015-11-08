@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const distDir = path.join(__dirname, '../../dist');
 const sourceDir = path.join(__dirname, '../../src');
+const pkg = path.join(__dirname, '../../package.json');
 
 module.exports = {
     entry: sourceDir,
@@ -50,7 +51,8 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             '__DEV__': false,
-            'process.env.NODE_ENV': JSON.stringify('production')
+            'process.env.NODE_ENV': JSON.stringify('production'),
+			 VERSION: JSON.stringify(pkg.version)
         })
     ]
 };

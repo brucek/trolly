@@ -1,6 +1,7 @@
 // Webpack config for development
 import webpack from 'webpack';
 import path from 'path';
+import pkg from '../../package.json';
 import banner from '../banner';
 
 module.exports = {
@@ -36,7 +37,8 @@ module.exports = {
 	    new webpack.BannerPlugin(banner),
         new webpack.DefinePlugin({
             '__DEV__': true,
-            'process.env.NODE_ENV': JSON.stringify('development')
+            'process.env.NODE_ENV': JSON.stringify('development'),
+			 VERSION: JSON.stringify(pkg.version)
         })
     ]
 };
