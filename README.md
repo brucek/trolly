@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/Kflash/trolly/badge.svg?branch=master&service=github)](https://coveralls.io/github/Kflash/trolly?branch=master)
 [![Dependency Status](https://david-dm.org/kflash/trolly.svg)](https://david-dm.org/kflash/trolly)
 
-> A boilerplate for creating isomorphic libraries using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint
+> A boilerplate for creating isomorphic libraries using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint without any framework dependencies.
 
 ## Features
 
@@ -16,6 +16,14 @@
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * Isparta for coverage report
 * Node >= 4.x
+
+## Note
+
+There are known issues with `Babel v.6.x`, and `Webpack 2.0-Beta`. Latest Webpack release runs stable only on node.js `stable` branch. 
+
+However. Trolly uses `Babel v. 6.x` without any issues, but not yet updated to `Webpack 2.0-Beta`. `PhantomJS 2.0` is still not supported.
+
+Older node.js versions gives issues with some newer dependencies, so only `Node >= 4.x` are supported.
 
 ## Basic guide
 
