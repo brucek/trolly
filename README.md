@@ -12,13 +12,13 @@ Node `^4.0.0` or `^5.0.0` (npm3 recommended).
 
 ## Features
 
-* Babel for ES6 and ES7
+* [Babel](http://babeljs.io/) for ES6 and ES7
 * Universal unit tests that work in Node and in the browser
 * Support for ES2015 in the unit tests
-* Webpack for bundling
-* Eslint to maintain a consistent code style
+* [Webpack](https://webpack.github.io/) for bundling
+* [Eslint](http://eslint.org/) to maintain a consistent code style
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
-* Isparta for coverage report
+* [Isparta](https://www.npmjs.com/package/isparta) for coverage report
 * Node >= 4.x
 * iojs >= 3.x
 
