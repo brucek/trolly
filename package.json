@@ -7,7 +7,7 @@
     "precommit": "npm test && npm run build",
     "clean": "rimraf dist",
     "build": "npm run clean && set NODE_ENV=production && webpack --config ./__config__/webpack/webpack.production.config.js --progress --profile --colors",
-    "coverage": "babel-node node_modules/isparta/bin/isparta cover --report text node_modules/mocha/bin/_mocha",
+    "coverage": "babel-node ./node_modules/isparta/bin/isparta cover --report text ./node_modules/mocha/bin/_mocha",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
     "compile": "webpack",
     "release": "npm version ${BUMP:-\"patch\"} --no-git-tag-version && git add package.json && git commit -m \":octocat: Bump to $(cat package.json | jq -r .version)\" && git tag $(cat package.json | jq -r .version) && git push && git push --tags && npm publish",
@@ -20,8 +20,7 @@
 	"package:purge": "rm -rf node_modules",
     "package:reinstall": "npm run package:purge && npm install",
     "package:updates": "./node_modules/.bin/ncu",
-    "package:upgrade": "npm run package:updates -u",
-	"deploy": "npm run lint && npm run test && npm run compile"
+    "package:upgrade": "npm run package:updates -u"
   },
   "repository": "trolly",
     "keywords": [

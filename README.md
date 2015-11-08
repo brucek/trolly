@@ -96,6 +96,9 @@ Older node.js versions gives issues with some newer dependencies, so only `Node 
 ###Help! It doesn't work on Windows! What do I do?
 Just take a cup of coffee and relax. It works!
 
+###Is this boilerplate production ready?
+Yes, for small applications. For larger applications you need to customize this after your own needs. Example setting up Babel to work with React, adding express etc.
+
 ## License
 MIT © [Kenny Flashlight](https://github.com/kflash)
 
