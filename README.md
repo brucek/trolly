@@ -40,15 +40,15 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run lint` - Lint the source
 * `npm run lint:tests` - Lint the unit tests
 * `npm run clean` - Remove the coverage report and the *dist* folder
-* `npm run test` - Runs the unit tests with karma and Chrome once
-* `npm run test:browser` - Runs the unit tests for browser once
-* `npm run test:server` - Runs the unit tests on the server once
-* `npm run watch` - Run unit tests & watch files for changes
+* `npm run test` - Runs unit tests for both server and the browser
+* `npm run test:browser` - Runs the unit tests for browser / client
+* `npm run test:server` - Runs the unit tests on the server
+* `npm run watch` - Run all unit tests & watch files for changes
 * `npm run coveralls` - Run Isparta, a code coverage tool;
 * `npm run packages` - Shows all installed dependencies
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
-* `npm run package:updates` - Generate a list overview for newer dependencies
+* `npm run package:updates` - shows a list over dependencies with a higher version number then the current one - if any 
 * `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
 
 ## Unit tests
