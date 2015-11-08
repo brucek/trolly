@@ -8,7 +8,7 @@
 
 ## Requirements
 
-Node `^4.0.0` or `^5.0.0` (npm3 recommended).
+Node `^4.0.0` or `^5.0.0`.
 
 ## Features
 
