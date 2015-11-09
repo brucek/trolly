@@ -1,19 +1,19 @@
 // Webpack config for creating the production bundle.
 const webpack = require('webpack');
 const path = require('path');
-const distDir = path.join(__dirname, '../../dist');
-const sourceDir = path.join(__dirname, '../../src');
-const pkg = path.join(__dirname, '../../package.json');
+const DIST_PATH = path.join(__dirname, '../../dist');
+const APP_PATH = path.join(__dirname, '../../src');
+const PACKAGE = path.join(__dirname, '../../package.json');
 
 module.exports = {
-    entry: sourceDir,
+    entry: APP_PATH,
     cache: false,
     debug: false,
     devtool: false,
     hot: false,
     build: true,
     output: {
-        path: distDir,
+        path: DIST_PATH,
         filename: 'trolly.min.js',
         libraryTarget: 'umd',
         library: 'trolly'
@@ -22,7 +22,7 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             exclude: ['node_modules'],
-            include: sourceDir,
+            include: APP_PATH,
             loader: 'babel-loader'
         }]
     },
@@ -52,7 +52,7 @@ module.exports = {
         new webpack.DefinePlugin({
             '__DEV__': false,
             'process.env.NODE_ENV': JSON.stringify('production'),
-			 VERSION: JSON.stringify(pkg.version)
+			 VERSION: JSON.stringify(PACKAGE.version)
         })
     ]
 };

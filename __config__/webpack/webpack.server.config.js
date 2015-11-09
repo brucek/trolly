@@ -27,9 +27,6 @@ const compiler = webpack({
     resolve: {
         extensions: ['', '.js']
     },
-    devServer: {
-        contentBase: 'http://localhost:8081'
-    },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ]
@@ -55,6 +52,8 @@ const bundler = new WebpackDevServer(compiler, {
     // The rest is terminal configurations
     quiet: false,
     noInfo: true,
+	historyApiFallback: true,
+	progress:true,
     stats: {
         colors: true
     }

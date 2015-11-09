@@ -30,8 +30,7 @@ module.exports = function(config) {
             'karma-sinon-chai',
             'karma-webpack',
             'karma-mocha',
-            'karma-phantomjs-launcher',
-            'karma-spec-reporter'
+            'karma-phantomjs-launcher'
         ],
         // Start these browsers, currently available:
         // - Chrome

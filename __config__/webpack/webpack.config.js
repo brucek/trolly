@@ -31,7 +31,6 @@ module.exports = {
         extensions: ['', '.js']
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
 	    new webpack.BannerPlugin(banner),
         new webpack.DefinePlugin({

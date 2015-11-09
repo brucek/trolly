@@ -86,8 +86,6 @@ npm run dev-server
 
 Open `http://localhost:8080`, and you will see this message in your browser: `It works!`.
 
-From here you have several options- either setup and run a HTTP server on port 8081, or setup and run `mocha` browser tests in your prefered browser.
-
 ## Installation
 
 Download the package, and run this from the command line:
