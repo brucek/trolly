@@ -19,7 +19,7 @@ Node `^4.0.0` or `^5.0.0`.
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * [Isparta](https://www.npmjs.com/package/isparta) for coverage report
-* Hot Module Replacement
+* Hot Module Replacement (WDS)
 * Node >= 4.x
 * iojs >= 3.x
 
@@ -84,9 +84,9 @@ Trolly uses `webpack-dev-server` as an asset server with hot module replacement 
 npm run dev-server
 ```
 
-Open `http://localhost:8080` in your browser, and you will see this text: 'It's works!'.
+Open `http://localhost:8080`, and you will see this message in your browser: `It's works!`.
 
-From here you have several options. Either setup and run a HTTP server on port 8081, or setup and run 'mocha' browser tests in your prefered browser.
+From here you have several options- either setup and run a HTTP server on port 8081, or setup and run `mocha` browser tests in your prefered browser.
 
 ## Installation
 
@@ -119,7 +119,7 @@ Just take a cup of coffee and relax. It works!
 Yes, for small applications. For a larger project, you'll need to customize the boilerplate after your own needs, but that is out of scope of this boilerplate.
 
 ## License
-MIT © [KFlash](https://github.com/kflash)
+MIT Â© [KFlash](https://github.com/kflash)
 
 [trav_img]: https://api.travis-ci.org/Kflash/trolly.svg
 [trav_site]: https://travis-ci.org/Kflash/trolly.svg?branch=master
