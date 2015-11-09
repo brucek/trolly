@@ -19,6 +19,7 @@ Node `^4.0.0` or `^5.0.0`.
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * [Isparta](https://www.npmjs.com/package/isparta) for coverage report
+* Hot Module Replacement
 * Node >= 4.x
 * iojs >= 3.x
 
@@ -74,6 +75,18 @@ npm run lint // lints the source
 
 npm run lint:tests // lints the unit tests
 ```
+
+## Development server
+
+Trolly uses `webpack-dev-server` as an asset server with hot module replacement (WDS) enabled on port 8080.
+
+```js
+npm run dev-server
+```
+
+Open `http://localhost:8080` in your browser, and you will see this text: 'It's works!'.
+
+From here you have several options. Either setup and run a HTTP server on port 8081, or setup and run 'mocha' browser tests in your prefered browser.
 
 ## Installation
 

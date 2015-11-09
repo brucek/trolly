@@ -5,11 +5,17 @@ import pkg from '../../package.json';
 import banner from '../banner';
 
 module.exports = {
-    entry: path.join(__dirname, '../../src'),
+      entry: [ 
+	'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+	path.join(__dirname, '../../src')
+  ],
     cache: true,
     debug: true,
+	devtool: 'eval',
     output: {
         path: path.join(__dirname, '../../dist'),
+		publicPath: 'http://localhost:8080/assets/',
         filename: 'trolly.js',
         libraryTarget: 'umd',
         library: 'trolly'
@@ -27,13 +33,14 @@ module.exports = {
         }]
     },
     resolve: {
-        modulesDirectories: [
-            'src',
-            'node_modules'
-        ],
-        extensions: ['', '.json', '.js']
+        extensions: ['', '.js']
     },
+	devServer: {
+    contentBase: 'http://localhost:8081'
+  },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(),
 	    new webpack.BannerPlugin(banner),
         new webpack.DefinePlugin({
             '__DEV__': true,
