@@ -1,13 +1,13 @@
 {
     "name": "trolly",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "distTag": "pre",
     "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint without any framework dependencies.",
     "scripts": {
         "precommit": "npm test && npm run build",
         "clean": "rimraf dist",
         "build": "npm run clean && set NODE_ENV=production && webpack --config ./__config__/webpack/webpack.production.config.js --progress --profile --colors",
-        "coverage": "babel-node ./node_modules/isparta/bin/isparta cover --report text ./node_modules/mocha/bin/_mocha",
+        "coverage": "node_modules/.bin/babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
         "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
         "compile": "webpack",
         "test": "npm run test:server && npm run test:browser",
@@ -70,6 +70,7 @@
         "karma-spec-reporter": "0.0.22",
         "karma-webpack": "^1.7.0",
         "mocha": "^2.3.3",
+        "mocha-lcov-reporter": "^1.0.0",
         "npm-check-updates": "^2.3.4",
         "phantomjs": "^1.9.18",
         "phantomjs-polyfill": "0.0.1",
