@@ -84,7 +84,7 @@ Trolly uses `webpack-dev-server` as an asset server with hot module replacement 
 npm run dev-server
 ```
 
-Open `http://localhost:8080`, and you will see this message in your browser: `It's works!`.
+Open `http://localhost:8080`, and you will see this message in your browser: `It works!`.
 
 From here you have several options- either setup and run a HTTP server on port 8081, or setup and run `mocha` browser tests in your prefered browser.
 
