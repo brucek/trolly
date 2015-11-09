@@ -110,6 +110,9 @@ However. Trolly uses `Babel v. 6.x` without any issues, but not yet updated to `
 
 Older node.js versions gives issues with some newer dependencies, so only `Node >= 4.x` and `iojs >= 3.x` are supported.
 
+## Known Mac issues
+There are a know issue with `Node 4.1` on Mac. To solve this issue, upgrade to `Node >= 5.x`.
+
 ## FAQ
 
 ###Help! It doesn't work on Windows! What do I do?
