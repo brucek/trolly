@@ -26,7 +26,7 @@ Node `^4.0.0` or `^5.0.0`.
 ## Babel >= 6.x design changes
 
 If you migrate from `Babel >= 5.x` to `Babel >= 6.x`, your code will probably break because 
-Babel now have have killed the `CommonJS` default export behaviour. 
+Babel now have killed the `CommonJS` default export behaviour. 
 
 As a workaround, replace `export default { … }` with  `module.exports = { … }`
 
