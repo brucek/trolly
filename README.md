@@ -23,6 +23,13 @@ Node `^4.0.0` or `^5.0.0`.
 * Node >= 4.x
 * iojs >= 3.x
 
+## Babel >= 6.x design changes
+
+With `Babel >= 6.x` huge changes have been done. If you migrate from `Babel >= 5.x` to `Babel >= 6.x`, your
+code will probably break because`export default` have changed. 
+
+As a workaround, replace `export default { … }` with  `module.exports = { … }`
+
 ## Getting Started
 
 Just clone the repo and install the necessary node modules:
