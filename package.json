@@ -78,7 +78,7 @@
         "phantomjs": "^1.9.18",
         "phantomjs-polyfill": "0.0.1",
         "sinon-chai": "^2.8.0",
-        "webpack": "^1.12.4",
+        "webpack": "^2.0.0-beta",
         "webpack-dev-server": "^1.12.1"
     },
     "babel": {
