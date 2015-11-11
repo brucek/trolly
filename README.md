@@ -8,7 +8,7 @@
 
 ## Requirements
 
-Node `^4.0.0` or `^5.0.0`.
+Node `^5.0.0` (*stable branch*).
 
 ## Features
 
@@ -20,8 +20,7 @@ Node `^4.0.0` or `^5.0.0`.
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * [Isparta](https://www.npmjs.com/package/isparta) for coverage report
 * Hot Module Replacement (WDS)
-* Node >= 4.x
-* iojs >= 3.x
+* Node >= 5.x
 
 ## Babel >= 6.x design changes
 
@@ -113,7 +112,7 @@ There are issues with `Babel v.6.x`, and `Webpack 2.0-Beta`. Latest Webpack rele
 
 However. Trolly uses `Babel v. 6.x` without any issues, but not yet updated to `Webpack 2.0-Beta`. `PhantomJS 2.0` is still not supported.
 
-Older node.js versions gives issues with some newer dependencies, so only `Node >= 4.x` and `iojs >= 3.x` are supported.
+Older node.js versions gives issues with some newer dependencies, so only `Node >= 5.x` are supported.
 
 ## Known Mac issues
 There are a know issue with `Node 4.1` on Mac. To solve this issue, upgrade to `Node >= 5.x`.
