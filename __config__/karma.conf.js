@@ -1,5 +1,6 @@
 import webpackConfig from '../webpack.config';
 
+// Karma configuration here
 module.exports = function(config) {
     config.set({
         logLevel: config.LOG_INFO,
@@ -13,7 +14,7 @@ module.exports = function(config) {
         ],
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['mocha', 'sinon-chai'],
+        frameworks: ['mocha', 'sinon-chai'], //use mocha and sinon-chai as framework
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -55,7 +56,7 @@ module.exports = function(config) {
         autoWatch: false,
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: !process.env.CONTINUOUS_INTEGRATION,
+        singleRun: true, //just run once by default
     });
 
     if (process.env.TRAVIS) {

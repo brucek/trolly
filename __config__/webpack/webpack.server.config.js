@@ -28,6 +28,7 @@ const compiler = webpack({
         extensions: ['', '.js']
     },
     plugins: [
+        // Used for hot-reload
         new webpack.HotModuleReplacementPlugin()
     ]
 });
@@ -52,8 +53,8 @@ const bundler = new WebpackDevServer(compiler, {
     // The rest is terminal configurations
     quiet: false,
     noInfo: true,
-	historyApiFallback: true,
-	progress:true,
+    historyApiFallback: true,
+    progress: true,
     stats: {
         colors: true
     }
