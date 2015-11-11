@@ -50,7 +50,7 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run test` - Runs unit tests for both server and the browser
 * `npm run test:browser` - Runs the unit tests for browser / client
 * `npm run test:server` - Runs the unit tests on the server
-* `npm run watch` - Run all unit tests & watch files for changes
+* `npm run watch` - Run all unit tests for server & watch files for changes
 * `npm run coveralls` - Run Isparta, a code coverage tool;
 * `npm run packages` - Shows all installed dependencies
 * `npm run package:purge` - Remove all dependencies
@@ -104,7 +104,7 @@ npm install
 
 This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
 
-For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `bootstrap.js` file located inside the `__setup__ folder`
+For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `bootstrap.js` file located inside the `__config__ folder`
 
 ## Known Mac issues
 There are a know issue with `Node 4.1` on Mac. To solve this issue, upgrade to `Node >= 5.x`.
