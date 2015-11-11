@@ -82,7 +82,7 @@ npm run lint // lints the source
 npm run lint:tests // lints the unit tests
 ```
 
-## Development server
+## Asset server
 
 Trolly uses `webpack-dev-server` as an asset server with hot module replacement (WDS) enabled on port 8080.
 
