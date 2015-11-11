@@ -10,7 +10,7 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            '__tests__/client/**/*.spec.js'
+            'test/client/**/*.spec.js'
         ],
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -19,7 +19,7 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            '__tests__/client/**/*.spec.js': ['webpack']
+            'test/client/**/*.spec.js': ['webpack']
         },
         webpack: {
             module: webpackConfig.module
