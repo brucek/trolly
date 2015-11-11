@@ -31,6 +31,7 @@ module.exports = {
         extensions: ['', '.js']
     },
     plugins: [
+        new webpack.optimize.OccurenceOrderPlugin(),
 	    new webpack.BannerPlugin(banner),
         new webpack.DefinePlugin({
             '__DEV__': true,
