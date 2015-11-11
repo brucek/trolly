@@ -8,7 +8,7 @@
 
 ## Requirements
 
-Node `^5.0.0` (*stable branch*).
+Node `^5.0.0`.
 
 ## Features
 
