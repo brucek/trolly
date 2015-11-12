@@ -20,13 +20,8 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.js?$/,
-            exclude: ['node_modules'],
-            loader: 'babel',
-            query: {
-                env: {
-                    development: {}
-                }
-            }
+            exclude: /node_modules/,
+            loaders: ['babel-loader']
         }]
     },
     resolve: {

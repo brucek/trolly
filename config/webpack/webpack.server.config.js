@@ -20,30 +20,18 @@ const compiler = webpack({
     module: {
         loaders: [{
             test: /\.js?$/,
-            exclude: ['node_modules'],
-            loader: 'babel'
+            exclude: /node_modules/,
+            loaders: ['babel-loader']
         }]
     },
     resolve: {
-        extensions: ['', '.js']
+        extensions: ['', '.js', '.jsx']
     },
     plugins: [
         // Used for hot-reload
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
     ]
-});
-
-// We give notice in the terminal when it starts bundling and
-// set the time it started
-compiler.plugin('compile', function() {
-    console.log('Bundling...');
-    bundleStart = Date.now();
-});
-
-// We also give notice when it is done compiling, including the
-// time it took. Nice to have
-compiler.plugin('done', function() {
-    console.log('Bundled in ' + (Date.now() - bundleStart) + 'ms. The server are now running...');
 });
 
 const bundler = new WebpackDevServer(compiler, {
@@ -65,5 +53,5 @@ const bundler = new WebpackDevServer(compiler, {
     if (error) {
         console.log(error);
     }
-    console.log('Bundling project, please wait...');
+    console.log('The asset server is running...');
 });
