@@ -4,7 +4,7 @@
 [![devDependency Status](https://david-dm.org/kflash/trolly/dev-status.svg)](https://david-dm.org/kflash/trolly#info=devDependencies)
 [![Dependency Status](https://david-dm.org/kflash/trolly.svg)](https://david-dm.org/kflash/trolly)
 
-> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Chai, Karma, Isparta, and ESLint without any framework dependencies.
+> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, sinon-chai, Karma, Isparta, and ESLint without any framework dependencies.
 
 ## Requirements
 
@@ -104,7 +104,7 @@ npm install
 
 This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
 
-For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `bootstrap.js` file located inside the `config folder`
+For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `mocha.conf.js` file located inside the `config folder`
 
 ## Known Mac issues
 There are a know issue with `Node 4.1` on Mac. To solve this issue, upgrade to `Node >= 5.x`.
