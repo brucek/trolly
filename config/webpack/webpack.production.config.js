@@ -1,6 +1,7 @@
 // Webpack config for creating the production bundle.
 const webpack = require('webpack');
 const path = require('path');
+const WebpackNotifierPlugin = require('webpack-notifier');
 const DIST_DIR = path.join(__dirname, '../../dist');
 const SRC_DIR = path.join(__dirname, '../../src');
 const PKG_LOCATION = path.join(__dirname, '../../PKG_LOCATION.json');
@@ -35,7 +36,9 @@ module.exports = {
         extensions: ['', '.json', '.js']
     },
     plugins: [
-        // optimizations
+	    // Notifier
+        new WebpackNotifierPlugin({title: 'Trolly', alwaysNotify: true} ),
+		// optimizations
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({
