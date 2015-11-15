@@ -19,6 +19,7 @@ Node `^5.0.0`.
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
 * Unit tests for browser, server or both
+* Run unit tests for PhantomJS, Chrome, Firefox and IE
 * Coveralls
 * Hot Module Replacement (WDS)
 * Node >= 5.x
@@ -55,6 +56,9 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run test:server` - Runs the unit tests on the server
 * `npm run watch:server` - Run all unit tests for server & watch files for changes
 * `npm run watch:browser` - Run all unit tests for browser & watch files for changes
+* `npm run karma:firefox` - Run all unit tests with Karma & Firefox
+* `npm run karma:chrome` - Run all unit tests with Karma & Chrome
+* `npm run karma:ie` - Run all unit tests with Karma & Internet Explorer
 * `npm run packages` - Shows all installed dependencies
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies

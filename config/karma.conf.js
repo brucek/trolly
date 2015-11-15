@@ -23,8 +23,8 @@ module.exports = function(config) {
             'test/**/*.common.js': ['webpack', 'coverage'],
             'test/**/*.browser.js': ['webpack']
         },
-		reporters: ['progress', 'coverage'],
-		coverageReporter: {
+        reporters: ['progress', 'coverage'],
+        coverageReporter: {
             reporters: [{
                 type: 'text'
             }, {
@@ -38,12 +38,15 @@ module.exports = function(config) {
         webpackMiddleware: {
             noInfo: true
         },
-		plugins: [
+        plugins: [
             'karma-sinon-chai',
             'karma-webpack',
             'karma-mocha',
             'karma-phantomjs-launcher',
-			'karma-coverage'
+            'karma-chrome-launcher',
+            'karma-firefox-launcher',
+            'karma-ie-launcher',
+            'karma-coverage'
         ],
         // Start these browsers, currently available:
         // - Chrome
@@ -68,7 +71,7 @@ module.exports = function(config) {
         autoWatch: false,
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: false,
+        singleRun: true,
     });
 
     if (process.env.TRAVIS) {
