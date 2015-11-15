@@ -4,7 +4,6 @@ import webpackConfig from './webpack/webpack.karma.config';
 module.exports = function(config) {
     config.set({
         logLevel: config.LOG_INFO,
-        logColors: true,
         // list of files to exclude
         exclude: [],
         // list of files / patterns to load in the browser

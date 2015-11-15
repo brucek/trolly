@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import path from 'path';
 import pkg from '../../package.json';
 import banner from '../banner';
+import WebpackNotifierPlugin from 'webpack-notifier';
 
 module.exports = {
     // entry points 
@@ -28,6 +29,7 @@ module.exports = {
         extensions: ['', '.js']
     },
     plugins: [
+	    new WebpackNotifierPlugin({title: 'Trolly', alwaysNotify: true} ),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.BannerPlugin(banner),
         new webpack.DefinePlugin({
