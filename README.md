@@ -18,6 +18,8 @@ Node `^5.0.0`.
 * [Webpack](https://webpack.github.io/) for bundling
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
+* Unit tests for browser, server or both
+* Coveralls
 * Hot Module Replacement (WDS)
 * Node >= 5.x
 
