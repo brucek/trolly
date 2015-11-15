@@ -53,7 +53,8 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run test` - Runs unit tests for both server and the browser
 * `npm run test:browser` - Runs the unit tests for browser / client
 * `npm run test:server` - Runs the unit tests on the server
-* `npm run watch` - Run all unit tests for server & watch files for changes
+* `npm run watch:server` - Run all unit tests for server & watch files for changes
+* `npm run watch:browser` - Run all unit tests for browser & watch files for changes
 * `npm run packages` - Shows all installed dependencies
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
@@ -72,7 +73,7 @@ Tests for both client and server share the same `.common.js` files,
 
 To run the tests in the project, just simply `npm run test` for both server and client unit tests, or `npm run test:server`. for server or `npm run test:browser`. for browser tests.
 
-To keep watching the common test suites that you are working on, simply do `npm run watch`.
+To keep watching the common test suites that you are working on, simply do `npm run watch:browser` or `npm run watch:server`.
 
 ## Coveralls
 

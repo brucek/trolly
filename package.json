@@ -1,6 +1,6 @@
 {
     "name": "trolly",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "distTag": "pre",
     "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon-Chai, Karma, Coveralls, and ESLint without any framework dependencies.",
     "scripts": {
@@ -10,7 +10,8 @@
         "test": "npm run test:server && npm run test:browser",
         "test:server": "mocha --opts config/mocha.opts",
         "test:browser": "./node_modules/.bin/karma start --single-run",
-        "watch": "npm run test:server -- --watch",
+        "watch:server": "npm run test:server -- --watch",
+        "watch:browser": "./node_modules/.bin/karma start",
         "lint:source": "eslint ./src/**/*.js",
         "lint:common": "eslint ./test/**/*.common.js",
         "lint:server": "eslint ./test/**/*.server.js",

@@ -68,7 +68,7 @@ module.exports = function(config) {
         autoWatch: false,
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: true, //just run once by default
+        singleRun: false,
     });
 
     if (process.env.TRAVIS) {
