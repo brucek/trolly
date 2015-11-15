@@ -1,22 +1,25 @@
+require('babel-core/register');
+
 // Webpack config for development
 import webpack from 'webpack';
 import path from 'path';
 import pkg from '../../package.json';
 import banner from '../banner';
 import WebpackNotifierPlugin from 'webpack-notifier';
+import config from '../config';
 
 module.exports = {
     // entry points 
-    entry: path.join(__dirname, '../../src'),
+    entry: config.sourceDir,
     cache: true,
     debug: true,
     // more options here: http://webpack.github.io/docs/configuration.html#devtool
     devtool: 'eval',
     output: {
-        path: path.join(__dirname, '../../dist'),
-        filename: 'trolly.js',
+        path: config.distDir,
+        filename: config.dev,
         libraryTarget: 'umd',
-        library: 'trolly'
+        library: console._app
     },
     module: {
         loaders: [{
@@ -29,7 +32,7 @@ module.exports = {
         extensions: ['', '.js']
     },
     plugins: [
-	    new WebpackNotifierPlugin({title: 'Trolly', alwaysNotify: true} ),
+	    new WebpackNotifierPlugin({alwaysNotify: true} ),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.BannerPlugin(banner),
         new webpack.DefinePlugin({

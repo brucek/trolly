@@ -1,29 +1,33 @@
+require('babel-core/register');
+
 // Webpack config for creating the production bundle.
+
 const webpack = require('webpack');
 const path = require('path');
 const WebpackNotifierPlugin = require('webpack-notifier');
-const DIST_DIR = path.join(__dirname, '../../dist');
-const SRC_DIR = path.join(__dirname, '../../src');
 const PKG_LOCATION = path.join(__dirname, '../../package.json');
+const config = require('../config');
+
+console.log(config);
 
 module.exports = {
-    entry: SRC_DIR,
+    entry: config.sourceDir,
     cache: false,
     debug: false,
     devtool: false,
     hot: false,
     build: true,
     output: {
-        path: DIST_DIR,
-        filename: 'trolly.min.js',
+        path: config.distDir,
+        filename: config._app + '.min.js',
         libraryTarget: 'umd',
-        library: 'trolly'
+        library: console._app
     },
     module: {
         loaders: [{
             test: /\.js$/,
             exclude: ['node_modules'],
-            include: SRC_DIR,
+            include: config.sourceDir,
             loader: 'babel-loader'
         }]
     },

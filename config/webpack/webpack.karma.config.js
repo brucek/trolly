@@ -1,6 +1,7 @@
 // Webpack config for development
 import webpack from 'webpack';
 import path from 'path';
+import config from '../config';
 
 module.exports = {
     cache: true,
@@ -11,7 +12,7 @@ module.exports = {
     module: {
 		preLoaders: [{
             test: /\.jsx?$/,
-            include: path.join(__dirname, '../src'),
+            include: config.sourceDir,
             exclude: /(tests)/,
             loader: 'isparta',
         }],

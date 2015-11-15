@@ -1,6 +1,9 @@
+require('babel-core/register');
+
 const webpack = require('webpack');
 const path = require('path');
 const WebpackDevServer = require('webpack-dev-server');
+const config = require('../config');
 
 // First we fire up Webpack an pass in the configuration we
 // created
@@ -11,11 +14,11 @@ const compiler = webpack({
         'webpack/hot/only-dev-server'
     ],
     output: {
-        path: path.join(__dirname, '../../dist'),
-        filename: 'trolly.js',
+        path: config.distDir,
+        filename: config.dev,
         publicPath: 'http://localhost:8080/assets/',
         libraryTarget: 'umd',
-        library: 'trolly'
+        library: config._app
     },
     module: {
         loaders: [{
