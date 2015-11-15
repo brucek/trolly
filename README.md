@@ -21,6 +21,7 @@ Node `^5.0.0`.
 * Unit tests for browser, server or both
 * Run unit tests for PhantomJS, Chrome, Firefox and IE
 * Coveralls
+* Displays build status system notifications
 * Hot Module Replacement (WDS)
 * Node >= 5.x
 
