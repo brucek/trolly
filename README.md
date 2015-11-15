@@ -112,7 +112,7 @@ This boilerplate is easily customizable. Add your dependencies to the package.js
 
 For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `mocha.conf.js` file located inside the `config folder`.
 
-All paths, and the name on the library can be done inside the `config.js` file llocated inside the same folder.
+All paths, and the name on the library can be modified inside the `config.js` file located inside the same folder.
 
 ## Known Mac issues
 There are a know issue with `Node 4.1` on Mac. To solve this issue, upgrade to `Node >= 5.x`.
