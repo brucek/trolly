@@ -1,10 +1,10 @@
-# Isomorphic boilerplate written in ES2015 for Node and the browser.
+# Universal (isomorphic) boilerplate written in ES2015 for Node and the browser.
 
 [![Travis Status][trav_img]][trav_site]
 [![devDependency Status](https://david-dm.org/kflash/trolly/dev-status.svg)](https://david-dm.org/kflash/trolly#info=devDependencies)
 [![Dependency Status](https://david-dm.org/kflash/trolly.svg)](https://david-dm.org/kflash/trolly)
 
-> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, sinon-chai, Karma, Isparta, and ESLint without any framework dependencies.
+> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon-chai, Karma, Isparta, and ESLint without any framework dependencies.
 
 ## Requirements
 
