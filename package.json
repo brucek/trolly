@@ -1,6 +1,6 @@
 {
     "name": "trolly",
-    "version": "0.4.9",
+    "version": "0.5.0",
     "distTag": "pre",
     "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon-Chai, Karma, Isparta, and ESLint without any framework dependencies.",
     "scripts": {
@@ -34,7 +34,11 @@
         "eslint",
         "isparta",
         "es2015",
+        "webpack",
         "es6",
+        "universal",
+        "hot reloading",
+        "isomorphic",
         "ES2015",
         "es6",
         "Babel",
@@ -44,6 +48,9 @@
         "template",
         "skeleton",
         "istanbul",
+        "hot",
+        "reload",
+        "hmr",
         "sinon"
     ],
     "files": [
@@ -82,8 +89,8 @@
         ]
     },
     "devEngines": {
-        "node": "4.x || 5.x",
-        "npm": "2.x || 3.x"
+        "node": ">=4.1 <6",
+        "npm": ">=3.1 <5"
     },
     "author": {
         "name": "KFlash",
