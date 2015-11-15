@@ -4,7 +4,7 @@ const path = require('path');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const DIST_DIR = path.join(__dirname, '../../dist');
 const SRC_DIR = path.join(__dirname, '../../src');
-const PKG_LOCATION = path.join(__dirname, '../../PKG_LOCATION.json');
+const PKG_LOCATION = path.join(__dirname, '../../package.json');
 
 module.exports = {
     entry: SRC_DIR,
@@ -36,9 +36,12 @@ module.exports = {
         extensions: ['', '.json', '.js']
     },
     plugins: [
-	    // Notifier
-        new WebpackNotifierPlugin({title: 'Trolly', alwaysNotify: true} ),
-		// optimizations
+        // Notifier
+        new WebpackNotifierPlugin({
+            title: 'Trolly',
+            alwaysNotify: true
+        }),
+        // optimizations
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({

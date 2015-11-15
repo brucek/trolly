@@ -44,7 +44,7 @@ $ npm webpack                   # Build a non-minified version of the library
 
 ## Usage
 
-* `npm run build` - Build task that generates minified scripts
+* `npm run production` - Build task that generates minified scripts for production
 * `npm run precommit` - Run the unit tests,, and generate a minified script
 * `npm run clean` - Remove the `dist` folder
 * `npm run lint:source` - Lint the source
