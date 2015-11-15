@@ -44,14 +44,15 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run build` - Build task that generates minified scripts
 * `npm run precommit` - Run the unit tests,, and generate a minified script
 * `npm run clean` - Remove the `dist` folder
-* `npm run lint` - Lint the source
-* `npm run lint:tests` - Lint the unit tests
+* `npm run lint:source` - Lint the source
+* `npm run lint:common` - Lint the unit tests shared by Karma and Mocha
+* `npm run lint:server` - Lint the unit tests for server
+* `npm run lint:browser` - Lint the unit tests for browser
 * `npm run clean` - Remove the coverage report and the *dist* folder
 * `npm run test` - Runs unit tests for both server and the browser
 * `npm run test:browser` - Runs the unit tests for browser / client
 * `npm run test:server` - Runs the unit tests on the server
 * `npm run watch` - Run all unit tests for server & watch files for changes
-* `npm run coveralls` - Run Isparta, a code coverage tool;
 * `npm run packages` - Shows all installed dependencies
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
@@ -62,11 +63,11 @@ $ npm webpack                   # Build a non-minified version of the library
 
 This project uses Mocha to run your unit tests, it uses Karma as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.).
 
-To add a unit test, simply create `.spec.js` file inside the `~/test` folder. Karma will pick up on these files automatically, and Mocha and Chai will be available within your unit tests without the need to import them.
+To add a unit test, simply create `.common.js` file inside the `~/test` folder. Karma will pick up on these files automatically, and Mocha and Chai will be available within your unit tests without the need to import them.
 
 To run unit tests only for the browser ( *client*), simply create a `.browser.js` file, or if you need to run unit tests only for the server, create a `.server.js` file inside the `~/test` folder.
 
-Tests for both client and server share the same `.spec.js` files,
+Tests for both client and server share the same `.common.js` files,
 
 To run the tests in the project, just simply `npm run test` for both server and client unit tests, or `npm run test:server`. for server or `npm run test:browser`. for browser tests.
 

@@ -20,5 +20,5 @@ before_install:
   - npm install -g npm@3.4.0
   - npm install -g babel-cli@6.1.18
 
-after_script:
-  - npm run coveralls
+# Upload to coveralls, but don't _fail_ if coveralls is down.
+  - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"

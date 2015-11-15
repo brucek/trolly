@@ -1,4 +1,4 @@
-import webpackConfig from '../webpack.config';
+import webpackConfig from './webpack/webpack.karma.config';
 
 // Karma configuration here
 module.exports = function(config) {
@@ -11,7 +11,7 @@ module.exports = function(config) {
         files: [
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
             'test/**/*.browser.js',
-            'test/**/*.spec.js'
+            'test/**/*.common.js'
         ],
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -20,8 +20,17 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'test/**/*.spec.js': ['webpack'],
+            'test/**/*.common.js': ['webpack', 'coverage'],
             'test/**/*.browser.js': ['webpack']
+        },
+		reporters: ['progress', 'coverage'],
+		coverageReporter: {
+            reporters: [{
+                type: 'text'
+            }, {
+                type: 'lcovonly',
+                subdir: '.'
+            }]
         },
         webpack: {
             module: webpackConfig.module
@@ -29,12 +38,6 @@ module.exports = function(config) {
         webpackMiddleware: {
             noInfo: true
         },
-        plugins: [
-            'karma-sinon-chai',
-            'karma-webpack',
-            'karma-mocha',
-            'karma-phantomjs-launcher'
-        ],
         // Start these browsers, currently available:
         // - Chrome
         // - ChromeCanary
