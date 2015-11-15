@@ -127,7 +127,7 @@ Yes, for small applications. For a larger project, you'll need to customize the 
 
 ###How do I set this up to work with React
 
-To get it working with *React*, you have to add the `babel-preset-react` , `react 14.x` and the `react-dom 14.x` dependencies  to your `package.json`. After that you have to add `react` the *presets* section inside your `babelrc` file. To get `JSX` working in the unit tests, you need to import the React library - `import React from 'react'.`
+To get it working with *React*, you have to add the `babel-preset-react` , `react 14.x` and the `react-dom 14.x` dependencies  to your `package.json`. After that you have to add `react` to the *presets* section inside your `babelrc` file. Note that you would need to import the React library in your unit tests to get `JSX` working.`
 
 ###Is there absolute paths in Trolly, or can I change the paths?
 Not sure what you mean. But you can modify the `config.js` file inside the `./config` folder if you want to change the paths, or the name on the library. Example if the name on your library is `Foo`, you have to change `_app = 'trolly'` to `_app = 'Foo'`. Or if your unit test folder is `unitTests`, you have to rename `testDir = _root + 'tests'` to `testDir = _root + 'unitTests'`.
