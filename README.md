@@ -125,6 +125,13 @@ Just take a cup of coffee and relax. It works!
 ###Is this boilerplate production ready?
 Yes, for small applications. For a larger project, you'll need to customize the boilerplate after your own needs, but that is out of scope of this boilerplate.
 
+###How do I set this up to work with React
+
+First you have to install the `babel-preset-es2015` preset, and the React packages - `react 14.x` and `react-dom 14.x`. Then you need to modify the `babelrc` file so it looks like this `"presets": [ "es2015", "stage-0", "react" ]`. And to get `JSX` working in the unit tests, you need to import the React library - `import React from 'react'.`
+
+###Is there absolute paths in Trolly, or can I change the paths?
+Not sure what you mean. But you can modify the `config.js` file inside the `./config` folder if you want to change the paths, or the name on the library. Example if the name on your library is `Foo`, you have to change `_app = 'trolly'` to `_app = 'Foo'`. Or if your unit test folder is `unitTests`, you have to rename `testDir = _root + 'tests'` to `testDir = _root + 'unitTests'`.
+
 ## License
 MIT © [KFlash](https://github.com/kflash)
 

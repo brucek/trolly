@@ -12,8 +12,6 @@ const
     distDir = _root + 'dist',
     sourceDir = _root + 'src',
     testDir = _root + 'tests',
-    serverDir = _root + 'tests/server',
-    clientDir = _root + 'tests/client',
     setupDir = _root + 'tests/setup/node.js',
     karmaConf = _root + 'config/karma.conf.js';
 
@@ -24,8 +22,6 @@ module.exports = {
     distDir,
     sourceDir,
     testDir,
-    serverDir,
-    clientDir,
     setupDir,
     karmaConf
 };
