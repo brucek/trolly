@@ -1,8 +1,6 @@
 // Webpack config for development
 import webpack from 'webpack';
 import path from 'path';
-import pkg from '../../package.json';
-import banner from '../banner';
 
 module.exports = {
     cache: true,
@@ -14,7 +12,7 @@ module.exports = {
 		preLoaders: [{
             test: /\.jsx?$/,
             include: path.join(__dirname, '../src'),
-            exclude: /(__tests__)/,
+            exclude: /(tests)/,
             loader: 'isparta',
         }],
         loaders: [{
