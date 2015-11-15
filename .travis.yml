@@ -19,5 +19,8 @@ branches:
 before_install:
   - npm install -g npm@3.4.0
 
+after_script:
+  - npm run coveralls
+  
 # Upload to coveralls, but don't _fail_ if coveralls is down.
   - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"

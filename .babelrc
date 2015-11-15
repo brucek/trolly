@@ -15,5 +15,5 @@
     }
   },
 /* Add plugins here**/
-"plugins": []
+"plugins": ["babel-plugin-syntax-jsx"]
 }
