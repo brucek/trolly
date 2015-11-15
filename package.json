@@ -103,7 +103,7 @@
     "dependencies": {
         "npmlog": "^2.0.0",
         "rimraf": "^2.4.3",
-		"webpack-notifier": "1.2.1"
+		"webpack-notifier": "1.2.1",
         "karma-firefox-launcher": "^0.1.7",
         "karma-chrome-launcher": "^0.2.1",
         "karma-ie-launcher": "^0.2.0",
