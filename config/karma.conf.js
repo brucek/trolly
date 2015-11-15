@@ -38,6 +38,13 @@ module.exports = function(config) {
         webpackMiddleware: {
             noInfo: true
         },
+		plugins: [
+            'karma-sinon-chai',
+            'karma-webpack',
+            'karma-mocha',
+            'karma-phantomjs-launcher',
+			'karma-coverage'
+        ],
         // Start these browsers, currently available:
         // - Chrome
         // - ChromeCanary

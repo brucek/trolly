@@ -4,7 +4,7 @@
 [![devDependency Status](https://david-dm.org/kflash/trolly/dev-status.svg)](https://david-dm.org/kflash/trolly#info=devDependencies)
 [![Dependency Status](https://david-dm.org/kflash/trolly.svg)](https://david-dm.org/kflash/trolly)
 
-> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon-chai, Karma, Isparta, and ESLint without any framework dependencies.
+> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon-chai, Karma, Coveralls, and ESLint without any framework dependencies.
 
 ## Requirements
 
@@ -18,7 +18,6 @@ Node `^5.0.0`.
 * [Webpack](https://webpack.github.io/) for bundling
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * UMD pattern, which provides compatibility with the most popular script loaders, to the output.
-* [Isparta](https://www.npmjs.com/package/isparta) for coverage report
 * Hot Module Replacement (WDS)
 * Node >= 5.x
 
@@ -80,12 +79,6 @@ This library is set up to integrate with Coveralls, and will automaticly publish
 ## Linting
 
 This boilerplate project uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
-
-```js
-npm run lint // lints the source
-
-npm run lint:tests // lints the unit tests
-```
 
 ## Asset server
 
