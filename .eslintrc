@@ -1,63 +1,70 @@
----
-parser: babel-eslint
+{
+    "globals": {
+        "document": true,
+        "window": true,
+    },
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "mocha": true,
+        "node": true
 
-root: true
-globals:
-  window: true
-  document: true
-env:
-  node: true
-  es6: true
-  mocha: true
-ecmaFeatures:
-  jsx: true
-  modules: true
-extends:
-  "eslint:recommended"
-# We're stricter than the default config, mostly. We'll override a few rules and
-# then enable some Rivatha specific ones.  
-rules:
-  accessor-pairs: 0
-  array-bracket-spacing: [1, "never"]
-  block-scoped-var: 1
-  brace-style: [1, "1tbs", { "allowSingleLine": true }]
-  camelcase: [1, { "properties": "never" }]
-  curly: [1, "multi-line"]
-  comma-dangle: [0, always-multiline]
-  consistent-return: 2
-  dot-location: [2, property]
-  dot-notation: 2
-  eol-last: 0
-  eqeqeq: [2, allow-null]
-  indent: [0, 0, { "SwitchCase": 1 }]
-  jsx-quotes: [2, prefer-double]
-  max-depth: [1, 5]
-  max-len: [1, 100]
-  max-statements: [1, 18]
-  new-cap: 0
-  no-bitwise: 0
-  no-empty: 0
-  no-fallthrough: 0
-  no-dupe-class-members: 2
-  no-extend-native: 1
-  no-nested-ternary: 1
-  no-new-object: 1
-  no-spaced-func: 1
-  no-mixed-spaces-and-tabs: 1
-  no-restricted-syntax: [2, WithStatement]
-  no-shadow: 2
-  no-unused-expressions: 2
-  no-trailing-spaces: 1
-  no-unused-vars: [1, { "vars": "all", "args": "none" }]
-  no-use-before-define: [2, "nofunc"]
-  no-console: 0
-  object-curly-spacing: [1, "always"]
-  one-var: [1, "never"]
-  quotes: [2, single, avoid-escape]
-  semi: [2, "always"]
-  semi-spacing: [1, { "before": false, "after": true }]
-  space-after-keywords: [2, "always"]
-  space-unary-ops: 2
-  space-before-blocks: 1
-  space-infix-ops: 1  
-  space-return-throw-case: 1  
+    },
+    "parser": "babel-eslint",
+    #We 're stricter than the default config, mostly. We'
+    ll override a few rules and# then enable some Rivatha specific ones.
+    "rules": {
+        "accessor-pairs": 0,
+        "array-bracket-spacing": [1, "never"],
+        "block-scoped-var": 1,
+        "brace-style": [1, "1tbs", {
+            "allowSingleLine": true
+        }],
+        "camelcase": [1, {
+            "properties": "never"
+        }],
+        "curly": [1, "multi-line"],
+        "comma-dangle": [0, always - multiline],
+        "consistent-return": 2,
+        "dot-location": [2, property],
+        "dot-notation": 2,
+        "eol-last": 0,
+        "eqeqeq": [2, allow - null],
+        "indent": [0, 0, {
+            "SwitchCase": 1
+        }],
+        "jsx-quotes": [2, prefer - double],
+        "max-depth": [1, 5],
+        "max-len": [1, 100],
+        "max-statements": [1, 18],
+        "new-cap": 0,
+        "no-bitwise": 0,
+        "no-empty": 0,
+        "no-fallthrough": 0,
+        "no-dupe-class-members": 2,
+        "no-extend-native": 1,
+        "no-nested-ternary": 1,
+        "no-new-object": 1,
+        "no-spaced-func": 1,
+        "no-mixed-spaces-and-tabs": 1,
+        "no-restricted-syntax": [2, WithStatement],
+        "no-shadow": 2,
+        "no-unused-expressions": 2,
+        "no-trailing-spaces": 1,
+        "no-unused-vars": [1, {
+            "vars": "all",
+            "args": "none"
+        }],
+        "no-use-before-define": [2, "nofunc"],
+        "no-console": 0,
+        "object-curly-spacing": [1, "always"],
+        "one-var": [1, "never"],
+        "quotes": [2, single, avoid - escape],
+        "strict": [2, "never"]
+    },
+    "plugins": []
+}
