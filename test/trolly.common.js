@@ -1,4 +1,3 @@
-import trolly from '../src';
 
 describe('trolly - server and browser tests', () => {
 

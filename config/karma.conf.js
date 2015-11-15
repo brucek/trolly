@@ -9,7 +9,8 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            'test/**/*.browser.js',
+            'src/**/*.js',
+			'test/**/*.browser.js',
             'test/**/*.common.js'
         ],
         // frameworks to use
@@ -19,8 +20,8 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/**/*.js': [ 'webpack', 'coverage' ],
-            'test/**/*.common.js': ['webpack', 'coverage'],
+            'src/**/*.js': ['webpack', 'coverage'],
+            'test/**/*.common.js': ['webpack'],
             'test/**/*.browser.js': ['webpack']
         },
         reporters: ['progress', 'coverage'],

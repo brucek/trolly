@@ -1,4 +1,4 @@
-import trolly from '../src';
+
 
 describe('Karma - browser tests *only*', () => {
 
