@@ -3,7 +3,7 @@
 ## 0.5.6
 * fixed a bug with production mode
 *  BC! `Build` renamed to `production` - `npm run production`
-*  
+
 ## 0.5.2
 
 - BC! Changed how unit tests works. Unit tests are merged into one folder - `./tests`. Unit tests for browser: `.browser.js`.  Unit tests for server: `.server.js`.
