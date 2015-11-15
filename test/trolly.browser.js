@@ -1,6 +1,6 @@
-import trolly from '../../src';
+import trolly from '../src';
 
-describe('trolly', () => {
+describe('Karma - browser tests *only*', () => {
 
   it('should be a object', () => {
     expect(typeof trolly).to.be.a.object;
