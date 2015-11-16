@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.3
+* solved issues with the unit tests
+
 ## 0.6.2
 * Fixed bug with Mocha setup
 
