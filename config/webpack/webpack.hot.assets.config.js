@@ -1,14 +1,10 @@
 require('babel-core/register');
 
 const webpack = require('webpack');
-const path = require('path');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('../config');
 
-// First we fire up Webpack an pass in the configuration we
-// created
-const bundleStart = null;
-const compiler = webpack({
+new WebpackDevServer(webpack({
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server'
@@ -39,26 +35,26 @@ const compiler = webpack({
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     ]
-});
-
-const bundler = new WebpackDevServer(compiler, {
+}), {
     publicPath: 'http://localhost:8080/assets/',
     // Configure hot replacement
     hot: true,
     // The rest is terminal configurations
     quiet: false,
     noInfo: true,
-    historyApiFallback: true,
+    historyApiFallback: {
+        index: './templates/index.html'
+    },
     progress: true,
     stats: {
         colors: true
     }
     // We fire up the development server and give notice in the terminal
     // that we are starting the initial bundle
-}).listen(8080, 'localhost', function(error) {
+}).listen(8080, 'localhost', function(err, result) {
 
-    if (error) {
-        console.log(error);
+    if (err) {
+        console.log(err);
     }
-    console.log('The asset server is running. Open port 8080 in your browser...');
+    console.log('The asset server is running at localhost: 8080');
 });

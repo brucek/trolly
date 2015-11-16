@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.2
+- re-factored how the asset server works
+- added more `ESLint` rules
+- moved `index.html` from root to `/templates/index.html`
+- added sourcemap for Karma
+- fixed issue with auto-watch for Karma
+
 ## 0.7.0
 * added and improved the asset server. See the readme file.
 * added support for both `sinon-chai`, and `sinon`, `chai` in the unit tests
