@@ -1,2 +1,8 @@
 require('babel-core/register');
-module.exports = require('./config/webpack/webpack.config');
+
+/**
+ * Simple example on how environment variables can be used
+ */
+
+const config   = require('./config/environment').default;
+module.exports = require('./config/webpack/webpack.' + config.env + '.config');

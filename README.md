@@ -23,6 +23,7 @@ Node `^5.0.0`.
 * Coveralls
 * Displays build status system notifications
 * Hot Module Replacement (WDS)
+* Environment variables
 * Node >= 5.x
 
 ## Babel >= 6.x design changes

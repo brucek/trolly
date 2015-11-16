@@ -107,6 +107,7 @@
         "karma-chrome-launcher": "^0.2.1",
         "karma-ie-launcher": "^0.2.0",
 	    "babel-core": "^6.1.21",
-        "babel-plugin-syntax-jsx": "^6.1.18"
+        "babel-plugin-syntax-jsx": "^6.1.18",
+		"dotenv": "^1.2.0"
     }
 }
