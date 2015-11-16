@@ -1,4 +1,4 @@
-/*! trolly, version 0.5.7 */
+/*! trolly, version 0.6.4 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -53,9 +53,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	eval("'use strict';\n\nvar _fooBar = __webpack_require__(1);\n\nvar _fooBar2 = _interopRequireDefault(_fooBar);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\n* Migrating from Babel >= 5.x to Babel >= 6.x, will most likely break your code\n* because Babel now have killed the CommonJS default export behaviour.\n*\nAs a workaround, replace export default { … } with module.exports = { … }\n*/\n\nvar trolly = {\n  fooBar: _fooBar2.default,\n  example: function example() {\n    return 'hello';\n  }\n};\n\nmodule.exports = trolly;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/index.js\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
-	eval("\"use strict\";\n\n/**\n* Migrating from Babel >= 5.x to Babel >= 6.x, will most likely break your code\n* because Babel now have killed the CommonJS default export behaviour.\n*\nAs a workaround, replace export default { … } with module.exports = { … }\n*/\n\nmodule.exports = function () {};\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/index.js\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/index.js?");
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = fooBar;\nfunction fooBar() {\n  return 'world!';\n};\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/fooBar.js\n ** module id = 1\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/fooBar.js?");
 
 /***/ }
 /******/ ])

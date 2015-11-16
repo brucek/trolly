@@ -8,8 +8,6 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 const PKG_LOCATION = path.join(__dirname, '../../package.json');
 const config = require('../config');
 
-console.log(config);
-
 module.exports = {
     entry: config.sourceDir,
     cache: false,
@@ -23,15 +21,14 @@ module.exports = {
         libraryTarget: 'umd',
         library: console._app
     },
-    module: {
+ module: {
         loaders: [{
             test: /\.js$/,
             exclude: ['node_modules'],
-            include: config.sourceDir,
+            include: path.join(__dirname, '../../src'),
             loader: 'babel-loader'
         }]
-    },
-    progress: true,
+    },    progress: true,
     resolve: {
         modulesDirectories: [
             'src',
