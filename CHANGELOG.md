@@ -2,7 +2,7 @@
 
 ## 0.7.0
 * added and improved the asset server. See the readme file.
-* added support for both `sinon-chai`, and `sinon`, `chai`
+* added support for both `sinon-chai`, and `sinon`, `chai` in the unit tests
 * improved the build process
 * improved development mode
 * added eslint option both for dev-and production mode
