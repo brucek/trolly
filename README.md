@@ -129,9 +129,6 @@ Yes, for small applications. For a larger project, you'll need to customize the 
 
 To get it working with *React*, you have to add the `babel-preset-react` , `react 14.x` and the `react-dom 14.x` dependencies  to your `package.json`. After that you have to add `react` to the *presets* section inside your `babelrc` file. Note that you would need to import the React library in your unit tests to get `JSX` working.`
 
-#### How do I change the global name on the library used in the unit tests?
-It's only for `Mocha` you have to do that. `Karma` does this automaticly. Open up the `mocha.conf.js` file, and change `global.trolly` to the name on your library. E.g. `global.Foo`.
-
 ## How to Contribute
 
 If you see any bugs, or have any ideas regarding how to improve this boilerplate,, please do not hesitate to send a pull request.
