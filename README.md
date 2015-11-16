@@ -119,17 +119,17 @@ There are a know issue with `Node 4.1` on Mac. To solve this issue, upgrade to `
 
 ## FAQ
 
-### Help! It doesn't work on Windows! What do I do?
+#### Help! It doesn't work on Windows! What do I do?
 Just take a cup of coffee and relax. It works!
 
-### Is this boilerplate production ready?
+#### Is this boilerplate production ready?
 Yes, for small applications. For a larger project, you'll need to customize the boilerplate after your own needs, but that is out of scope of this boilerplate.
 
-### How do I get this boilerplate working with React?
+#### How do I get this boilerplate working with React?
 
 To get it working with *React*, you have to add the `babel-preset-react` , `react 14.x` and the `react-dom 14.x` dependencies  to your `package.json`. After that you have to add `react` to the *presets* section inside your `babelrc` file. Note that you would need to import the React library in your unit tests to get `JSX` working.`
 
-### How do I change the global name on the library used in the unit tests?
+#### How do I change the global name on the library used in the unit tests?
 It's only for `Mocha` you have to do that. `Karma` does this automaticly. Open up the `mocha.conf.js` file, and change `global.trolly` to the name on your library. E.g. `global.Foo`.
 
 ## How to Contribute
