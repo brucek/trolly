@@ -2,6 +2,10 @@
     "globals": {
         "document": true,
         "window": true,
+        "spy",
+        "mocha",
+        "stub",
+        "beforeEach"
     },
     "ecmaFeatures": {
         "jsx": true,

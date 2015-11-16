@@ -5,4 +5,4 @@
 As a workaround, replace export default { … } with module.exports = { … }
 */
 
-module.exports = function() {}
+module.exports = function() {};

@@ -9,9 +9,9 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            'src/**/*.js',
-			'test/**/*.browser.js',
-            'test/**/*.common.js'
+            './src/**/*.js',
+			'./test/**/*.browser.js',
+            './test/**/*.common.js'
         ],
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter

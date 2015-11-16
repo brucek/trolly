@@ -47,10 +47,10 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run production` - Build task that generates minified scripts for production
 * `npm run precommit` - Run the unit tests,, and generate a minified script
 * `npm run clean` - Remove the `dist` folder
-* `npm run lint:source` - Lint the source
-* `npm run lint:common` - Lint the unit tests shared by Karma and Mocha
-* `npm run lint:server` - Lint the unit tests for server
-* `npm run lint:browser` - Lint the unit tests for browser
+* `npm run eslint:source` - Lint the source
+* `npm run eslint:common` - Lint the unit tests shared by Karma and Mocha
+* `npm run eslint:server` - Lint the unit tests for server
+* `npm run eslint:browser` - Lint the unit tests for browser
 * `npm run clean` - Remove the coverage report and the *dist* folder
 * `npm run test` - Runs unit tests for both server and the browser
 * `npm run test:browser` - Runs the unit tests for browser / client
