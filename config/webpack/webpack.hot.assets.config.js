@@ -6,25 +6,26 @@ const config = require('../config');
 
 new WebpackDevServer(webpack({
     entry: [
-        'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server'
+
+        // For hot style updates
+        'webpack/hot/only-dev-server',
+        // The script refreshing the browser on none hot updates
+        'webpack-dev-server/client?http://localhost:8080'
     ],
     output: {
+        // We need to give Webpack a path. It does not actually need it,
+        // because files are kept in memory in webpack-dev-server, but an
+        // error will occur if nothing is specified. We use the buildPath
+        // as that points to where the files will eventually be bundled
+        // in production		
         path: config.distDir,
-        filename: config.dev,
-        publicPath: 'http://localhost:8080/assets/',
-        libraryTarget: 'umd',
-        library: config._app
+        filename: config.dev
     },
     module: {
         loaders: [{
             test: /\.js?$/,
-            exclude: [/hot/,
-                /node_modules/,
-                /babel/,
-                /node_modules[\\\/]react(-router)?[\\\/]/ // In case this is used together with React
-            ],
-            loaders: ['babel-loader']
+            exclude: [/node_modules/],
+            loader: 'babel-loader'
         }]
     },
     resolve: {
@@ -32,8 +33,7 @@ new WebpackDevServer(webpack({
     },
     plugins: [
         // Used for hot-reload
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.HotModuleReplacementPlugin()
     ]
 }), {
     publicPath: 'http://localhost:8080/assets/',
