@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.7
+* added support for environment variabels. See the FAQ section in the readme.
+
 ## 0.6.3
 * solved issues with the unit tests
 
