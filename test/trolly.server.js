@@ -1,7 +1,21 @@
 describe('Mocha - server tests *only*', () => {
+	
+    describe('trolly', () => {
 
-  it('should be a object', () => {
-    expect(typeof trolly).to.be.a.object;
-  });
+        describe('Example function', () => {
 
+            it('should say "hello"', () => {
+                expect(trolly.example()).to.eql('hello');
+            });
+ 
+            it('should say "world!"', () => {
+                expect(trolly.fooBar()).to.eql('world!');
+            });
+ 
+        });
+    });
+
+    it('should be a function', () => {
+        expect(typeof trolly.example).to.be.a.function;
+    });
 });
