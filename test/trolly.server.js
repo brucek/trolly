@@ -1,3 +1,5 @@
+import trolly from '../src';
+
 describe('Mocha - server tests *only*', () => {
 	
     describe('trolly', () => {

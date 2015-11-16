@@ -20,7 +20,7 @@ module.exports = function(config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
             'test/**/*.common.js': ['webpack', 'coverage'],
-            'test/**/*.browser.js': ['webpack']
+            'test/**/*.browser.js': ['webpack', 'coverage']
         },
         reporters: ['progress', 'coverage'],
         coverageReporter: {
