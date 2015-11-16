@@ -6,6 +6,7 @@ module.exports = {
     _app: 'trolly',
     minified: 'trolly.min.js',
     dev: 'trolly.js',
+    eslintDir: _root + '.eslintrc',
     distDir: _root + 'dist',
     sourceDir: _root + 'src',
     testDir: _root + 'tests',

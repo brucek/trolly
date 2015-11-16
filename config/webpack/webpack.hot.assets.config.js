@@ -23,7 +23,11 @@ const compiler = webpack({
     module: {
         loaders: [{
             test: /\.js?$/,
-            exclude: /node_modules/,
+            exclude: [/hot/,
+                /node_modules/,
+                /babel/,
+                /node_modules[\\\/]react(-router)?[\\\/]/ // In case this is used together with React
+            ],
             loaders: ['babel-loader']
         }]
     },

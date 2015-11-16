@@ -24,6 +24,7 @@ Node `^5.0.0`.
 * Displays build status system notifications
 * Hot Module Replacement (WDS)
 * Environment variables
+* Asset server on port 8080
 * Node >= 5.x
 
 ## Babel >= 6.x design changes

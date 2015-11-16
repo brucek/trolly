@@ -14,7 +14,12 @@ module.exports = function(config) {
         ],
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['mocha', 'sinon-chai'], //use mocha and sinon-chai as framework
+        frameworks: [
+            'sinon-chai',
+            'sinon',
+            'chai',
+            'mocha'
+        ], //use mocha and sinon-chai as framework
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -39,6 +44,8 @@ module.exports = function(config) {
         },
         plugins: [
             'karma-sinon-chai',
+            'karma-sinon',
+            'karma-chai',
             'karma-webpack',
             'karma-mocha',
             'karma-phantomjs-launcher',

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0
+* added and improved the asset server. See the readme file.
+* added support for both `sinon-chai`, and `sinon`, `chai`
+* improved the build process
+* improved development mode
+* added eslint option both for dev-and production mode
+
 ## 0.6.7
 * added support for environment variabels. See the FAQ section in the readme.
 

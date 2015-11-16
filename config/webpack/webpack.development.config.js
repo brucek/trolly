@@ -40,5 +40,9 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('development'),
             VERSION: JSON.stringify(pkg.version)
         })
-    ]
+    ], eslint: {
+      configFile: config.eslintDir,
+      emitError: true,
+      emitWarning: false
+    }
 };

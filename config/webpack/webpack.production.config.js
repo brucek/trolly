@@ -45,6 +45,7 @@ module.exports = {
         // optimizations
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.NoErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             output: {
                 comments: false
@@ -61,5 +62,9 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production'),
             VERSION: JSON.stringify(PKG_LOCATION.version)
         })
-    ]
+    ], eslint: {
+      configFile: config.eslintDir,
+      emitError: true,
+      emitWarning: false
+    }
 };
