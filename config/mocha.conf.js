@@ -1,10 +1,8 @@
 /* eslint-disable */
-import config from './config';
-import chai from 'chai';
-import sinon from 'sinon';
 
-require('babel-core/register');
+process.env.NODE_ENV = 'development';
 
-global.chai = chai;
-global.sinon = sinon;
-global.expect = global.chai.expect;
+global.babel = require('babel-core/register');
+global.expect = require('chai').expect;
+global.sinon = require('sinon');
+global.BROWSER = false;

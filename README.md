@@ -62,7 +62,7 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run karma:firefox` - Run all unit tests with Karma & Firefox
 * `npm run karma:chrome` - Run all unit tests with Karma & Chrome
 * `npm run karma:ie` - Run all unit tests with Karma & Internet Explorer
-* `npm run packages` - Shows all installed dependencies
+* `npm run packages` - List installed packages
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
 * `npm run package:updates` - shows a list over dependencies with a higher version number then the current one - if any 
