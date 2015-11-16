@@ -22,7 +22,7 @@
         "package:reinstall": "npm run package:purge && npm install",
         "package:updates": "./node_modules/.bin/ncu",
         "package:upgrade": "npm run package:updates -u",
-        "dev-server": "node config/webpack/webpack.server.config"
+        "asset-server": "node config/webpack/webpack.hot.assets.config"
     },
     "repository": "trolly",
     "keywords": [

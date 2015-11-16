@@ -66,6 +66,8 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run package:reinstall` - Reinstall all dependencies
 * `npm run package:updates` - shows a list over dependencies with a higher version number then the current one - if any 
 * `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
+* `npm run asset-server` - starts a asset server with hot module replacement (WDS) on port 8080
+
 
 ## Unit tests
 
@@ -94,7 +96,7 @@ This boilerplate project uses ESLint to lint your source. To change the rules, e
 Trolly uses `webpack-dev-server` as an asset server with hot module replacement (WDS) enabled on port 8080.
 
 ```js
-npm run dev-server
+npm run asset-server
 ```
 
 Open `http://localhost:8080`, and you will see this message in your browser: `It works!`.
