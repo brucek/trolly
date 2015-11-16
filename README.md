@@ -130,6 +130,16 @@ Yes, for small applications. For a larger project, you'll need to customize the 
 
 To get it working with *React*, you have to add the `babel-preset-react` , `react 14.x` and the `react-dom 14.x` dependencies  to your `package.json`. After that you have to add `react` to the *presets* section inside your `babelrc` file. Note that you would need to import the React library in your unit tests to get `JSX` working.`
 
+#### Why is there so many webpack configuration files?
+
+Short answer. Too keep the file size as compact as possible. Each plugin take up tons of code lines. Example if you merge the development configuration file with the server configuration file, you will end up with a development version with a filsize 4 - 5 times larger then what it is now.
+
+#### Is there any environment variabels for production and development?
+
+Yes, there is. You have to configure this yourself. Just modify the `environment.js` file inside the `./config folder`.
+
+There exist one example on how to use environment variabels. Take a look at the `webpack.config.js` file in the root.
+
 ## How to Contribute
 
 If you see any bugs, or have any ideas regarding how to improve this boilerplate,, please do not hesitate to send a pull request.

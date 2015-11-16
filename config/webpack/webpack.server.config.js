@@ -56,5 +56,5 @@ const bundler = new WebpackDevServer(compiler, {
     if (error) {
         console.log(error);
     }
-    console.log('The asset server is running...');
+    console.log('The asset server is running. Open port 8080 in your browser...');
 });
