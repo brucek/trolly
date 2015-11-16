@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.2
+* Fixed bug with Mocha setup
+
+## 0.6.1
+* lint tasks renamed to eslint tasks. E.g `npm run eslint:source`
+*  updated to latest mocha
+*   minor bug fixes
+
 ## 0.5.6
 * fixed a bug with production mode
 *  BC! `Build` renamed to `production` - `npm run production`
