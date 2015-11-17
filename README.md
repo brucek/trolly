@@ -25,6 +25,7 @@ Node `^5.0.0`.
 * Hot Module Replacement (WDS)
 * Environment variables
 * Asset server on port 8080
+* Package managment
 * Node >= 5.x
 
 ## Babel >= 6.x design changes
@@ -87,6 +88,14 @@ To keep watching the common test suites that you are working on, simply do `npm 
 ## Coveralls
 
 This library is set up to integrate with Coveralls, and will automaticly publish your coverage report if you have created an account for your repo at **coveralls.io**
+
+## Package management
+
+Trolly has build-in some nice features to always make sure your dependency tree are up to date.
+
+You can check for the latest dependencies with `npm run package:updates`, and if you want to update your packages, you can simply do `npm run package:upgrade`.
+
+To reinstall all packages, do `npm run package:reinstall`, and to remove all packages  `npm run package:purge`.
 
 ## Linting
 
