@@ -66,8 +66,10 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run packages` - List installed packages
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
-* `npm run package:updates` - shows a list over dependencies with a higher version number then the current one - if any 
+* `npm run package:check` - shows a list over dependencies with a higher version number then the current one - if any 
 * `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
+* `npm run package:dev` - Automaticly upgrade all devDependencies and update package.json
+* `npm run package:prod` - Automaticly upgrade all dependencies and update package.json
 * `npm run asset-server` - starts a asset server with hot module replacement (WDS) on port 8080
 
 
@@ -91,9 +93,13 @@ This library is set up to integrate with Coveralls, and will automaticly publish
 
 ## Package management
 
-Trolly has build-in some nice features to always make sure your dependency tree are up to date.
+Trolly has build-in some nice features to always make sure your dependency tree are up to date. 
 
-You can check for the latest dependencies with `npm run package:updates`, and if you want to update your packages, you can simply do `npm run package:upgrade`.
+To check for the latest dependencies, simply run `npm run package:check`. 
+
+If you want to update your packages, you can simply do `npm run package:upgrade`.
+
+*Note!* Your `package.json` will be automatically updated so make sure you have saved your changes before running this.
 
 To reinstall all packages, do `npm run package:reinstall`, and to remove all packages  `npm run package:purge`.
 

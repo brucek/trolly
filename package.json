@@ -1,6 +1,6 @@
 {
     "name": "trolly",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon, Chai, Karma, Coveralls, and ESLint without any framework dependencies.",
     "scripts": {
         "precommit": "npm test && npm run build",
@@ -22,9 +22,11 @@
         "packages": "npm list --depth=0",
 		"package:purge": "rm -rf node_modules",
         "package:reinstall": "npm run package:purge && npm install",
-        "package:updates": "./node_modules/.bin/ncu",
-        "package:upgrade": "npm run package:updates -u",
-        "asset-server": "node config/webpack/webpack.hot.assets.config"
+		"package:check": "./node_modules/.bin/ncu",
+        "package:upgrade": "./node_modules/.bin/ncu -u",
+        "package:prod": "./node_modules/.bin/ncu -u",
+		"package:dev": "./node_modules/.bin/ncu -p -u",
+		"asset-server": "node config/webpack/webpack.hot.assets.config"
     },
     "repository": "trolly",
     "keywords": [
