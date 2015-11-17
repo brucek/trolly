@@ -145,7 +145,7 @@ To get it working with *React*, you have to add the `babel-preset-react` , `reac
 
 #### Why is there so many webpack configuration files?
 
-Short answer. Too keep the file size as compact as possible. Each plugin take up tons of code lines. Example if you merge the development configuration file with the server configuration file, you will end up with a development version with a filsize 4 - 5 times larger then what it is now.
+Short answer. Too keep the file size as compact as possible. Each plugin take up tons of code lines. Example if you merge the development configuration file with the server configuration file, you will end up with a development version with a filesize 4 - 5 times bigger then what's needed.
 
 #### There seems to be some configuration settings that is not used. Why?
 
