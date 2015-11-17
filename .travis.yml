@@ -11,18 +11,12 @@ cache:
     - node_modules
 
 notifications:
-  email:
-    on_success: change
-    on_failure: always
-	
+  email: true
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
 
 before_install:
-  # GUI for real browsers.
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
   - npm install -g npm@3.4.0
 
 after_script:
