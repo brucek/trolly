@@ -19,15 +19,14 @@ const {
     PORT,
     WEBPACK_DEV_SERVER_PORT
 } = defaults(process.env, {
-        ENVIRONMENT: 'local',
+        ENVIRONMENT: 'development',
+        // localhost
         HOST: 'localhost',
-        PORT: '8000',
-        WEBPACK_DEV_SERVER_PORT: '8081'
+        // port to use with the asset server
+		PORT: '8000'
     }),
     IS_PROD = any([
         NODE_ENV === 'production',
-        ENVIRONMENT === 'stage',
-        ENVIRONMENT === 'staging',
         ENVIRONMENT === 'prod',
         ENVIRONMENT === 'production'
     ]),
