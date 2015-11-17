@@ -103,7 +103,7 @@ To reinstall all packages, do `npm run package:reinstall`, and to remove all pac
 
 ## Linting
 
-This boilerplate project uses ESLint to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
+This boilerplate project uses ESLint and the [Airbnb styleguide](https://github.com/airbnb/javascript#ecmascript-6-styles) to lint your source. To change the rules, edit the .eslintrc file in the root directory, respectively.
 
 ## Asset server
 
