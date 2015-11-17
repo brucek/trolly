@@ -139,13 +139,17 @@ There are a know issue with `Node 4.1` on Mac & iOS. To solve this issue, upgrad
 #### Is this boilerplate production ready?
 Yes, for small applications. For a larger project, you'll need to customize the boilerplate after your own needs, but that is out of scope of this boilerplate.
 
+What's the browser compatibility?
+
+This transpiler works best in IE9+, but you can support IE8 by limiting yourself to a subset of ES2015 features.
+
 #### How do I get this boilerplate working with React?
 
 To get it working with *React*, you have to add the `babel-preset-react` , `react 14.x` and the `react-dom 14.x` dependencies  to your `package.json`. After that you have to add `react` to the *presets* section inside your `babelrc` file. Note that you would need to import the React library in your unit tests to get `JSX` working.`
 
 #### Why is there so many webpack configuration files?
 
-Short answer. Too keep the file size as compact as possible. Each plugin take up tons of code lines. Example if you merge the development configuration file with the server configuration file, you will end up with a development version with a filesize 4 - 5 times bigger then what's needed.
+Short answer. Too keep the file size as compact as possible. Each plugin take up tons of code lines. Example if you merge the development configuration file with the server configuration file, you will end up with a development version with a filesize 5 - 6 times bigger then what's needed. And everything getting slow.
 
 #### There seems to be some configuration settings that is not used. Why?
 
