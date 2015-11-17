@@ -1,5 +1,4 @@
 dist/*
 node_modules/*
 **/node_modules/*
-__config__/**
-__setup__/**
+config/**
