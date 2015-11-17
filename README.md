@@ -150,8 +150,8 @@ Short answer. Too keep the file size as compact as possible. Each plugin take up
 
 #### There seems to be some configuration settings that is not used. Why?
 
-Simply because with Trolly you are only given as set of tools and settings to use. After that it's up to you how you want to use it to 
-setup your own workflow after your own needs.
+With Trolly you are given a various set of tools and settings to use. After that it's up to you how you want to use it to 
+setup your own workflow.
 
 Btw. All configuration related files are located in the `./config` folder.
 
