@@ -164,6 +164,33 @@ Yes, there is. You have to configure this yourself. Just modify the `environment
 
 There exist one example on how to use environment variabels. Take a look at the `webpack.config.js` file in the root.
 
+#### I ran into trouble getting Trolly works with Travis and Chrome. What should I do?
+
+Sorry, but this is out of the scope of this boilerplate. However,  you should get it to work if you modify your `travis.yml` file and add:
+
+```js
+
+before_install:
+  # GUI for real browsers.
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+```
+
+Then you would need to modify the `karma.conf.js` configuration file, and add a custom launcher:
+
+```js
+ customLaunchers: {
+            Chrome_travis_ci: {
+                base: 'Chrome',
+                flags: ['--no-sandbox']
+            }
+        }
+```
+
+Inside the `process.env.TRAVIS` block, set `Chrome_travis_ci'` as the default browser for Travis.
+
 ## How to Contribute
 
 If you see any bugs, or have any ideas regarding how to improve this boilerplate,, please do not hesitate to send a pull request.
