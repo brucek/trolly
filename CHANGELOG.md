@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.4
+* re-factored how the package management works
+
 ## 0.7.2
 - re-factored how the asset server works
 - added more `ESLint` rules
