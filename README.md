@@ -67,7 +67,7 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
 * `npm run package:check` - shows a list over dependencies with a higher version number then the current one - if any 
-* `npm run package:upgrade` - Automaticly upgrade all dependencies and update package.json
+* `npm run package:upgrade` - Automaticly upgrade all devDependencies & dependencies, and update package.json
 * `npm run package:dev` - Automaticly upgrade all devDependencies and update package.json
 * `npm run package:prod` - Automaticly upgrade all dependencies and update package.json
 * `npm run asset-server` - starts a asset server with hot module replacement (WDS) on port 8080
