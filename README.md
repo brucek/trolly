@@ -139,7 +139,7 @@ There are a know issue with `Node 4.1` on Mac & iOS. To solve this issue, upgrad
 #### Is this boilerplate production ready?
 Yes, for small applications. For a larger project, you'll need to customize the boilerplate after your own needs, but that is out of scope of this boilerplate.
 
-What's the browser compatibility?
+#### What's the browser compatibility?
 
 This transpiler works best in IE9+, but you can support IE8 by limiting yourself to a subset of ES2015 features.
 
