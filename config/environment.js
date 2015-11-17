@@ -42,7 +42,6 @@ export default {
     HOST,
     PORT,
     WEBPACK_DEV_SERVER_PORT,
-    WEBPACK_DEV_BASE,
     HOT_RELOAD
 };
 /* eslint-enable */
