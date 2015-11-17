@@ -5,4 +5,5 @@ require('babel-core/register');
  */
 
 const config   = require('./config/environment').default;
-module.exports = require('./config/webpack/webpack.' + config.env + '.config');
+
+module.exports = require('./config/webpack/webpack.' + config.ENVIRONMENT_NAME + '.config');

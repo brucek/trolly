@@ -27,7 +27,8 @@ module.exports = function(config) {
             'test/**/*.common.js': ['webpack', 'coverage', 'sourcemap'],
             'test/**/*.browser.js': ['webpack', 'coverage', 'sourcemap']
         },
-        reporters: ['progress', 'coverage'],
+        // test results reporter to use
+		reporters: ['progress', 'coverage'],
         coverageReporter: {
             reporters: [{
                 type: 'text'
@@ -66,6 +67,8 @@ module.exports = function(config) {
         browsers: ['PhantomJS'],
         browserDisconnectTimeout: 10000,
         browserDisconnectTolerance: 2,
+        // concurrency level how many browser should be started simultaneously
+        concurrency: 4,
         // If browser does not capture in given timeout [ms], kill it
         captureTimeout: 100000,
         browserNoActivityTimeout: 30000,

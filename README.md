@@ -148,6 +148,13 @@ To get it working with *React*, you have to add the `babel-preset-react` , `reac
 
 Short answer. Too keep the file size as compact as possible. Each plugin take up tons of code lines. Example if you merge the development configuration file with the server configuration file, you will end up with a development version with a filsize 4 - 5 times larger then what it is now.
 
+#### There seems to be some configuration settings that is not used. Why?
+
+Simply because with Trolly you are only given as set of tools and settings to use. After that it's up to you how you want to use it to 
+setup your own workflow after your own needs.
+
+Btw. All configuration related files are located in the `./config` folder.
+
 #### Is there any environment variabels for production and development?
 
 Yes, there is. You have to configure this yourself. Just modify the `environment.js` file inside the `./config folder`.

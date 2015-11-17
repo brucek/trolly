@@ -3,6 +3,7 @@ require('babel-core/register');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('../config');
+const environment = require('../environment');
 
 new WebpackDevServer(webpack({
     entry: [
@@ -51,7 +52,7 @@ new WebpackDevServer(webpack({
     }
     // We fire up the development server and give notice in the terminal
     // that we are starting the initial bundle
-}).listen(8080, 'localhost', function(err, result) {
+}).listen(8080, environment.HOST, function(err, result) {
 
     if (err) {
         console.log(err);

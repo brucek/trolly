@@ -1,6 +1,6 @@
 {
     "name": "trolly",
-    "version": "0.7.5",
+    "version": "0.7.6",
     "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon, Chai, Karma, Coveralls, and ESLint without any framework dependencies.",
     "scripts": {
         "clean": "rimraf dist",
@@ -106,6 +106,7 @@
     "license": "MIT",
     "dependencies": {
         "npmlog": "^2.0.0",
+        "lodash": "3.10.1",
         "rimraf": "^2.4.3",
 		"webpack-notifier": "1.2.1",
         "karma-firefox-launcher": "^0.1.7",
