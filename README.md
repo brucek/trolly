@@ -25,7 +25,7 @@ Node `^5.0.0`.
 * Hot Module Replacement (WDS)
 * Environment variables
 * Asset server on port 8080
-* Package managment
+* Package management
 * Node >= 5.x
 
 ## Babel >= 6.x design changes
