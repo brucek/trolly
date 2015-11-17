@@ -13,14 +13,12 @@ Node `^5.0.0`.
 ## Features
 
 * [ES6 with Babel](http://babeljs.io/) for ES6 and ES7
-* Universal unit tests that work in Node and in the browser
-* Support for ES2015 in the unit tests
 * [Webpack](https://webpack.github.io/) for bundling
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * [Universal Module Definition (UMD) API](https://github.com/umdjs/umd), which provides compatibility with the most popular script loaders, to the output.
-* Universal Tests. Works for browser, server or both
-* Run unit tests for PhantomJS, Chrome, Firefox and IE
-* Coveralls
+* Universal unit tests that work in Node,browser or both
+* Unit tests written with ES2015 get transpiled on the fly
+* PhantomJS, Chrome, Firefox and IE unit tests for the browser
 * Displays build status system notifications
 * Hot Module Replacement (WDS)
 * Environment variables
