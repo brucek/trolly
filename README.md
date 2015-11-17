@@ -70,7 +70,6 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run package:prod` - Automaticly upgrade all dependencies and update package.json
 * `npm run asset-server` - starts a asset server with hot module replacement (WDS) on port 8080
 
-
 ## Unit tests
 
 This project uses Mocha to run your unit tests, it uses Karma as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.).

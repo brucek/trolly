@@ -25,9 +25,14 @@
     "package:upgrade": "./node_modules/.bin/ncu -u",
     "package:prod": "./node_modules/.bin/ncu -u",
     "package:dev": "./node_modules/.bin/ncu -p -u",
-    "asset-server": "node config/webpack/webpack.hot.assets.config"
+    "asset-server": "node config/webpack/webpack.hot.assets.config",
+	"preversion": "[[ -z $(git status --porcelain) ]] && npm run production && git add -A dist && git commit -m 'Build lib'",
+    "postpublish": "git push origin master --follow-tags"
   },
-  "repository": "trolly",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kflash/trolly.git"
+  },
   "keywords": [
     "Webpack",
     "workflow",
