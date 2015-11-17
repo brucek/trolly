@@ -20,17 +20,25 @@ module.exports = {
         library: config._app
     },
     module: {
+        preLoaders: [{
+            test: /\.js$/,
+            loader: 'eslint-loader',
+            exclude: /node_modules/
+        }],
+
         loaders: [{
             test: /\.js?$/,
             exclude: /node_modules/,
-            loaders: ['babel-loader']
+            loader: 'babel-loader'
         }]
     },
     resolve: {
         extensions: ['', '.js']
     },
     plugins: [
-	    new WebpackNotifierPlugin({alwaysNotify: true} ),
+        new WebpackNotifierPlugin({
+            alwaysNotify: true
+        }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.BannerPlugin(banner),
         new webpack.DefinePlugin({
@@ -38,9 +46,8 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('development'),
             VERSION: JSON.stringify(pkg.version)
         })
-    ], eslint: {
-      configFile: config.eslintDir,
-      emitError: true,
-      emitWarning: false
+    ],
+    eslint: {
+        configFile: config.eslintDir
     }
 };

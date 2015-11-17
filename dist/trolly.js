@@ -1,13 +1,13 @@
-/*! trolly, version 0.8.2 */
+/*! trolly, version 0.8.7 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
+	else if(typeof exports === 'object')
+		exports["trolly"] = factory();
+	else
+		root["trolly"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -55,13 +55,43 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\nvar _fooBar = __webpack_require__(1);\n\nvar _fooBar2 = _interopRequireDefault(_fooBar);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\r\n* Migrating from Babel >= 5.x to Babel >= 6.x, will most likely break your code\r\n* because Babel now have killed the CommonJS default export behaviour.\r\n*\r\nAs a workaround, replace export default { … } with module.exports = { … }\r\n*/\n\nvar trolly = {\n  fooBar: _fooBar2.default,\n  example: function example() {\n    return 'hello';\n  }\n};\n\nmodule.exports = trolly;\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/index.js\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/index.js?");
+	'use strict';
+
+	var _fooBar = __webpack_require__(1);
+
+	var _fooBar2 = _interopRequireDefault(_fooBar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	* Migrating from Babel >= 5.x to Babel >= 6.x, will most likely break your code
+	* because Babel now have killed the CommonJS default export behaviour.
+	*
+	As a workaround, replace export default { … } with module.exports = { … }
+	*/
+
+	var trolly = {
+	  fooBar: _fooBar2.default,
+	  example: function example() {
+	    return 'hello';
+	  }
+	};
+
+	module.exports = trolly;
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = fooBar;\nfunction fooBar() {\n  return 'world!';\n}\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/fooBar.js\n ** module id = 1\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/fooBar.js?");
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = fooBar;
+	function fooBar() {
+	  return 'world!';
+	}
 
 /***/ }
 /******/ ])

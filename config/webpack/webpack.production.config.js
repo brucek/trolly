@@ -21,14 +21,20 @@ module.exports = {
         libraryTarget: 'umd',
         library: console._app
     },
- module: {
+    module: {
+        preLoaders: [{
+            test: /\.js$/,
+            loader: 'eslint-loader',
+            exclude: /node_modules/
+        }],
         loaders: [{
             test: /\.js$/,
             exclude: ['node_modules'],
             include: path.join(__dirname, '../../src'),
             loader: 'babel-loader'
         }]
-    },    progress: true,
+    },
+    progress: true,
     resolve: {
         modulesDirectories: [
             'src',
@@ -62,9 +68,10 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production'),
             VERSION: JSON.stringify(PKG_LOCATION.version)
         })
-    ], eslint: {
-      configFile: config.eslintDir,
-      emitError: true,
-      emitWarning: false
+    ],
+    eslint: {
+        configFile: config.eslintDir,
+        emitError: true,
+        emitWarning: false
     }
 };
