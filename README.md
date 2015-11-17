@@ -188,8 +188,7 @@ Then you would need to modify the `karma.conf.js` configuration file, and add a 
             }
         }
 ```
-
-Inside the `process.env.TRAVIS` block, set `Chrome_travis_ci'` as the default browser for Travis.
+before you use ENV vars on Travis, and set the `Chrome_travis_ci` as the default browser to launch together with Travis.
 
 ## How to Contribute
 
