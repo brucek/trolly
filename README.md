@@ -46,9 +46,8 @@ $ npm webpack                   # Build a non-minified version of the library
 
 ## Workflow
 
-* `npm run production` - Build task that generates minified scripts for production
-* `npm run precommit` - Run the unit tests,, and generate a minified script
-* `npm run clean` - Remove the `dist` folder
+* `npm run production` - Build task that generate a minified script for production
+* `npm run clean` - Remove the `dist` folder and it's files
 * `npm run eslint:source` - Lint the source
 * `npm run eslint:common` - Lint the unit tests shared by Karma and Mocha
 * `npm run eslint:server` - Lint the unit tests for server

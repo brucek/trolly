@@ -1,9 +1,8 @@
 {
     "name": "trolly",
-    "version": "0.7.4",
+    "version": "0.7.5",
     "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon, Chai, Karma, Coveralls, and ESLint without any framework dependencies.",
     "scripts": {
-        "precommit": "npm test && npm run build",
         "clean": "rimraf dist",
         "production": "npm run clean && set NODE_ENV=production && webpack --config ./config/webpack/webpack.production.config.js --progress --profile --colors",
         "test": "npm run test:server && npm run test:browser",
