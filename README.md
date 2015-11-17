@@ -17,8 +17,8 @@ Node `^5.0.0`.
 * Support for ES2015 in the unit tests
 * [Webpack](https://webpack.github.io/) for bundling
 * [Eslint](http://eslint.org/) to maintain a consistent code style
-* UMD pattern, which provides compatibility with the most popular script loaders, to the output.
-* Unit tests for browser, server or both
+* [Universal Module Definition (UMD) API](https://github.com/umdjs/umd), which provides compatibility with the most popular script loaders, to the output.
+* Universal Tests. Works for browser, server or both
 * Run unit tests for PhantomJS, Chrome, Firefox and IE
 * Coveralls
 * Displays build status system notifications
@@ -38,6 +38,7 @@ As a workaround, replace `export default { … }` with  `module.exports = { … 
 ## Getting Started
 
 Just clone the repo and install the necessary node modules:
+
 ```js
 $ git clone https://github.com/kflash/trolly.git trolly
 $ cd trolly
@@ -45,7 +46,7 @@ $ npm install                   # Install Node modules listed in ./package.json
 $ npm webpack                   # Build a non-minified version of the library
 ```
 
-## Usage
+## Workflow
 
 * `npm run production` - Build task that generates minified scripts for production
 * `npm run precommit` - Run the unit tests,, and generate a minified script
@@ -133,13 +134,11 @@ For the server side unit tests with mocha, you may want to install jsdom etc. Th
 
 All paths, and the name on the library can be modified inside the `config.js` file.
 
-## Known Mac issues
-There are a know issue with `Node 4.1` on Mac. To solve this issue, upgrade to `Node >= 5.x`.
+## Possible iOS issues
+
+There are a know issue with `Node 4.1` on Mac & iOS. To solve this issue, upgrade to `Node >= 5.x`.
 
 ## FAQ
-
-#### Help! It doesn't work on Windows! What do I do?
-Just take a cup of coffee and relax. It works!
 
 #### Is this boilerplate production ready?
 Yes, for small applications. For a larger project, you'll need to customize the boilerplate after your own needs, but that is out of scope of this boilerplate.
