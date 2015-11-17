@@ -17,7 +17,7 @@ module.exports = {
         path: config.distDir,
         filename: config.dev,
         libraryTarget: 'umd',
-        library: console._app
+        library: config._app
     },
     module: {
         loaders: [{
