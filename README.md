@@ -153,7 +153,7 @@ Short answer. Too keep the file size as compact as possible. Each plugin take up
 With Trolly you are given a various set of tools and settings to use. After that it's up to you how you want to use it to 
 setup your own workflow.
 
-Btw. All configuration related files are located in the `./config` folder.
+All configuration files are located in the `./config` folder.
 
 #### Is there any environment variabels for production and development?
 
