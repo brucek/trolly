@@ -13,8 +13,6 @@ module.exports = {
     entry: config.sourceDir,
     cache: true,
     debug: true,
-    // more options here: http://webpack.github.io/docs/configuration.html#devtool
-    devtool: 'eval',
     output: {
         path: config.distDir,
         filename: config.dev,
