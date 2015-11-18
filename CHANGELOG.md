@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1
+
+- added [pre-commit hook](https://www.npmjs.com/package/pre-commit) 
+
 ## 0.8.9
 
 - browser tests renamed form `.browser.js` to `.client.js`
