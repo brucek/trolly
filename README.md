@@ -104,7 +104,7 @@ To reinstall all packages, do `npm run package:reinstall`, and to remove all pac
 
 ## Pre-commit
 
-This boilerplate uses a[pre-commit hook](https://www.npmjs.com/package/pre-commit) to ensure that your npm test (or other specified scripts) passes before you can commit your changes. This all conveniently configured in your package.json.
+This boilerplate uses a [pre-commit hook](https://www.npmjs.com/package/pre-commit) to ensure that your npm test (or other specified scripts) passes before you can commit your changes. This all conveniently configured in your package.json.
 
 
 ## Linting
