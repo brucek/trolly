@@ -76,7 +76,7 @@ This project uses Mocha to run your unit tests, it uses Karma as the test runner
 
 To add a unit test, simply create `.common.js` file inside the `~/test` folder. Karma will pick up on these files automatically, and Mocha and Chai will be available within your unit tests without the need to import them.
 
-To run unit tests only for the browser ( *client*), simply create a `.browser.js` file, or if you need to run unit tests only for the server, create a `.server.js` file inside the `~/test` folder.
+To run unit tests only for the browser ( *client*), simply create a `.client.js` file, or if you need to run unit tests only for the server, create a `.server.js` file inside the `~/test` folder.
 
 Tests for both client and server share the same `.common.js` files,
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.9
+
+- browser tests renamed form `.browser.js` to `.client.js`
+
 ## 0.7.4
 * re-factored how the package management works
 
