@@ -1,4 +1,4 @@
-/*! trolly, version 0.9.0 */
+/*! trolly, version 0.9.3 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();

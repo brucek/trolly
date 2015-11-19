@@ -39,7 +39,7 @@
  * Babel enables the use of ES6 today by transpiling your ES6 JavaScript into equivalent ES5 source
  * that is actually delivered to the end user browser.
  */
- /* eslint-disable no-var */
+/* eslint-disable no-var */
 require('babel-core/register');
 
 // Webpack config for development
@@ -67,10 +67,10 @@ module.exports = {
             loader: 'eslint-loader',
             exclude: /node_modules/
         }],
-
         loaders: [{
-            test: /\.js?$/,
+            test: /\.js$/,
             exclude: /node_modules/,
+            include: path.join(__dirname, '../../src'),
             loader: 'babel-loader'
         }]
     },

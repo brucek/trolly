@@ -7,9 +7,10 @@ const path = require('path');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const PKG_LOCATION = path.join(__dirname, '../../package.json');
 const config = require('../config');
+const webpackConfig = require('./webpack.development.config')
 
-module.exports = {
-    entry: config.sourceDir,
+module.exports = Object.assign({}, webpackConfig, {
+
     cache: false,
     debug: false,
     devtool: false,
@@ -20,27 +21,6 @@ module.exports = {
         filename: config._app + '.min.js',
         libraryTarget: 'umd',
         library: console._app
-    },
-    module: {
-        preLoaders: [{
-            test: /\.js$/,
-            loader: 'eslint-loader',
-            exclude: /node_modules/
-        }],
-        loaders: [{
-            test: /\.js$/,
-            exclude: ['node_modules'],
-            include: path.join(__dirname, '../../src'),
-            loader: 'babel-loader'
-        }]
-    },
-    progress: true,
-    resolve: {
-        modulesDirectories: [
-            'src',
-            'node_modules'
-        ],
-        extensions: ['', '.json', '.js']
     },
     plugins: [
         // Notifier
@@ -68,10 +48,5 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production'),
             VERSION: JSON.stringify(PKG_LOCATION.version)
         })
-    ],
-    eslint: {
-        configFile: config.eslintDir,
-        emitError: true,
-        emitWarning: false
-    }
-};
+    ]
+});
