@@ -1,5 +1,8 @@
 # Changelog
 
+# 0.9.7
+- updated to the latest dependencies
+
 ## 0.9.1
 
 - added [pre-commit hook](https://www.npmjs.com/package/pre-commit) 
