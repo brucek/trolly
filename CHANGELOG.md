@@ -1,5 +1,11 @@
 # Changelog
 
+# 0.9.9
+- updated dependencies
+
+# 0.9.8
+- updated dependencies
+
 # 0.9.7
 - updated to the latest dependencies
 
