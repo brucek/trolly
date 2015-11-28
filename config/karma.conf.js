@@ -16,14 +16,16 @@ module.exports = function(config) {
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: [
             'sinon-chai',
+            'sinon',
+            'chai',
             'mocha'
         ], //use mocha and sinon-chai as framework
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'test/**/*.common.js': ['webpack'],
-            'test/**/*.client.js': ['webpack']
+            'test/**/*.common.js': ['webpack', 'sourcemap'],
+            'test/**/*.client.js': ['webpack', 'sourcemap']
         },
         // test results reporter to use
 		reporters: ['progress', 'coverage'],
@@ -43,13 +45,16 @@ module.exports = function(config) {
         },
         plugins: [
             'karma-sinon-chai',
+            'karma-sinon',
+            'karma-chai',
             'karma-webpack',
             'karma-mocha',
             'karma-phantomjs-launcher',
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-ie-launcher',
-            'karma-coverage'
+            'karma-coverage',
+			'karma-sourcemap-loader'
         ],
         // Start these browsers, currently available:
         // - Chrome
