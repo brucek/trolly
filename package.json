@@ -1,6 +1,6 @@
 {
   "name": "trolly",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A starter kit to get you up and running with a bunch of awesome new front-end technologies using Babel, Webpack, Mocha, Sinon, Chai, Karma, Coveralls, and ESLint without any framework dependencies.",
   "scripts": {
     "clean": "rimraf dist",
@@ -73,16 +73,16 @@
     "src"
   ],
   "devDependencies": {
-    "babel-cli": "^6.3.17",
+    "babel-cli": "^6.4.0",
     "babel-eslint": "^5.0.0-beta6",
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^3.0.0",
-    "eslint-plugin-react": "^3.13.1",
+    "eslint-config-airbnb": "^3.1.0",
+    "eslint-plugin-react": "^3.14.0",
     "eslint-loader": "^1.2.0",
-    "karma": "^0.13.17",
+    "karma": "^0.13.19",
     "karma-chai": "^0.1.0",
     "karma-cli": "^0.1.2",
     "karma-coverage": "^0.5.3",
@@ -97,7 +97,7 @@
     "phantomjs": "^1.9.19",
     "phantomjs-polyfill": "0.0.1",
     "sinon-chai": "^2.8.0",
-    "webpack": "^1.12.9",
+    "webpack": "^1.12.10",
     "webpack-dev-server": "^1.14.0"
   },
   "babel": {
@@ -124,7 +124,7 @@
     "karma-firefox-launcher": "^0.1.7",
     "karma-chrome-launcher": "^0.2.2",
     "karma-ie-launcher": "^0.2.0",
-    "babel-core": "^6.3.26",
+    "babel-core": "^6.4.0",
     "babel-plugin-syntax-jsx": "^6.3.13",
     "dotenv": "^1.2.0",
     "karma-sourcemap-loader": "^0.3.6",
