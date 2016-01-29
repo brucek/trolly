@@ -1,4 +1,4 @@
-const _root = __dirname + '../../';
+const _root = __dirname + '/../';
 
 module.exports = {
 
