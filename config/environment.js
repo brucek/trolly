@@ -2,7 +2,7 @@
 import dotenv from 'dotenv';
 import path from 'path';
 import {
-    any, defaults
+    defaults
 }
 from 'lodash';
 
@@ -25,11 +25,9 @@ const {
         // port to use with the asset server
 		PORT: '8000'
     }),
-    IS_PROD = any([
-        NODE_ENV === 'production',
-        ENVIRONMENT === 'prod',
-        ENVIRONMENT === 'production'
-    ]),
+    IS_PROD = () => {
+        return ( NODE_ENV === 'production' || ENVIRONMENT === 'prod' || ENVIRONMENT === 'production' );
+    },
     IS_DEV = !IS_PROD,
     ENVIRONMENT_NAME = IS_PROD ? 'production' : 'development';
 
