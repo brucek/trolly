@@ -55,6 +55,8 @@ module.exports = {
     entry: config.sourceDir,
     cache: true,
     debug: true,
+    watch: true,
+    devtool: 'eval',
     output: {
         path: config.distDir,
         filename: config.dev,
