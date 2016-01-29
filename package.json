@@ -27,7 +27,7 @@
     "package:prod": "./node_modules/.bin/ncu -u",
     "package:dev": "./node_modules/.bin/ncu -p -u",
     "asset-server": "node config/webpack/webpack.hot.assets.config",
-	"preversion": "[[ -z $(git status --porcelain) ]] && npm run production && git add -A dist && git commit -m 'Build lib'",
+    "preversion": "[[ -z $(git status --porcelain) ]] && npm run production && git add -A dist && git commit -m 'Build lib'",
     "postpublish": "git push origin master --follow-tags"
   },
   "pre-commit": [
@@ -80,8 +80,9 @@
     "babel-preset-stage-0": "^6.3.13",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^4.0.0",
-    "eslint-plugin-react": "^3.16.1",
     "eslint-loader": "^1.2.1",
+    "eslint-plugin-react": "^3.16.1",
+    "istanbul-instrumenter-loader": "^0.1.3",
     "karma": "^0.13.19",
     "karma-chai": "^0.1.0",
     "karma-cli": "^0.1.2",
@@ -95,13 +96,12 @@
     "mocha": "^2.4.5",
     "npm-check-updates": "^2.5.7",
     "phantomjs": "^2.1.3",
-    "phantomjs-prebuilt": "^2.1.3",
     "phantomjs-polyfill": "0.0.1",
+    "phantomjs-prebuilt": "^2.1.3",
     "sinon-chai": "^2.8.0",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
   },
-
   "babel": {
     "ignore": [
       "packages/babel-cli/src/babel-plugin/templates"
@@ -118,20 +118,18 @@
   "bugs": "https://github.com/kflash/trolly/issues",
   "homepage": "https://github.com/kflash/trolly",
   "license": "MIT",
-  
   "dependencies": {
-    "npmlog": "^2.0.2",
-    "lodash": "4.0.1",
-    "rimraf": "^2.5.1",
-    "webpack-notifier": "1.2.1",
-    "karma-firefox-launcher": "^0.1.7",
-    "karma-chrome-launcher": "^0.2.2",
-    "karma-ie-launcher": "^0.2.0",
     "babel-core": "^6.4.5",
     "babel-plugin-syntax-jsx": "^6.3.13",
     "dotenv": "^2.0.0",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-ie-launcher": "^0.2.0",
     "karma-sourcemap-loader": "^0.3.7",
-    "pre-commit": "^1.1.2"
+    "lodash": "4.0.1",
+    "npmlog": "^2.0.2",
+    "pre-commit": "^1.1.2",
+    "rimraf": "^2.5.1",
+    "webpack-notifier": "1.2.1"
   }
-
 }

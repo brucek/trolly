@@ -10,15 +10,14 @@ module.exports = {
     output: {},
 	entry: {},
     module: {
-		preLoaders: [{
-            test: /\.jsx?$/,
-            include: config.sourceDir,
-            exclude: /(tests)/,
-            loader: 'isparta',
+		postLoaders: [{
+            test: /\.js$/,
+            include: path.resolve('src/'),
+            loader: 'istanbul-instrumenter'
         }],
         loaders: [{
             test: /\.js?$/,
-//            exclude: /node_modules/,
+            exclude: /node_modules/,
             loaders: ['babel-loader']
         }]
     },

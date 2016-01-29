@@ -3,7 +3,6 @@ import webpackConfig from './webpack/webpack.karma.config';
 // Karma configuration here
 module.exports = function(config) {
     config.set({
-        logLevel: config.LOG_INFO,
         // list of files to exclude
         exclude: [],
         // list of files / patterns to load in the browser
@@ -24,6 +23,7 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
+            // 'src/**/*.js': ['coverage'],
             'test/**/*.common.js': ['webpack', 'sourcemap'],
             'test/**/*.client.js': ['webpack', 'sourcemap']
         },
@@ -35,7 +35,11 @@ module.exports = function(config) {
             }, {
                 type: 'lcovonly',
                 subdir: '.'
-            }]
+            }, {
+                type: 'html',
+                dir: 'coverage/'
+            }
+            ]
         },
         webpack: {
             module: webpackConfig.module
