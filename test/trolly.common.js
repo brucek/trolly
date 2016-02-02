@@ -1,3 +1,7 @@
+/* global expect */
+/* eslint padded-blocks: 0*/
+/* eslint no-unused-expressions: 0*/
+/* eslint max-nested-callbacks: 0*/
 import trolly from '../src';
 
 describe('trolly - server and browser tests', () => {

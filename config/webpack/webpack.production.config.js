@@ -25,7 +25,7 @@ module.exports = Object.assign({}, webpackConfig, {
     plugins: [
         // Notifier
         new WebpackNotifierPlugin({
-            title: 'Trolly',
+            title: PKG_LOCATION.name,
             alwaysNotify: true
         }),
         // optimizations
