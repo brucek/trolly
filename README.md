@@ -67,9 +67,9 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
 * `npm run package:check` - shows a list over dependencies with a higher version number then the current one - if any
-* `npm run package:upgrade` - Automaticly upgrade all devDependencies & dependencies, and update package.json
-* `npm run package:dev` - Automaticly upgrade all devDependencies and update package.json
-* `npm run package:prod` - Automaticly upgrade all dependencies and update package.json
+* `npm run package:upgrade` - Automatically upgrade all devDependencies & dependencies, and update package.json
+* `npm run package:dev` - Automatically upgrade all devDependencies and update package.json
+* `npm run package:prod` - Automatically upgrade all dependencies and update package.json
 * `npm run asset-server` - starts a asset server with hot module replacement (WDS) on port 8080
 
 ## Unit tests
@@ -88,7 +88,7 @@ To keep watching the common test suites that you are working on, simply do `npm 
 
 ## Coveralls
 
-This library is set up to integrate with Coveralls, and will automaticly publish your coverage report if you have created an account for your repo at **coveralls.io**
+This library is set up to integrate with Coveralls, and will automatically publish your coverage report if you have created an account for your repo at **coveralls.io**
 
 ## Package management
 
