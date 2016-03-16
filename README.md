@@ -29,8 +29,8 @@ Node `^5.0.0`.
 
 ## Babel >= 6.x design changes
 
-If you migrate from `Babel >= 5.x` to `Babel >= 6.x`, your code will probably break because 
-Babel now have killed the `CommonJS` default export behaviour. 
+If you migrate from `Babel >= 5.x` to `Babel >= 6.x`, your code will probably break because
+Babel now have killed the `CommonJS` default export behaviour.
 
 As a workaround, replace `export default { … }` with  `module.exports = { … }`
 
@@ -38,7 +38,7 @@ As a workaround, replace `export default { … }` with  `module.exports = { … 
 
 Just clone the repo and install the necessary node modules:
 
-```js
+```sh
 $ git clone https://github.com/kflash/trolly.git trolly
 $ cd trolly
 $ npm install                   # Install Node modules listed in ./package.json
@@ -66,7 +66,7 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run packages` - List installed packages
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
-* `npm run package:check` - shows a list over dependencies with a higher version number then the current one - if any 
+* `npm run package:check` - shows a list over dependencies with a higher version number then the current one - if any
 * `npm run package:upgrade` - Automaticly upgrade all devDependencies & dependencies, and update package.json
 * `npm run package:dev` - Automaticly upgrade all devDependencies and update package.json
 * `npm run package:prod` - Automaticly upgrade all dependencies and update package.json
@@ -92,9 +92,9 @@ This library is set up to integrate with Coveralls, and will automaticly publish
 
 ## Package management
 
-Trolly has build-in some nice features to always make sure your dependency tree are up to date. 
+Trolly has build-in some nice features to always make sure your dependency tree are up to date.
 
-To check for the latest dependencies, simply run `npm run package:check`. 
+To check for the latest dependencies, simply run `npm run package:check`.
 
 If you want to update your packages, you can simply do `npm run package:upgrade`.
 
@@ -115,7 +115,7 @@ This boilerplate project uses ESLint and the [Airbnb styleguide](https://github.
 
 Trolly uses `webpack-dev-server` as an asset server with hot module replacement (WDS) enabled on port 8080.
 
-```js
+```sh
 npm run asset-server
 ```
 
@@ -126,12 +126,12 @@ Open `http://localhost:8080`, and you will see this message in your browser: `It
 Download the package, and run this from the command line:
 
 ```
-npm install 
+npm install
 ```
 
 ## Customizing
 
-This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself. 
+This boilerplate is easily customizable. Add your dependencies to the package.json file, and modify either the webpack config files or the karma files itself.
 
 For the server side unit tests with mocha, you may want to install jsdom etc. This can be done if you modify the `mocha.conf.js` file located inside the `config folder`.
 
@@ -160,7 +160,7 @@ Short answer. Too keep the file size as compact as possible. Each plugin take up
 
 #### There seems to be some configuration settings that is not used. Why?
 
-With Trolly you are given a various set of tools and settings to use. After that it's up to you how you want to use it to 
+With Trolly you are given a various set of tools and settings to use. After that it's up to you how you want to use it to
 setup your own workflow.
 
 All configuration files are located in the `./config` folder.
@@ -175,7 +175,7 @@ There exist one example on how to use environment variabels. Take a look at the 
 
 Sorry, but this is out of the scope of this boilerplate. However,  you should get it to work if you modify your `travis.yml` file and add:
 
-```js
+```sh
 
 before_install:
   # GUI for real browsers.
