@@ -165,11 +165,11 @@ setup your own workflow.
 
 All configuration files are located in the `./config` folder.
 
-#### Is there any environment variabels for production and development?
+#### Is there any environment variables for production and development?
 
 Yes, there is. You have to configure this yourself. Just modify the `environment.js` file inside the `./config folder`.
 
-There exist one example on how to use environment variabels. Take a look at the `webpack.config.js` file in the root.
+There exist one example on how to use environment variables. Take a look at the `webpack.config.js` file in the root.
 
 #### I ran into trouble getting Trolly works with Travis and Chrome. What should I do?
 
