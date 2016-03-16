@@ -1,6 +1,6 @@
 {
     "root": true,
-    "extends": airbnb,
+    "extends": "airbnb",
     "parser": "babel-eslint",
     "globals": {
         "document": true,
@@ -124,9 +124,6 @@
         "new-cap": [2, {
             "newIsCap": true
         }],
-        "no-multiple-empty-lines": [2, {
-            "max": 2
-        }],
         "no-nested-ternary": 2,
         "no-new-object": 2,
         "no-spaced-func": 2,
@@ -184,5 +181,5 @@
         }],
         "wrap-regex": 1
     },
-    plugins: []
+    "plugins": []
 }
