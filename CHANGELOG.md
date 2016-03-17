@@ -11,7 +11,7 @@
 
 ## 0.9.1
 
-- added [pre-commit hook](https://www.npmjs.com/package/pre-commit) 
+- added [pre-commit hook](https://www.npmjs.com/package/pre-commit)
 
 ## 0.8.9
 
@@ -35,7 +35,7 @@
 * added eslint option both for dev-and production mode
 
 ## 0.6.7
-* added support for environment variabels. See the FAQ section in the readme.
+* added support for environment variables. See the FAQ section in the readme.
 
 ## 0.6.3
 * solved issues with the unit tests
@@ -56,8 +56,8 @@
 
 - BC! Changed how unit tests works. Unit tests are merged into one folder - `./tests`. Unit tests for browser: `.browser.js`.  Unit tests for server: `.server.js`.
 - BC! Unit tests - `.common.js` runs both for Karma and Mocha.
-- BC! Coverage report for common unit tests - available with Karma.  `npm run test:browser`. 
+- BC! Coverage report for common unit tests - available with Karma.  `npm run test:browser`.
 - BC! Removed Isparta because of Babel 6.x issues
-- BC! Mocha have got it's own configuration file. Located in `./config/mocha.opts`. 
+- BC! Mocha have got it's own configuration file. Located in `./config/mocha.opts`.
 - BC! Eslint got more options. Check out the readme file.
 - General cleanup
