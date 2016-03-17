@@ -3,9 +3,8 @@ require('babel-core/register');
 // Webpack config for creating the production bundle.
 
 const webpack = require('webpack');
-const path = require('path');
 const WebpackNotifierPlugin = require('webpack-notifier');
-const PKG_LOCATION = path.join(__dirname, '../../package.json');
+import pkg from "../../package.json";
 const config = require('../config');
 const webpackConfig = require('./webpack.development.config');
 
@@ -25,7 +24,7 @@ module.exports = Object.assign({}, webpackConfig, {
     plugins: [
         // Notifier
         new WebpackNotifierPlugin({
-            title: PKG_LOCATION.name,
+            title: pkg.name,
             alwaysNotify: true
         }),
         // optimizations
@@ -46,7 +45,7 @@ module.exports = Object.assign({}, webpackConfig, {
         new webpack.DefinePlugin({
             '__DEV__': false,
             'process.env.NODE_ENV': JSON.stringify('production'),
-            VERSION: JSON.stringify(PKG_LOCATION.version)
+            VERSION: JSON.stringify(pkg.version)
         })
     ]
 });

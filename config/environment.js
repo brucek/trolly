@@ -28,7 +28,7 @@ const {
     IS_DEV = !IS_PROD(),
     ENVIRONMENT_NAME = IS_PROD() ? 'production' : 'development';
 
-process.env.NODE_ENV = IS_PROD() ? 'production' : 'development';
+process.env.NODE_ENV = ENVIRONMENT_NAME;
 
 export default {
     IS_PROD,
