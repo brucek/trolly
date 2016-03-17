@@ -7,7 +7,7 @@ const path = require('path');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const PKG_LOCATION = path.join(__dirname, '../../package.json');
 const config = require('../config');
-const webpackConfig = require('./webpack.development.config')
+const webpackConfig = require('./webpack.development.config');
 
 module.exports = Object.assign({}, webpackConfig, {
 

@@ -1,15 +1,16 @@
-const _root = __dirname + '/../';
+import path from 'path';
+const _root = path.join(__dirname, '/../');
 
 module.exports = {
 
-    // path helpers	
+    // path helpers
     _app: 'trolly',
     minified: 'trolly.min.js',
     dev: 'trolly.js',
-    eslintDir: _root + '.eslintrc',
-    distDir: _root + 'dist',
-    sourceDir: _root + 'src',
-    testDir: _root + 'tests',
-    setupDir: _root + 'tests/setup/node.js',
-    karmaConf: _root + 'config/karma.conf.js'
+    eslintDir: path.join(_root, '.eslintrc'),
+    distDir: path.join(_root, 'dist'),
+    sourceDir: path.join(_root, 'src'),
+    testDir: path.join(_root, 'tests'),
+    setupDir: path.join(_root, 'tests/setup/node.js'),
+    karmaConf: path.join(_root, 'config/karma.conf.js')
 };

@@ -1,10 +1,7 @@
 /* eslint-disable */
 import dotenv from 'dotenv';
 import path from 'path';
-import {
-    defaults
-}
-from 'lodash';
+import { defaults } from 'lodash';
 
 dotenv.load({
     silent: false,
@@ -28,10 +25,10 @@ const {
     IS_PROD = () => {
         return ( NODE_ENV === 'production' || ENVIRONMENT === 'prod' || ENVIRONMENT === 'production' );
     },
-    IS_DEV = !IS_PROD,
-    ENVIRONMENT_NAME = IS_PROD ? 'production' : 'development';
+    IS_DEV = !IS_PROD(),
+    ENVIRONMENT_NAME = IS_PROD() ? 'production' : 'development';
 
-process.env.NODE_ENV = IS_PROD ? 'production' : 'development';
+process.env.NODE_ENV = IS_PROD() ? 'production' : 'development';
 
 export default {
     IS_PROD,
