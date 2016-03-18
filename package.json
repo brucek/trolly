@@ -121,7 +121,7 @@
   "homepage": "https://github.com/kflash/trolly",
   "license": "MIT",
   "dependencies": {
-    "babel-core": "^6.6.0",
+    "babel-core": "^6.7.0",
     "babel-plugin-syntax-jsx": "^6.5.0-1",
     "dotenv": "^2.0.0",
     "karma-chrome-launcher": "^0.2.2",
