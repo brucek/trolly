@@ -56,7 +56,7 @@ module.exports = {
     cache: true,
     debug: true,
     watch: true,
-    devtool: 'eval',
+    devtool: 'inline-source-map',
     output: {
         path: config.distDir,
         filename: config.dev,
