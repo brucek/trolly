@@ -1,0 +1,16 @@
+instrumentation:
+  root: src
+  default-excludes: false
+  excludes: [ 'node_modules/**', '**/test/**', '**/tests/**', '**/config/**' ]
+  extensions:
+    - .es6
+    - .js
+  include-all-sources: true
+  es-modules: true
+  baseline-file: ./coverage/cli/coverage-baseline.json
+reporting:
+  dir: ./coverage/cli
+  reports:
+    - html
+    - text
+    - lcov
