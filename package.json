@@ -6,7 +6,7 @@
     "clean": "rimraf dist",
     "production": "npm run clean && NODE_ENV=production webpack --progress --profile --colors",
     "test": "npm run test:server && npm run test:browser",
-    "test:server": "babel-node -r node_modules/.bin/isparta cover -v --include '**/*js' node_modules/.bin/_mocha -- --opts config/mocha.opts",
+    "test:server": "babel-node -r node_modules/.bin/isparta cover --include '**/*js' node_modules/.bin/_mocha -- --opts config/mocha.opts",
     "test:browser": "./node_modules/.bin/karma start --single-run",
     "cov:server": "open coverage/cli/index.html",
     "cov:browser": "open coverage/Phantom*/index.html",
