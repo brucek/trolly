@@ -10,7 +10,7 @@ module.exports = {
     eslintDir: path.join(_root, '.eslintrc'),
     distDir: path.join(_root, 'dist'),
     sourceDir: path.join(_root, 'src'),
-    testDir: path.join(_root, 'tests'),
-    setupDir: path.join(_root, 'tests/setup/node.js'),
+    testDir: path.join(_root, 'test'),
+    setupDir: path.join(_root, 'test/setup/node.js'),
     karmaConf: path.join(_root, 'config/karma.conf.js')
 };
