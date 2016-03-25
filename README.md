@@ -50,9 +50,7 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run production` - Build task that generate a minified script for production
 * `npm run clean` - Remove the `dist` folder and it's files
 * `npm run eslint:source` - Lint the source
-* `npm run eslint:common` - Lint the unit tests shared by Karma and Mocha
-* `npm run eslint:server` - Lint the unit tests for server
-* `npm run eslint:browser` - Lint the unit tests for browser
+* `npm run eslint:test` - Lint the unit tests
 * `npm run eslint:fix` - ESLint will try to fix as many issues as possible in your source files
 * `npm run clean` - Remove the coverage report and the *dist* folder
 * `npm run test` - Runs unit tests for both server and the browser
