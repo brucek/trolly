@@ -60,7 +60,10 @@ $ npm webpack                   # Build a non-minified version of the library
 * `npm run watch:browser` - Run all unit tests for browser & watch files for changes
 * `npm run karma:firefox` - Run all unit tests with Karma & Firefox
 * `npm run karma:chrome` - Run all unit tests with Karma & Chrome
-* `npm run karma:ie` - Run all unit tests with Karma & Internet Explorer
+* `npm run karma:ie` - Output unit tests with Karma & Internet Explorer
+* `npm run cov:server` - Print coverage report for server tests
+* `npm run cov:browser` - Output coverage report for browser tests
+* `npm run cov:chrome` - Output coverage report for browsers tests ( Chrome)
 * `npm run packages` - List installed packages
 * `npm run package:purge` - Remove all dependencies
 * `npm run package:reinstall` - Reinstall all dependencies
@@ -86,7 +89,8 @@ To keep watching the common test suites that you are working on, simply do `npm 
 
 ## Coveralls
 
-This library is set up to integrate with Coveralls, and will automatically publish your coverage report if you have created an account for your repo at **coveralls.io**
+This library is set up to integrate with Coveralls, and will automatically publish your coverage report if you have created an account for your repo at **coveralls.io**.
+Coverage reports are supported for both the browser and server unit tests.
 
 ## Package management
 
