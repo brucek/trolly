@@ -17,7 +17,9 @@ Node `^5.0.0`.
 * [Rewire](https://github.com/speedskater/babel-plugin-rewire) enables options to mock modules for testing purposes.
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * [Universal Module Definition (UMD) API](https://github.com/umdjs/umd), which provides compatibility with the most popular script loaders, to the output.
-* Universal unit tests that work in Node,browser or both
+* [Sinon.JS](http://sinonjs.org/) with examples for test doubles
+* [babel-plugin-rewire](https://github.com/speedskater/babel-plugin-rewire) to apply test doubles to dependencies of imported modules
+* Universal unit tests that work in Node, browser or both
 * Unit tests written with ES2015 get transpiled on the fly
 * PhantomJS, Chrome, Firefox and IE unit tests for the browser
 * Displays build status system notifications
@@ -88,10 +90,14 @@ To run the tests in the project, just simply `npm run test` for both server and 
 
 To keep watching the common test suites that you are working on, simply do `npm run watch:browser` or `npm run watch:server`.
 
-## Rewire
+### Rewire
 
-Rewire are supported through the `babel-plugin-rewire plugin`. It is useful for writing tests, specifically to mock the dependencies of the module under test. 
+Rewire is supported through the [`babel-plugin-rewire`](https://github.com/speedskater/babel-plugin-rewire) plugin. It is useful for writing tests, specifically to mock the dependencies of the module under test.
 Examples and tests are included.
+
+### Sinon
+
+[Sinon.JS](http://sinonjs.org/) is also set up for test doubles - see [test/BatClass.common.js](test/BatClass.common.js) for examples of both Sinon and Rewire using ES6 classes.
 
 ## Coveralls
 
