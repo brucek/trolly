@@ -51,7 +51,7 @@ import WebpackNotifierPlugin from 'webpack-notifier';
 import config from '../config';
 
 module.exports = {
-    // entry points 
+    // entry points
     entry: config.sourceDir,
     cache: true,
     debug: true,
@@ -73,7 +73,7 @@ module.exports = {
             test: /\.js$/,
             exclude: /node_modules/,
             include: path.join(__dirname, '../../src'),
-            loader: 'babel-loader'
+            loader: 'babel-loader?plugins=rewire'
         }]
     },
     resolve: {
