@@ -16,7 +16,9 @@ Node `^5.0.0`.
 * [Webpack](https://webpack.github.io/) for bundling
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * [Universal Module Definition (UMD) API](https://github.com/umdjs/umd), which provides compatibility with the most popular script loaders, to the output.
-* Universal unit tests that work in Node,browser or both
+* [Sinon.JS](http://sinonjs.org/) with examples for test doubles
+* [babel-plugin-rewire](https://github.com/speedskater/babel-plugin-rewire) to apply test doubles to dependencies of imported modules
+* Universal unit tests that work in Node, browser or both
 * Unit tests written with ES2015 get transpiled on the fly
 * PhantomJS, Chrome, Firefox and IE unit tests for the browser
 * Displays build status system notifications
@@ -86,6 +88,12 @@ Tests for both client and server share the same `.common.js` files,
 To run the tests in the project, just simply `npm run test` for both server and client unit tests, or `npm run test:server`. for server or `npm run test:browser`. for browser tests.
 
 To keep watching the common test suites that you are working on, simply do `npm run watch:browser` or `npm run watch:server`.
+
+### Test Doubles
+
+Test doubles are running through both [Sinon.JS](http://sinonjs.org/) and [babel-plugin-rewire](https://github.com/speedskater/babel-plugin-rewire).
+
+See [test/BatClass.common.js](test/BatClass.common.js) for examples.
 
 ## Coveralls
 
