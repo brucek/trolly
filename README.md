@@ -14,6 +14,7 @@ Node `^5.0.0`.
 
 * [ES6 with Babel](http://babeljs.io/) for ES6 and ES7
 * [Webpack](https://webpack.github.io/) for bundling
+* [Rewire](https://github.com/speedskater/babel-plugin-rewire) enables options to mock modules for testing purposes.
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * [Universal Module Definition (UMD) API](https://github.com/umdjs/umd), which provides compatibility with the most popular script loaders, to the output.
 * Universal unit tests that work in Node,browser or both
@@ -86,6 +87,11 @@ Tests for both client and server share the same `.common.js` files,
 To run the tests in the project, just simply `npm run test` for both server and client unit tests, or `npm run test:server`. for server or `npm run test:browser`. for browser tests.
 
 To keep watching the common test suites that you are working on, simply do `npm run watch:browser` or `npm run watch:server`.
+
+## Rewire
+
+Rewire are supported through the `babel-plugin-rewire plugin`. It is useful for writing tests, specifically to mock the dependencies of the module under test. 
+Examples and tests are included.
 
 ## Coveralls
 
